@@ -30,7 +30,7 @@ if ( ! defined( 'WPINC' ) )
 /**
  * Currently plugin version.
  */
-define( 'PLUGIN_NAME_VERSION', '0.1.0' );
+define( 'PLUGIN_NAME_VERSION', '0.3.0' );
 
 
 /**
