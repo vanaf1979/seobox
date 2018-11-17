@@ -20,11 +20,12 @@ class Seobox
 			$this->version = '0.3.0';
 		}
 
-		$this->plugin_name = 'seobox';
+		$this->plugin_name = 'SeoBox';
 
 		$this->load_dependencies();
 		$this->set_locale();
 		$this->define_admin_hooks();
+		$this->define_settings_hooks();
 		$this->define_public_hooks();
 	}
 
@@ -36,6 +37,8 @@ class Seobox
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-seobox-i18n.php';
 
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-seobox-admin.php';
+
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'settings/class-seobox-settings.php';
 
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-seobox-public.php';
 
@@ -60,6 +63,22 @@ class Seobox
 
 		$this->loader->add_action( 'add_meta_boxes', $plugin_admin, 'add_seo_metabox' );
 		$this->loader->add_action( 'save_post', $plugin_admin, 'save_va_seo' );
+	}
+
+
+	private function define_settings_hooks() {
+
+		$plugin_settings = new Plugin_Name_Settings( $this->get_plugin_name(), $this->get_version() );
+
+		// Script loaders
+		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_settings, 'enqueue_styles' );
+		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_settings, 'enqueue_scripts' );
+
+		// Register the settings page
+		$this->loader->add_action( 'admin_menu', $plugin_settings, 'register_settings_page' );
+		// Register individual settings
+		$this->loader->add_action( 'admin_init', $plugin_settings, 'register_settings' );
+
 	}
 
 
