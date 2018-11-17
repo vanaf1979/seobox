@@ -17,7 +17,7 @@ class Seobox
 		}
 		else
 		{
-			$this->version = '0.3.0';
+			$this->version = '0.4.0';
 		}
 
 		$this->plugin_name = 'SeoBox';

@@ -1,6 +1,6 @@
 {
   "name": "seobox",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Seobox wordpress seo plugin",
   "main": "index.js",
   "scripts": {
