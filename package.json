@@ -3,6 +3,13 @@
   "version": "0.4.0",
   "description": "Seobox wordpress seo plugin",
   "author": "Vanaf1979.nl",
+  "contributors": [
+    {
+      "name": "Stephan Nijman",
+      "email": "vanaf1979@gmail.com",
+      "url": "https://vanaf1979.nl"
+    }
+  ],
   "license": "GPL-2.0",
   "main": "index.js",
   "scripts": {
