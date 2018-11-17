@@ -66,19 +66,16 @@ class Seobox
 	}
 
 
-	private function define_settings_hooks() {
-
+	private function define_settings_hooks()
+	{
 		$plugin_settings = new Plugin_Name_Settings( $this->get_plugin_name(), $this->get_version() );
 
-		// Script loaders
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_settings, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_settings, 'enqueue_scripts' );
 
-		// Register the settings page
 		$this->loader->add_action( 'admin_menu', $plugin_settings, 'register_settings_page' );
-		// Register individual settings
-		$this->loader->add_action( 'admin_init', $plugin_settings, 'register_settings' );
 
+		$this->loader->add_action( 'admin_init', $plugin_settings, 'register_settings' );
 	}
 
 
