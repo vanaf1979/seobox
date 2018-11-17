@@ -1,4 +1,6 @@
 {
     "/admin/dist/js/seobox-admin.js": "/admin/dist/js/seobox-admin.js",
-    "/admin/dist/css/seobox-admin.css": "/admin/dist/css/seobox-admin.css"
+    "/admin/dist/css/seobox-admin.css": "/admin/dist/css/seobox-admin.css",
+    "/settings/dist/css/seobox-settings.css": "/settings/dist/css/seobox-settings.css",
+    "/settings/dist/js/seobox-settings.js": "/settings/dist/js/seobox-settings.js"
 }
