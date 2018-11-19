@@ -58,4 +58,13 @@ class Plugin_Name_Settings
 		echo '</div>';
 	}
 
+
+	public function seobox_settings_links( $links )
+	{
+		$mylinks = array(
+			'<a href="' . admin_url( 'options-general.php?page=' . $this->plugin_name ) . '">Settings</a>',
+		);
+		return array_merge( $links, $mylinks );
+	}
+
 }

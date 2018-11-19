@@ -74,8 +74,10 @@ class Seobox
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_settings, 'enqueue_scripts' );
 
 		$this->loader->add_action( 'admin_menu', $plugin_settings, 'register_settings_page' );
-
 		$this->loader->add_action( 'admin_init', $plugin_settings, 'register_settings' );
+
+		$this->loader->add_filter( 'plugin_action_links', $plugin_settings, 'seobox_settings_links', $priority = 10 );
+
 	}
 
 
