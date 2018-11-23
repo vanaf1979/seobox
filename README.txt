@@ -25,6 +25,7 @@ This section describes how to install the plugin and get it working.
 == Changelog ==
 
 = 0.4.0 =
+- Added a Settings link to plugin overview page.
 - Fixed a bug in webpack.mix.js
 - Removed imagemin dependencies.
 
