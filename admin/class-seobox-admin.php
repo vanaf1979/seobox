@@ -56,15 +56,22 @@ class Seobox_Admin
 	}
 
 
-	public static function save_va_seo( $post_id )
+	public static function save_seobox( $post_id )
 	{
-		if ( array_key_exists( 'va_seo_test', $_POST ) )
+		// echo '<pre>';
+		// print_r( $_POST );
+		// echo '</pre>';
+
+		if( array_key_exists( 'seobox', $_POST ) )
 		{
+			$sbValues = serialize( $_POST['seobox'] );
+
 			// update_post_meta(
 			// 	$post_id,
-			// 	'_va_seo_test',
-			// 	$_POST['va_seo_test']
+			// 	'_seobox_data',
+			// 	sbValues
 			// );
 		}
+
 	}
 }
