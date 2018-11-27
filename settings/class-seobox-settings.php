@@ -41,21 +41,7 @@ class Plugin_Name_Settings
 
 	public function settings_page_content( )
 	{
-		echo '<div class="wrap">';
-		echo '<form action="options.php" method="post">';
-
-			settings_fields( 'seobox-settings' );
-			do_settings_sections( 'seobox-settings' );
-
-			/**
-			 * The included markup is up to you.
-			 */
-			require_once( plugin_dir_path( dirname( __FILE__ ) ) . 'settings/partials/seobox-settings-display.php' );
-
-			submit_button();
-
-		echo '</form>';
-		echo '</div>';
+		require_once( plugin_dir_path( dirname( __FILE__ ) ) . 'settings/partials/seobox-settings-display.php' );
 	}
 
 
