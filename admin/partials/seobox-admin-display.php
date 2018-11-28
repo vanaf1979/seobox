@@ -3,44 +3,42 @@
 
 <div class="seobox-metabox">
 
-    <h4><?php _e( 'Seobox wordpress seo plugin', 'seobox' ); ?></h4>
-
     <ul class="seobox-admin-tabs">
-        <li>
-            <a data-tab="tab-g">Google</a>
+        <li class="active" data-tab="tab-g">
+            <a>Google</a>
         </li>
-        <li>
-            <a data-tab="tab-fb">Facebook</a>
+        <li data-tab="tab-fb">
+            <a>Facebook</a>
         </li>
-        <li>
-            <a data-tab="tab-tw">Twitter</a>
+        <li data-tab="tab-tw">
+            <a>Twitter</a>
         </li>
-        <li>
-            <a data-tab="tab-sh">Schema</a>
+        <li data-tab="tab-sh">
+            <a>Schema</a>
         </li>
     </ul>
 
     <div class="sb-admin-tabs-container">
 
-        <div id="tab-g">
+        <div id="tab-g" class="tab active">
 
             <?php require_once( plugin_dir_path( dirname( __FILE__ ) ) . 'partials/seobox-admin-google-display.php' ); ?>
 
         </div>
 
-        <div id="ttab-fb">
+        <div id="tab-fb" class="tab">
 
             <?php require_once( plugin_dir_path( dirname( __FILE__ ) ) . 'partials/seobox-admin-facebook-display.php' ); ?>
 
         </div>
 
-        <div id="ttab-tw">
+        <div id="tab-tw" class="tab">
 
             <?php require_once( plugin_dir_path( dirname( __FILE__ ) ) . 'partials/seobox-admin-twitter-display.php' ); ?>
 
         </div>
 
-        <div id="tab-sh">
+        <div id="tab-sh" class="tab">
 
             <?php require_once( plugin_dir_path( dirname( __FILE__ ) ) . 'partials/seobox-admin-schema-display.php' ); ?>
 

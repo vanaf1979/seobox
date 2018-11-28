@@ -1,7 +1,9 @@
 
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
 
-<div class="seobox-steings">
+<div class="seobox-settings">
+
+    <h2><?php _e( 'Seobox settings', 'seobox' ); ?></h2>
 
     <div class="container left">
 
@@ -12,44 +14,42 @@
             do_settings_sections( 'seobox-settings' );
             ?>
 
-            <h2><?php _e( 'Seobox settings', 'seobox' ); ?></h2>
-
-            <ul class="seobox-settings-tabs">
-                <li>
-                    <a data-tab="tab-g">Google</a>
+            <ul class="seobox-admin-tabs">
+                <li class="active" data-tab="tab-g">
+                    <a>Google</a>
                 </li>
-                <li>
-                    <a data-tab="tab-fb">Facebook</a>
+                <li data-tab="tab-fb">
+                    <a>Facebook</a>
                 </li>
-                <li>
-                    <a data-tab="tab-tw">Twitter</a>
+                <li data-tab="tab-tw">
+                    <a>Twitter</a>
                 </li>
-                <li>
-                    <a data-tab="tab-sh">Schema</a>
+                <li data-tab="tab-sh">
+                    <a>Schema</a>
                 </li>
             </ul>
 
             <div class="sb-settings-tabs-container">
 
-                <div id="tab-g">
+                <div id="tab-g" class="tab active">
 
                     <?php require_once( plugin_dir_path( dirname( __FILE__ ) ) . 'partials/seobox-settings-google-display.php' ); ?>
 
                 </div>
 
-                <div id="ttab-fb">
+                <div id="tab-fb" class="tab">
 
                     <?php require_once( plugin_dir_path( dirname( __FILE__ ) ) . 'partials/seobox-settings-facebook-display.php' ); ?>
 
                 </div>
 
-                <div id="ttab-tw">
+                <div id="tab-tw" class="tab">
 
                     <?php require_once( plugin_dir_path( dirname( __FILE__ ) ) . 'partials/seobox-settings-twitter-display.php' ); ?>
 
                 </div>
 
-                <div id="tab-sh">
+                <div id="tab-sh" class="tab">
 
                     <?php require_once( plugin_dir_path( dirname( __FILE__ ) ) . 'partials/seobox-settings-schema-display.php' ); ?>
 
