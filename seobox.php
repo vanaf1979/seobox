@@ -43,8 +43,16 @@ function deactivate_seobox()
 }
 
 
+function uninstall_seobox()
+{
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-seobox-uninstall.php';
+	Seobox_Uninstall::uninstall();
+}
+
+
 register_activation_hook( __FILE__, 'activate_seobox' );
 register_deactivation_hook( __FILE__, 'deactivate_seobox' );
+register_uninstall_hook( __FILE__, 'uninstall_seobox' );
 
 
 require plugin_dir_path( __FILE__ ) . 'includes/class-seobox.php';
