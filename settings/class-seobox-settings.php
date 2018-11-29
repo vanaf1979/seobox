@@ -41,21 +41,16 @@ class Plugin_Name_Settings
 
 	public function settings_page_content( )
 	{
-		echo '<div class="wrap">';
-		echo '<form action="options.php" method="post">';
+		require_once( plugin_dir_path( dirname( __FILE__ ) ) . 'settings/partials/seobox-settings-display.php' );
+	}
 
-			settings_fields( 'seobox-settings' );
-			do_settings_sections( 'seobox-settings' );
 
-			/**
-			 * The included markup is up to you.
-			 */
-			require_once( plugin_dir_path( dirname( __FILE__ ) ) . 'settings/partials/seobox-settings-display.php' );
-
-			submit_button();
-
-		echo '</form>';
-		echo '</div>';
+	public function seobox_settings_links( $links )
+	{
+		$mylinks = array(
+			'<a href="' . admin_url( 'options-general.php?page=' . $this->plugin_name ) . '">Settings</a>',
+		);
+		return array_merge( $links, $mylinks );
 	}
 
 }

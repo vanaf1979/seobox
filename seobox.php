@@ -10,7 +10,7 @@
  * Plugin Name:       SeoBox
  * Plugin URI:        http://vanaf1979.nl/seobox
  * Description:       Wordpress Seo plugin
- * Version:           0.3.0
+ * Version:           0.4.0
  * Author:            Vanaf1979
  * Author URI:        https://vanaf1979.nl
  * License:           GPL-2.0+
@@ -26,7 +26,7 @@ if ( ! defined( 'WPINC' ) )
 }
 
 
-define( 'PLUGIN_NAME_VERSION', '0.3.0' );
+define( 'PLUGIN_NAME_VERSION', '0.4.0' );
 
 
 function activate_seobox()
@@ -43,8 +43,16 @@ function deactivate_seobox()
 }
 
 
+function uninstall_seobox()
+{
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-seobox-uninstall.php';
+	Seobox_Uninstall::uninstall();
+}
+
+
 register_activation_hook( __FILE__, 'activate_seobox' );
 register_deactivation_hook( __FILE__, 'deactivate_seobox' );
+register_uninstall_hook( __FILE__, 'uninstall_seobox' );
 
 
 require plugin_dir_path( __FILE__ ) . 'includes/class-seobox.php';

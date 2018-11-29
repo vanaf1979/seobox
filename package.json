@@ -1,7 +1,16 @@
 {
   "name": "seobox",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Seobox wordpress seo plugin",
+  "author": "Vanaf1979.nl",
+  "contributors": [
+    {
+      "name": "Stephan Nijman",
+      "email": "vanaf1979@gmail.com",
+      "url": "https://vanaf1979.nl"
+    }
+  ],
+  "license": "GPL-2.0",
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -15,19 +24,13 @@
   "keywords": [
     "Seo"
   ],
-  "author": "Vanaf1979.nl",
-  "license": "GPL-2.0",
   "bugs": {
     "url": "https://github.com/vanaf1979/seobox/issues"
   },
   "homepage": "https://github.com/vanaf1979/seobox#readme",
-  "dependencies": {
-    
-  },
+  "dependencies": {},
   "devDependencies": {
     "cssnext": "^1.8.4",
-    "imagemin-mozjpeg": "^8.0.0",
-    "imagemin-webpack-plugin": "^2.3.0",
     "laravel-mix": "^2.1.14"
   }
 }
