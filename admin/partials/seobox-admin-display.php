@@ -3,7 +3,7 @@
 
 <div class="seobox-metabox">
 
-    <?php echo wp_nonce_field( plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-seobox-admin.php', 'seobox_admin_nonce' ); ?>
+    <?php wp_nonce_field( 'seobox_admin_save_metas', 'seobox_admin_nonce' ); ?>
 
     <ul class="seobox-admin-tabs">
         <li class="active" data-tab="tab-g">

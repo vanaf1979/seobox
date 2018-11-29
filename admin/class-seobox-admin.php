@@ -68,18 +68,25 @@ class Seobox_Admin
 			$post_id = $parent_id;
 		}
 
-		// $file = plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-seobox-admin.php';
-	 	// if ( ! isset( $_POST['seobox_admin_nonce'] ) || ! wp_verify_nonce( $_POST ['seobox_admin_nonce'], $file ) )
-		// {
-		// 	echo "NOPE seobox_admin_nonce";
-		// 	echo $_POST['seobox_admin_nonce'];
-		// 	exit;
-		// 	return $post_id;
-		// }
 
-		if( array_key_exists( '_seobox_g_browser_title' , $_POST ) )
+		// Check the security nonce.
+	 	if ( ! isset( $_POST['seobox_admin_nonce'] ) || ! wp_verify_nonce( $_POST['seobox_admin_nonce'], 'seobox_admin_save_metas' ) ) 
 		{
-			update_post_meta( $post_id , '_seobox_g_browser_title' , sanitize_text_field( $_POST['_seobox_g_browser_title'] ) );
+			return $post_id;
+		}
+
+		$this->save_seobox_meta( $post_id , '_seobox_g_browser_title' );
+		// add other fields.
+	}
+
+
+	public function save_seobox_meta( $post_id , $key )
+	{
+		if( array_key_exists( $key , $_POST ) and trim( $_POST[ $key ] ) > ''  )
+		{	
+			$new_value = $_POST[ $key ];
+			$new_value = apply_filters( 'seobox_before_save_meta', $new_value , $key );
+			update_post_meta( $post_id , $key , sanitize_text_field( $new_value ) );
 		}
 	}
 }
