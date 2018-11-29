@@ -40,12 +40,7 @@ class Seobox_Admin
 		// Add meta box to all post types edit pages
 		foreach ( $screens as $screen )
 		{
-			add_meta_box(
-				'seobox-meta',
-				'SeoBox',
-				[self::class, 'meta_box_content'],
-				$screen
-			);
+			add_meta_box( 'seobox-meta', 'SeoBox', [self::class, 'meta_box_content'], $screen );
 		}
 	}
 
@@ -62,21 +57,21 @@ class Seobox_Admin
 		{
 			return;
 		}
+
+		// Check the security nonce.
+		if ( ! isset( $_POST['seobox_admin_nonce'] ) || ! wp_verify_nonce( $_POST['seobox_admin_nonce'], 'seobox_admin_save_metas' ) ) 
+		{
+			return $post_id;
+		}
 		
 		if ( $parent_id = wp_is_post_revision( $post_id ) )
 		{
 			$post_id = $parent_id;
 		}
 
-
-		// Check the security nonce.
-	 	if ( ! isset( $_POST['seobox_admin_nonce'] ) || ! wp_verify_nonce( $_POST['seobox_admin_nonce'], 'seobox_admin_save_metas' ) ) 
-		{
-			return $post_id;
-		}
-
 		$this->save_seobox_meta( $post_id , '_seobox_g_browser_title' );
 		// add other fields.
+		// $this->save_seobox_meta( $post_id , '_seobox_g_browser_title' );
 	}
 
 
