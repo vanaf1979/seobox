@@ -25,6 +25,9 @@ This section describes how to install the plugin and get it working.
 == Changelog ==
 
 = 0.4.0 =
+- Added tabs to settings and post screens,
+- Added a filter for before save.
+- Added a test field.
 - Added a uninstall class.
 - Added a Settings link to plugin overview page.
 - Fixed a bug in webpack.mix.js

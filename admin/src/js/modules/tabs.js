@@ -11,7 +11,6 @@ var tabs = {
 
             Utils.addEvent( tab , 'click' , ( e ) => {
                 
-                console.log(e);
                 var currentTab = Utils.find('.seobox-admin-tabs li.active');
                 currentTab.classList.remove('active');
 

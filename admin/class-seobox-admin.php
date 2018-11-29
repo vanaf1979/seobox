@@ -27,6 +27,7 @@ class Seobox_Admin
 
 	public function add_seo_metabox()
 	{
+		// TODO: Add a setting to choose post types.
 		// Find custom post types
 		$args = array( 'public' => true, 'exclude_from_search' => false, '_builtin' => false ); 
 		$output = 'names';
