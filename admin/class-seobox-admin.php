@@ -58,20 +58,28 @@ class Seobox_Admin
 
 	public static function save_seobox( $post_id )
 	{
-		// echo '<pre>';
-		// print_r( $_POST );
-		// echo '</pre>';
-
-		if( array_key_exists( 'seobox', $_POST ) )
+		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
 		{
-			$sbValues = serialize( $_POST['seobox'] );
-
-			// update_post_meta(
-			// 	$post_id,
-			// 	'_seobox_data',
-			// 	sbValues
-			// );
+			return;
+		}
+		
+		if ( $parent_id = wp_is_post_revision( $post_id ) )
+		{
+			$post_id = $parent_id;
 		}
 
+		// $file = plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-seobox-admin.php';
+	 	// if ( ! isset( $_POST['seobox_admin_nonce'] ) || ! wp_verify_nonce( $_POST ['seobox_admin_nonce'], $file ) )
+		// {
+		// 	echo "NOPE seobox_admin_nonce";
+		// 	echo $_POST['seobox_admin_nonce'];
+		// 	exit;
+		// 	return $post_id;
+		// }
+
+		if( array_key_exists( '_seobox_g_browser_title' , $_POST ) )
+		{
+			update_post_meta( $post_id , '_seobox_g_browser_title' , sanitize_text_field( $_POST['_seobox_g_browser_title'] ) );
+		}
 	}
 }

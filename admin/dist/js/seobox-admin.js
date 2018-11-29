@@ -60,92 +60,11 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(1);
-__webpack_require__(2);
-module.exports = __webpack_require__(3);
-
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-
-/* Import utilities. */
-var utils = __webpack_require__(12);
-
-var tabs = __webpack_require__(11);
-
-/* Initialize components. */
-utils.domready(function () {
-
-    tabs.init();
-});
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Utils = __webpack_require__(12);
-
-var tabs = {
-
-    init: function init() {
-        var tabs = Utils.findAll('.seobox-admin-tabs li');
-
-        Utils.loop(tabs, function (tab) {
-
-            Utils.addEvent(tab, 'click', function (e) {
-
-                console.log(e);
-                var currentTab = Utils.find('.seobox-admin-tabs li.active');
-                currentTab.classList.remove('active');
-
-                e.target.classList.add('active');
-
-                var currentPanel = Utils.find('.sb-admin-tabs-container .tab.active');
-                currentPanel.classList.remove('active');
-
-                var nextPanelName = '#' + e.target.dataset.tab;
-                var nextPanel = Utils.find(nextPanelName);
-
-                nextPanel.classList.add('active');
-            });
-        });
-    }
-
-};
-
-module.exports = tabs;
-
-/***/ }),
-/* 12 */
 /***/ (function(module, exports) {
 
 
@@ -353,6 +272,81 @@ var utils = {
 };
 
 module.exports = utils;
+
+/***/ }),
+/* 1 */,
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(3);
+__webpack_require__(5);
+module.exports = __webpack_require__(6);
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+
+/* Import utilities. */
+var utils = __webpack_require__(0);
+
+var tabs = __webpack_require__(4);
+
+/* Initialize components. */
+utils.domready(function () {
+
+    tabs.init();
+});
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Utils = __webpack_require__(0);
+
+var tabs = {
+
+    init: function init() {
+        var tabs = Utils.findAll('.seobox-admin-tabs li');
+
+        Utils.loop(tabs, function (tab) {
+
+            Utils.addEvent(tab, 'click', function (e) {
+
+                console.log(e);
+                var currentTab = Utils.find('.seobox-admin-tabs li.active');
+                currentTab.classList.remove('active');
+
+                e.target.classList.add('active');
+
+                var currentPanel = Utils.find('.sb-admin-tabs-container .tab.active');
+                currentPanel.classList.remove('active');
+
+                var nextPanelName = '#' + e.target.dataset.tab;
+                var nextPanel = Utils.find(nextPanelName);
+
+                nextPanel.classList.add('active');
+            });
+        });
+    }
+
+};
+
+module.exports = tabs;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

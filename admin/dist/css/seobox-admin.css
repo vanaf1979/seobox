@@ -16,6 +16,7 @@
   background: #efefef;
   border: solid 1px #dedede;
   border-radius: 2px;
+  cursor: pointer;
 }
 
 .seobox-metabox .seobox-admin-tabs li.active {

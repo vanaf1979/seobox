@@ -60,49 +60,12 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 13:
-/***/ (function(module, exports, __webpack_require__) {
-
-var Utils = __webpack_require__(14);
-
-var tabs = {
-
-    init: function init() {
-        var tabs = Utils.findAll('.seobox-admin-tabs li');
-
-        Utils.loop(tabs, function (tab) {
-
-            Utils.addEvent(tab, 'click', function (e) {
-
-                console.log(e);
-                var currentTab = Utils.find('.seobox-admin-tabs li.active');
-                currentTab.classList.remove('active');
-
-                e.target.classList.add('active');
-
-                var currentPanel = Utils.find('.sb-settings-tabs-container .tab.active');
-                currentPanel.classList.remove('active');
-
-                var nextPanelName = '#' + e.target.dataset.tab;
-                var nextPanel = Utils.find(nextPanelName);
-
-                nextPanel.classList.add('active');
-            });
-        });
-    }
-
-};
-
-module.exports = tabs;
-
-/***/ }),
-
-/***/ 14:
+/******/ ([
+/* 0 */,
+/* 1 */
 /***/ (function(module, exports) {
 
 
@@ -312,24 +275,27 @@ var utils = {
 module.exports = utils;
 
 /***/ }),
-
-/***/ 4:
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(5);
+module.exports = __webpack_require__(8);
 
 
 /***/ }),
-
-/***/ 5:
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 
 /* Import utilities. */
-var utils = __webpack_require__(14);
+var utils = __webpack_require__(1);
 
-var tabs = __webpack_require__(13);
+var tabs = __webpack_require__(9);
 
 /* Initialize components. */
 utils.domready(function () {
@@ -337,6 +303,41 @@ utils.domready(function () {
     tabs.init();
 });
 
-/***/ })
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/******/ });
+var Utils = __webpack_require__(1);
+
+var tabs = {
+
+    init: function init() {
+        var tabs = Utils.findAll('.seobox-admin-tabs li');
+
+        Utils.loop(tabs, function (tab) {
+
+            Utils.addEvent(tab, 'click', function (e) {
+
+                console.log(e);
+                var currentTab = Utils.find('.seobox-admin-tabs li.active');
+                currentTab.classList.remove('active');
+
+                e.target.classList.add('active');
+
+                var currentPanel = Utils.find('.sb-settings-tabs-container .tab.active');
+                currentPanel.classList.remove('active');
+
+                var nextPanelName = '#' + e.target.dataset.tab;
+                var nextPanel = Utils.find(nextPanelName);
+
+                nextPanel.classList.add('active');
+            });
+        });
+    }
+
+};
+
+module.exports = tabs;
+
+/***/ })
+/******/ ]);
