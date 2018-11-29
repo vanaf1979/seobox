@@ -27,6 +27,7 @@ class Seobox_Admin
 
 	public function add_seo_metabox()
 	{
+		// TODO: Add a setting to choose post types.
 		// Find custom post types
 		$args = array( 'public' => true, 'exclude_from_search' => false, '_builtin' => false ); 
 		$output = 'names';
@@ -40,12 +41,7 @@ class Seobox_Admin
 		// Add meta box to all post types edit pages
 		foreach ( $screens as $screen )
 		{
-			add_meta_box(
-				'seobox-meta',
-				'SeoBox',
-				[self::class, 'meta_box_content'],
-				$screen
-			);
+			add_meta_box( 'seobox-meta', 'SeoBox', [self::class, 'meta_box_content'], $screen );
 		}
 	}
 
@@ -56,15 +52,37 @@ class Seobox_Admin
 	}
 
 
-	public static function save_va_seo( $post_id )
+	public static function save_seobox( $post_id )
 	{
-		if ( array_key_exists( 'va_seo_test', $_POST ) )
+		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
 		{
-			// update_post_meta(
-			// 	$post_id,
-			// 	'_va_seo_test',
-			// 	$_POST['va_seo_test']
-			// );
+			return;
+		}
+
+		// Check the security nonce.
+		if ( ! isset( $_POST['seobox_admin_nonce'] ) || ! wp_verify_nonce( $_POST['seobox_admin_nonce'], 'seobox_admin_save_metas' ) ) 
+		{
+			return $post_id;
+		}
+		
+		if ( $parent_id = wp_is_post_revision( $post_id ) )
+		{
+			$post_id = $parent_id;
+		}
+
+		$this->save_seobox_meta( $post_id , '_seobox_g_browser_title' );
+		// add other fields.
+		// $this->save_seobox_meta( $post_id , '_seobox_g_browser_title' );
+	}
+
+
+	public function save_seobox_meta( $post_id , $key )
+	{
+		if( array_key_exists( $key , $_POST ) and trim( $_POST[ $key ] ) > ''  )
+		{	
+			$new_value = $_POST[ $key ];
+			$new_value = apply_filters( 'seobox_before_save_meta', $new_value , $key );
+			update_post_meta( $post_id , $key , sanitize_text_field( $new_value ) );
 		}
 	}
 }
