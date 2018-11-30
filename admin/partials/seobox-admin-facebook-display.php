@@ -18,14 +18,14 @@
         <option value="profile" <?php selected( $current_value, 'profile' ); ?>>Profile</option>
         <option value="book" <?php selected( $current_value, 'book' ); ?>>Book</option>
         <option value="article" <?php selected( $current_value, 'article' ); ?>>Article</option>
-        <option value="music.song" <?php selected( $current_value, 'music.song' ); ?>>Music.song</option>
-        <option value="music.album" <?php selected( $current_value, 'music.album' ); ?>>Music.album</option>
-        <option value="music.playlist" <?php selected( $current_value, 'music.playlist' ); ?>>Music.playlist</option>
-        <option value="music.radio_station" <?php selected( $current_value, 'music.radio_station' ); ?>>Music.radio_station</option>
-        <option value="video.movie" <?php selected( $current_value, 'video.movie' ); ?>>Video.movie</option>
-        <option value="video.episode" <?php selected( $current_value, 'video.episode' ); ?>>Video.episode</option>
-        <option value="video.tv_show" <?php selected( $current_value, 'video.tv_show' ); ?>>Video.tv_show</option>
-        <option value="video.other" <?php selected( $current_value, 'video.other' ); ?>>Video.other</option>
+        <option value="music.song" <?php selected( $current_value, 'music.song' ); ?>>Music song</option>
+        <option value="music.album" <?php selected( $current_value, 'music.album' ); ?>>Music album</option>
+        <option value="music.playlist" <?php selected( $current_value, 'music.playlist' ); ?>>Music playlist</option>
+        <option value="music.radio_station" <?php selected( $current_value, 'music.radio_station' ); ?>>Music radio station</option>
+        <option value="video.movie" <?php selected( $current_value, 'video.movie' ); ?>>Video movie</option>
+        <option value="video.episode" <?php selected( $current_value, 'video.episode' ); ?>>Video episode</option>
+        <option value="video.tv_show" <?php selected( $current_value, 'video.tv_show' ); ?>>Video tv show</option>
+        <option value="video.other" <?php selected( $current_value, 'video.other' ); ?>>Video other</option>
     </select>
 
 </div>

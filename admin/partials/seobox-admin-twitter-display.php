@@ -1,7 +1,7 @@
 
 <div class="form-wrapper">
 
-    <label class="main"><?php _e( 'Card type', 'seobox' ); ?></label>
+    <label class="main"><?php _e( 'Twitter card type', 'seobox' ); ?></label>
 
     <?php
     $current_value = get_post_meta( get_the_ID(), '_seobox_tw_card_type', true ); 
@@ -14,7 +14,7 @@
 
     <select name="_seobox_tw_card_type">
         <option value="summary" <?php selected( $current_value, 'summary' ); ?>>Summary</option>
-        <option value="summary_large_image" <?php selected( $current_value, 'summary_large_image' ); ?>>Summary_large_image</option>
+        <option value="summary_large_image" <?php selected( $current_value, 'summary_large_image' ); ?>>Summary large image</option>
         <option value="app" <?php selected( $current_value, 'app' ); ?>>App</option>
         <option value="player" <?php selected( $current_value, 'player' ); ?>>Player</option>
     </select>
