@@ -24,6 +24,14 @@ This section describes how to install the plugin and get it working.
 
 == Changelog ==
 
+= 0.5.0 =
+- Added scripts for media upload.
+- Added input fields for Schema.
+- Added input fields for Twitter.
+- Added input fields for Facebook.
+- Added input fields for Google.
+- Altered the website links on plugin page.
+
 = 0.4.0 =
 - Added tabs to settings and post screens,
 - Added a filter for before save.
