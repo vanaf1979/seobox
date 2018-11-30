@@ -73,6 +73,7 @@ class Seobox_Admin
 		$this->save_seobox_meta( $post_id , '_seobox_g_browser_title' );
 		$this->save_seobox_meta( $post_id , '_seobox_g_keywords' );
 		$this->save_seobox_meta( $post_id , '_seobox_g_description' );
+		$this->save_seobox_meta( $post_id , '_seobox_g_index_follow' );
 	}
 
 

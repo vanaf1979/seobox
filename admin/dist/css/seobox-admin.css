@@ -98,16 +98,26 @@
 }
 
 .seobox-metabox .form-wrapper label {
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 13px;
+  font-weight: normal;
   display: inline-block;
   width: auto;
-  color: #606c76;
+  color: #444444;
+  line-height: 21px;
   margin: 0px 0px 4px 0px;
   padding: 0px 0px 5px 0px;
 }
 
+.seobox-metabox .form-wrapper label.main {
+  font-size: 14px;
+  font-weight: bold;
+}
+
 .seobox-metabox .form-wrapper label:after {
+  content: "";
+}
+
+.seobox-metabox .form-wrapper label.main:after {
   content: ":";
 }
 
@@ -158,4 +168,20 @@
 
 .seobox-metabox .form-wrapper textarea:focus, .seobox-metabox .form-wrapper input:focus {
   border: 1px solid #5b9dd9;
+}
+
+.seobox-metabox .form-wrapper ul {
+  display: block;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  list-style: none;
+}
+
+.seobox-metabox .form-wrapper ul li {
+  display: inline-block;
+  margin: 0px 10px 0px 0px;
+}
+
+.seobox-metabox .form-wrapper ul li input {
+  margin: -1px 0px 0px 0px;
 }
