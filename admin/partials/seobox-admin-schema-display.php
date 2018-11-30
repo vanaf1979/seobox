@@ -54,4 +54,17 @@
 
     <label class="main"><?php _e( 'Schema image', 'seobox' ); ?></label>
 
+    <!-- 
+    https://wordpress.stackexchange.com/questions/112592/add-media-button-in-custom-plugin
+    https://mycyberuniverse.com/integration-wordpress-media-uploader-plugin-options-page.html
+    Good: https://rudrastyh.com/wordpress/customizable-media-uploader.html
+    -->
+
+    <input type="hidden" value="" id="_seobox_s_image" name="_seobox_s_image">
+    <button class="image-upload-button button button-large" data-field="_seobox_s_image" data-preview="image-preview-schema"><?php esc_attr_e( 'Select image', 'seobox' ); ?></button>
+
+    <div class="image-preview-schema">
+        <img src="" alt="" />
+    </div>
+
 </div>

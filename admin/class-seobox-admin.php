@@ -22,6 +22,11 @@ class Seobox_Admin
 	public function enqueue_scripts()
 	{
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'dist/js/seobox-admin.js', array(), $this->version, false );
+	
+		if ( ! did_action( 'wp_enqueue_media' ) )
+		{
+			wp_enqueue_media();
+		}
 	}
 
 

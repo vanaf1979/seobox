@@ -279,8 +279,8 @@ module.exports = utils;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(3);
-__webpack_require__(5);
-module.exports = __webpack_require__(6);
+__webpack_require__(6);
+module.exports = __webpack_require__(7);
 
 
 /***/ }),
@@ -293,11 +293,13 @@ module.exports = __webpack_require__(6);
 var utils = __webpack_require__(0);
 
 var tabs = __webpack_require__(4);
+var mediaUpload = __webpack_require__(5);
 
 /* Initialize components. */
 utils.domready(function () {
 
     tabs.init();
+    mediaUpload.init();
 });
 
 /***/ }),
@@ -337,12 +339,59 @@ module.exports = tabs;
 
 /***/ }),
 /* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Utils = __webpack_require__(0);
+
+var mediaUpload = {
+
+    init: function init() {
+        var uploadButtons = Utils.findAll('.image-upload-button');
+
+        Utils.loop(uploadButtons, function (uploadButton) {
+
+            Utils.addEvent(uploadButton, 'click', function (e) {
+
+                e.preventDefault();
+
+                custom_uploader = wp.media({
+                    title: 'Insert image',
+                    library: {
+                        type: 'image'
+                    },
+                    button: {
+                        text: 'Use this image'
+                    },
+                    multiple: false
+
+                }).on('select', function () {
+
+                    // Get attachment data
+                    var attachment = custom_uploader.state().get('selection').first().toJSON();
+
+                    // Add image id to hidden field
+                    var targetField = Utils.find('#' + uploadButton.dataset.field);
+                    targetField.setAttribute('value', attachment.id);
+
+                    // Add image url to prieview source
+                    var previewTarget = Utils.find('.' + uploadButton.dataset.preview + ' img');
+                    previewTarget.setAttribute('src', attachment.sizes.thumbnail.url);
+                }).open();
+            });
+        });
+    }
+};
+
+module.exports = mediaUpload;
+
+/***/ }),
+/* 6 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

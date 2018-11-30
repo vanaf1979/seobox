@@ -53,4 +53,16 @@
 
     <label class="main"><?php _e( 'Facebook image', 'seobox' ); ?></label>
 
+    <!-- 
+    https://wordpress.stackexchange.com/questions/112592/add-media-button-in-custom-plugin
+    https://mycyberuniverse.com/integration-wordpress-media-uploader-plugin-options-page.html
+    Good: https://rudrastyh.com/wordpress/customizable-media-uploader.html
+    -->
+
+    <input type="hidden" value="" id="_seobox_fb_open_graph_image" name="_seobox_fb_open_graph_image">
+    <button class="image-upload-button button button-large" data-field="_seobox_fb_open_graph_image" data-preview="image-preview-facebook"><?php esc_attr_e( 'Select image', 'seobox' ); ?></button>
+
+    <div class="image-preview-facebook">
+        <img src="" alt="" />
+    </div>
 </div>

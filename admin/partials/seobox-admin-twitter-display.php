@@ -53,5 +53,11 @@
 
     <label class="main"><?php _e( 'Twitter image', 'seobox' ); ?></label>
 
+    <input type="hidden" value="" id="_seobox_tw_image" name="_seobox_tw_image">
+    <button class="image-upload-button button button-large" data-field="_seobox_tw_image" data-preview="image-preview-twitter"><?php esc_attr_e( 'Select image', 'seobox' ); ?></button>
+
+    <div class="image-preview-twitter">
+        <img src="" alt="" />
+    </div>
 </div>
 
