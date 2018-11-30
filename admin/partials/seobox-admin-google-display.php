@@ -36,6 +36,7 @@
         $current_value = get_post_meta( get_the_ID(), '_seobox_g_index_follow', true ); 
         if( ! $current_value )
         {
+            // Needs to be default settings value.
             $current_value = 'index / follow';
         }
         ?>
