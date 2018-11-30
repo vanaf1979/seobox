@@ -78,6 +78,15 @@ class Seobox_Admin
 		$this->save_seobox_meta( $post_id , '_seobox_fb_open_graph_type' );
 		$this->save_seobox_meta( $post_id , '_seobox_fb_open_graph_title' );
 		$this->save_seobox_meta( $post_id , '_seobox_fb_open_graph_description' );
+
+		$this->save_seobox_meta( $post_id , '_seobox_tw_card_type' );
+		$this->save_seobox_meta( $post_id , '_seobox_tw_title' );
+		$this->save_seobox_meta( $post_id , '_seobox_tw_description' );
+		$this->save_seobox_meta( $post_id , '_seobox_tw_author_handle' );
+
+		$this->save_seobox_meta( $post_id , '_seobox_s_type' );
+		$this->save_seobox_meta( $post_id , '_seobox_s_title' );
+		$this->save_seobox_meta( $post_id , '_seobox_s_description' );
 	}
 
 

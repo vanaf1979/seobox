@@ -47,3 +47,10 @@
     <textarea name="_seobox_fb_open_graph_description" placeholder="<?php esc_attr_e( 'Open graph description', 'seobox' ); ?>"><?php echo esc_attr( get_post_meta( get_the_ID(), '_seobox_fb_open_graph_description', true ) ); ?></textarea>
 
 </div>
+
+
+<div class="form-wrapper">
+
+    <label class="main"><?php _e( 'Facebook image', 'seobox' ); ?></label>
+
+</div>
