@@ -1,1 +1,343 @@
-!function(t){var e={};function n(o){if(e[o])return e[o].exports;var i=e[o]={i:o,l:!1,exports:{}};return t[o].call(i.exports,i,i.exports,n),i.l=!0,i.exports}n.m=t,n.c=e,n.d=function(t,e,o){n.o(t,e)||Object.defineProperty(t,e,{configurable:!1,enumerable:!0,get:o})},n.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(e,"a",e),e},n.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},n.p="/",n(n.s=7)}([,function(t,e){var n={find:function(t,e){return(e||document).querySelector(t)},findAll:function(t,e){return(e||document).querySelectorAll(t)},parseBool:function(t){return"true"==t||1==t||1==t},inArray:function(t,e){for(var n=0;n<e.length;n++)if(e[n]==t)return n;return-1},loop:function(t,e){for(var n=0;n<t.length;n++)e(t[n])},getCookie:function(t){var e=document.cookie.match("(^|;) ?"+t+"=([^;]*)(;|$)");return e?e[2]:null},setCookie:function(t,e,n){var o=new Date;o.setTime(o.getTime()+864e5*n),document.cookie=t+"="+e+";path=/;expires="+o.toGMTString()},deleteCookie:function(t){setCookie(t,"",-1)},addEvent:function(t,e,n){t.attachEvent?t.attachEvent("on"+e,n):t.addEventListener(e,n)},removeEvent:function(t,e,n){t.detachEvent?t.detachEvent("on"+e,n):t.removeEventListener(e,n)},triggerEvent:function(t,e){var n;"createEvent"in document?((n=document.createEvent("HTMLEvents")).initEvent(e,!1,!0),t.dispatchEvent(n)):((n=document.createEventObject()).eventType=e,t.fireEvent("on"+n.eventType,n))},domready:function(t){"loading"!=document.readyState?t():document.addEventListener?this.addEvent(document,"DOMContentLoaded",t):this.addEvent(document,"onreadystatechange",function(){"loading"!=document.readyState&&t()})},trim:function(t){return"string"==typeof t?t.replace(/^\s+|\s+$/g,""):t},addStyle:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:null,e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null,n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:null,o=document.createElement("link");o.type="text/css",o.rel="stylesheet",o.href=t,e||(e="head"),null!=n&&"function"==typeof n&&(o.onload=function(){n()}),document[e].appendChild(o)},addScript:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:null,e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null,n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=t,parent="body",null!=e&&"function"==typeof e&&(n.onload=function(){e()}),document[parent].appendChild(n)}};t.exports=n},,,,,,function(t,e,n){t.exports=n(8)},function(t,e,n){var o=n(1),i=n(9);o.domready(function(){i.init()})},function(t,e,n){var o=n(1),i={init:function(){var t=o.findAll(".seobox-admin-tabs li");o.loop(t,function(t){o.addEvent(t,"click",function(t){console.log(t),o.find(".seobox-admin-tabs li.active").classList.remove("active"),t.target.classList.add("active"),o.find(".sb-settings-tabs-container .tab.active").classList.remove("active");var e="#"+t.target.dataset.tab;o.find(e).classList.add("active")})})}};t.exports=i}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */,
+/* 1 */
+/***/ (function(module, exports) {
+
+
+var utils = {
+
+  /*
+  --  ### MISC
+  */
+
+  /*
+  --  Find a DOM ellement.
+  */
+  find: function find(selector, context) {
+    return (context || document).querySelector(selector);
+  },
+
+  /*
+  --  Find multiple DOM ellement.
+  */
+  findAll: function findAll(selector, context) {
+    return (context || document).querySelectorAll(selector);
+  },
+
+  /*
+  --  Convert a value to a bool.
+  */
+  parseBool: function parseBool(value) {
+    return value == "true" || value == true || value == 1 ? true : false;
+  },
+
+  /*
+  --  ### ARRAYS
+  */
+
+  /*
+  --  Is a value in an array?
+  */
+  inArray: function inArray(needle, haystack) {
+    for (var i = 0; i < haystack.length; i++) {
+      if (haystack[i] == needle) return i;
+    }
+    return -1;
+  },
+
+  /*
+  --  Loop throu an array/;ist
+  */
+  loop: function loop(list, callback) {
+    for (var i = 0; i < list.length; i++) {
+      callback(list[i]);
+    }
+  },
+
+  /*
+  --  ### COOKIES
+  */
+
+  /*
+  --  Set cookie value.
+  */
+  getCookie: function getCookie(name) {
+    var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+    return v ? v[2] : null;
+  },
+
+  /*
+  --  Get cookie value.
+  */
+  setCookie: function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+    document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
+  },
+
+  /*
+  --  Delete cookie value.
+  */
+  deleteCookie: function deleteCookie(name) {
+    setCookie(name, '', -1);
+  },
+
+  /*
+  --  ### EVENTS
+  */
+
+  /*
+  --  Add event listner.
+  */
+  addEvent: function addEvent(ellement, type, callback) {
+    if (ellement.attachEvent) {
+      ellement.attachEvent('on' + type, callback);
+    } else {
+      ellement.addEventListener(type, callback);
+    }
+  },
+
+  /*
+  --  Remove event listner.
+  */
+  removeEvent: function removeEvent(ellement, type, callback) {
+    if (ellement.detachEvent) {
+      ellement.detachEvent('on' + type, callback);
+    } else {
+      ellement.removeEventListener(type, callback);
+    }
+  },
+
+  /*
+  --  Trigger events.
+  */
+  triggerEvent: function triggerEvent(el, type) {
+    if ('createEvent' in document) {
+      // modern browsers, IE9+
+      var e = document.createEvent('HTMLEvents');
+      e.initEvent(type, false, true);
+      el.dispatchEvent(e);
+    } else {
+      // IE 8
+      var e = document.createEventObject();
+      e.eventType = type;
+      el.fireEvent('on' + e.eventType, e);
+    }
+  },
+
+  /*
+  --  Fire on document ready.
+  */
+  domready: function domready(fn) {
+    if (document.readyState != 'loading') {
+      fn();
+    } else if (document.addEventListener) {
+      this.addEvent(document, 'DOMContentLoaded', fn);
+    } else {
+      this.addEvent(document, 'onreadystatechange', function () {
+        if (document.readyState != 'loading') {
+          fn();
+        }
+      });
+    }
+  },
+
+  /*
+  --  trim leading and trailing whitespace
+  */
+  trim: function trim(string) {
+    if (typeof string === "string") {
+      return string.replace(/^\s+|\s+$/g, '');
+    } else {
+      return string;
+    }
+  },
+
+  /*
+  --  ### Ajax
+  */
+
+  /*
+  --  Add a stylesheet to the dom.
+  */
+  addStyle: function addStyle() {
+    var style = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+    var parent = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+    var callback = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+
+    var element = document.createElement('link');
+    element.type = 'text/css';
+    element.rel = 'stylesheet';
+    element.href = style;
+
+    if (!parent) {
+      parent = 'head';
+    }
+
+    if (callback != null && typeof callback === "function") {
+      element.onload = function () {
+        callback();
+      };
+    }
+
+    document[parent].appendChild(element);
+  },
+
+  /*
+  --  Add a script file to the dom.
+  */
+  addScript: function addScript() {
+    var script = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+    var callback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+    var element = document.createElement('script');
+    element.type = 'text/javascript';
+    element.async = true;
+    element.src = script;
+    parent = 'body';
+
+    if (callback != null && typeof callback === "function") {
+      element.onload = function () {
+        callback();
+      };
+    }
+
+    document[parent].appendChild(element);
+  }
+
+};
+
+module.exports = utils;
+
+/***/ }),
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(8);
+
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+
+/* Import utilities. */
+var utils = __webpack_require__(1);
+
+var tabs = __webpack_require__(9);
+
+/* Initialize components. */
+utils.domready(function () {
+
+    tabs.init();
+});
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Utils = __webpack_require__(1);
+
+var tabs = {
+
+    init: function init() {
+        var tabs = Utils.findAll('.seobox-admin-tabs li');
+
+        Utils.loop(tabs, function (tab) {
+
+            Utils.addEvent(tab, 'click', function (e) {
+
+                console.log(e);
+                var currentTab = Utils.find('.seobox-admin-tabs li.active');
+                currentTab.classList.remove('active');
+
+                e.target.classList.add('active');
+
+                var currentPanel = Utils.find('.sb-settings-tabs-container .tab.active');
+                currentPanel.classList.remove('active');
+
+                var nextPanelName = '#' + e.target.dataset.tab;
+                var nextPanel = Utils.find(nextPanelName);
+
+                nextPanel.classList.add('active');
+            });
+        });
+    }
+
+};
+
+module.exports = tabs;
+
+/***/ })
+/******/ ]);
