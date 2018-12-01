@@ -8,7 +8,7 @@
  *
  * @wordpress-plugin
  * Plugin Name:       SeoBox
- * Plugin URI:        http://vanaf1979.nl/seobox
+ * Plugin URI:        https://seobox.vanaf1979.nl
  * Description:       A Simpler Wordpress Seo plugin.
  * Version:           0.5.0
  * Author:            Vanaf1979
