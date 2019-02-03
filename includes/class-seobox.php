@@ -96,6 +96,9 @@ class Seobox
 
 			$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 			$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+
+			$this->loader->add_action( 'wpseo_title' , $plugin_public , 'add_seabox_title_to_head' , 15  );
+			$this->loader->add_action( 'wp_head' , $plugin_public , 'add_seabox_tags_to_head' , 1 , 1 );
 		}
 	}
 

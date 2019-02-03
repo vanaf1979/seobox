@@ -26,4 +26,27 @@ class Seobox_Public
 		// wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/seobox-public.js', array( 'jquery' ), $this->version, false );
 	}
 
+
+	public function add_seabox_title_to_head( )
+	{
+		return 'Steph\'s geweldige title';
+	}
+
+
+	public function add_seabox_tags_to_head( )
+	{
+		echo $this->make_tag( 'meta', [ 'name' => 'sb-version' , 'content' => $this->version ] );
+	}
+
+
+	private static function make_tag( $tag , $attrs )
+	{
+		$return = "<{$tag} " ;
+		foreach ( $attrs as $key => $value )
+		{
+			$return .= "{$key}=\"{$value}\" ";
+		}
+		return $return .= '/>' . "\n";
+	}
+
 }
