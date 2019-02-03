@@ -26,6 +26,13 @@
 
 </div>
 
+<div class="form-wrapper">
+
+    <label class="main"><?php _e( 'Canonical', 'seobox' ); ?></label>
+
+    <input type="text" name="_seobox_g_canonical" value="<?php echo esc_attr( get_post_meta( get_the_ID(), '_seobox_g_canonical', true ) ); ?>" placeholder="<?php esc_attr_e( 'Canonical', 'seobox' ); ?>" class="i18n-multilingual-curly"/>
+
+</div>
 
 <div class="form-wrapper">
 
