@@ -1,0 +1,164 @@
+
+
+.seobox-metabox .form-wrapper {
+    display: block;
+    width: auto;
+    clear: both;
+    margin: 20px 5px 0px 5px;
+    padding: 0px 0px 15px 0px;
+    border-bottom: solid 1px #eeeeee;
+}
+    .seobox-metabox .form-wrapper:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .seobox-metabox .tab .form-wrapper:last-child {
+        border-bottom: none;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .seobox-metabox .form-wrapper ::-webkit-input-placeholder {
+        color: inherit;
+        opacity: 0.5;
+    }
+
+    .seobox-metabox .form-wrapper :-moz-placeholder {
+        color: inherit;
+        opacity: 0.5;
+    }
+
+    .seobox-metabox .form-wrapper ::-moz-placeholder {
+        color: inherit;
+        opacity: 0.5;
+    }
+
+    .seobox-metabox .form-wrapper :-ms-input-placeholder {
+        color: inherit;
+        opacity: 0.5;
+    }
+
+    .seobox-metabox .form-wrapper ::-ms-input-placeholder {
+        color: inherit;
+        opacity: 0.5;
+    }
+
+    .seobox-metabox .form-wrapper ::-moz-focus-inner {
+        border: 0;
+    }
+
+    .seobox-metabox .form-wrapper :disabled {
+        background: #ffffff;
+        opacity: 0.5;
+    }
+
+    .seobox-metabox .form-wrapper label {
+        font-size: 13px;
+        font-weight: normal;
+        display: inline-block;
+        width: auto;
+        color: #444444;
+        line-height: 21px;
+        margin: 0px 0px 4px 0px;
+        padding: 0px 0px 5px 0px;
+    }
+
+    .seobox-metabox .form-wrapper label.main {
+        font-size: 14px;
+        font-weight: bold;
+    }
+        .seobox-metabox .form-wrapper label:after {
+            content: "";
+        }
+            .seobox-metabox .form-wrapper label.main:after {
+                content: ":";
+            }
+
+    .seobox-metabox .form-wrapper input {
+        display: inline-block;
+        background: none;
+        box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
+        margin: 0px 0px 0px 0px;
+        box-sizing: border-box;
+        resize: none;
+    }
+
+    .seobox-metabox .form-wrapper input[type="email"],
+    .seobox-metabox .form-wrapper input[type="url"],
+    .seobox-metabox .form-wrapper input[type="time"],
+    .seobox-metabox .form-wrapper input[type="date"],
+    .seobox-metabox .form-wrapper input[type="datetime"],
+    .seobox-metabox .form-wrapper input[type="number"],
+    .seobox-metabox .form-wrapper input[type="month"],
+    .seobox-metabox .form-wrapper input[type="search"],
+    .seobox-metabox .form-wrapper input[type="tel"],
+    .seobox-metabox .form-wrapper input[type="text"],
+    .seobox-metabox .form-wrapper input[type="password"] {
+        width: 100%;
+        height: 32px;
+        font-size: 14px;
+        color: #32373c;
+        padding: 1px 5px 2px 5px !important;
+        outline: none;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+    }
+
+    .seobox-metabox .form-wrapper textarea {
+        width: 100%;
+        height: 120px;
+        padding: 3px 5px 5px 5px;
+        font-size: 14px;
+        color: #32373c;
+        resize: none;
+        background: none;
+        box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
+        padding: 3px 5px 3px 5px !important;
+        margin: 0px 0px 0px 0px;
+        outline: none;
+        box-sizing: border-box;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px; 
+    }
+
+    .seobox-metabox .form-wrapper textarea:focus, .seobox-metabox .form-wrapper input:focus {
+        border: 1px solid #5b9dd9;
+    }
+
+    .seobox-metabox .form-wrapper ul {
+        display: block;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        list-style: none;
+    }
+        .seobox-metabox .form-wrapper ul li {
+            display: inline-block;
+            margin: 0px 10px 0px 0px;
+        }
+            .seobox-metabox .form-wrapper ul li input {
+                margin: -1px 0px 0px 0px;
+            }
+
+    .seobox-metabox .form-wrapper select {
+        display: block;
+        width: 100%;
+        height: 32px;
+        padding: 0px 20px 0px 5px;
+        box-sizing: border-box;
+        outline: none;
+        color: #32373c;
+        box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
+        background: #ffffff;
+        border-radius: 3px;
+        appearance: none;
+        background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 99% 50%;
+    }
+
+    .seobox-metabox .form-wrapper .image-upload-button {
+        display: block;
+        clear: both;
+        margin: 10px 0px 0px 0px;
+    }

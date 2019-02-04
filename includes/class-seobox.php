@@ -17,7 +17,7 @@ class Seobox
 		}
 		else
 		{
-			$this->version = '0.4.0';
+			$this->version = '0.5.0';
 		}
 
 		$this->plugin_name = 'SeoBox';
@@ -82,6 +82,8 @@ class Seobox
 			$this->loader->add_action( 'admin_init', $plugin_settings, 'register_settings' );
 
 			$this->loader->add_filter( 'plugin_action_links', $plugin_settings, 'seobox_settings_links', $priority = 10 );
+			$this->loader->add_filter( 'plugin_row_meta', $plugin_settings, 'remove_plugin_meta', 10, 2 );
+
 		}
 	}
 
@@ -94,6 +96,9 @@ class Seobox
 
 			$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 			$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+
+			$this->loader->add_action( 'wpseo_title' , $plugin_public , 'add_seabox_title_to_head' , 15  );
+			$this->loader->add_action( 'wp_head' , $plugin_public , 'add_seabox_tags_to_head' , 1 , 1 );
 		}
 	}
 
