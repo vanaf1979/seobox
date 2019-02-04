@@ -22,6 +22,11 @@ class Seobox_Admin
 	public function enqueue_scripts()
 	{
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'dist/js/seobox-admin.js', array(), $this->version, false );
+	
+		if ( ! did_action( 'wp_enqueue_media' ) )
+		{
+			wp_enqueue_media();
+		}
 	}
 
 
@@ -71,8 +76,23 @@ class Seobox_Admin
 		}
 
 		$this->save_seobox_meta( $post_id , '_seobox_g_browser_title' );
-		// add other fields.
-		// $this->save_seobox_meta( $post_id , '_seobox_g_browser_title' );
+		$this->save_seobox_meta( $post_id , '_seobox_g_keywords' );
+		$this->save_seobox_meta( $post_id , '_seobox_g_description' );
+		$this->save_seobox_meta( $post_id , '_seobox_g_canonical' );
+		$this->save_seobox_meta( $post_id , '_seobox_g_index_follow' );
+
+		$this->save_seobox_meta( $post_id , '_seobox_fb_open_graph_type' );
+		$this->save_seobox_meta( $post_id , '_seobox_fb_open_graph_title' );
+		$this->save_seobox_meta( $post_id , '_seobox_fb_open_graph_description' );
+
+		$this->save_seobox_meta( $post_id , '_seobox_tw_card_type' );
+		$this->save_seobox_meta( $post_id , '_seobox_tw_title' );
+		$this->save_seobox_meta( $post_id , '_seobox_tw_description' );
+		$this->save_seobox_meta( $post_id , '_seobox_tw_author_handle' );
+
+		$this->save_seobox_meta( $post_id , '_seobox_s_type' );
+		$this->save_seobox_meta( $post_id , '_seobox_s_title' );
+		$this->save_seobox_meta( $post_id , '_seobox_s_description' );
 	}
 
 

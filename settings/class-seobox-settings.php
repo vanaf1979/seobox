@@ -49,8 +49,17 @@ class Plugin_Name_Settings
 	{
 		$mylinks = array(
 			'<a href="' . admin_url( 'options-general.php?page=' . $this->plugin_name ) . '">Settings</a>',
+			'<a href="https://seobox.vanaf1979.nl" target="_blank">Website</a>',
 		);
 		return array_merge( $links, $mylinks );
 	}
 
+
+	public function remove_plugin_meta( $plugin_meta , $plugin_file )
+	{
+		$plugin_meta[1] = str_replace( 'href="https://vanaf1979.nl"', 'href="https://vanaf1979.nl" target="_blank"' , $plugin_meta[1] );
+		unset( $plugin_meta[2] );
+		$plugin_meta[] = '<a href="https://twitter.com/wpseobox" target="_blank">Twitter</a>';
+		return $plugin_meta;
+	}
 }

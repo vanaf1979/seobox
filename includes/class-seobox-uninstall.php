@@ -14,7 +14,9 @@ class Seobox_Uninstall
     private function remove_metas()
     {
         // Remove metas from database
-        // delete_post_meta_by_key( 'related_posts' );
+        delete_post_meta_by_key( '_seobox_g_browser_title' );
+        delete_post_meta_by_key( '_seobox_g_keywords' );
+        delete_post_meta_by_key( '_seobox_g_description' );
     }
 
 
