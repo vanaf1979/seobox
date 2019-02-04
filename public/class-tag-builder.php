@@ -47,6 +47,7 @@ class Seobox_TagBulder
     private function get_meta_tag( $name , $seoboxname )
 	{
         $content = $this->wpmetas[ $seoboxname ][0];
+        //do_action( 'seobox_build_tags',  $arg = '' )
         return $this->make_meta_tag( $name , $content );
 	}
 
