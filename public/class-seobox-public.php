@@ -12,6 +12,13 @@ class Seobox_Public
 	{
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
+
+		$this->load_dependencies();
+	}
+
+	private function load_dependencies()
+	{
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . '/public/class-tag-builder.php';
 	}
 
 
@@ -35,18 +42,9 @@ class Seobox_Public
 
 	public function add_seabox_tags_to_head( )
 	{
-		echo $this->make_tag( 'meta', [ 'name' => 'sb-version' , 'content' => $this->version ] );
-	}
-
-
-	private static function make_tag( $tag , $attrs )
-	{
-		$return = "<{$tag} " ;
-		foreach ( $attrs as $key => $value )
-		{
-			$return .= "{$key}=\"{$value}\" ";
-		}
-		return $return .= '/>' . "\n";
+		global $post;
+		$tag_buider = new Seobox_TagBulder( $post->ID );
+		echo $tag_buider->get_tags_html();
 	}
 
 }
