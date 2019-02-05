@@ -3,7 +3,7 @@
   "version": "0.5.0",
   "description": "Seobox wordpress seo plugin",
   "author": "Vanaf1979.nl",
-  "homepage": "https://seobox.vanaf1979.nl",
+  "homepage": "https://github.com/vanaf1979/seobox#readme",
   "contributors": [
     {
       "name": "Stephan Nijman",
@@ -23,15 +23,21 @@
     "url": "git+https://github.com/vanaf1979/seobox.git"
   },
   "keywords": [
-    "Seo"
+    "Seo",
+    "Wordpress",
+    "Plugin"
   ],
   "bugs": {
     "url": "https://github.com/vanaf1979/seobox/issues"
   },
-  "homepage": "https://github.com/vanaf1979/seobox#readme",
   "dependencies": {},
   "devDependencies": {
+    "copy-webpack-plugin": "^4.6.0",
     "cssnext": "^1.8.4",
-    "laravel-mix": "^2.1.14"
+    "laravel-mix": "^4.0.14",
+    "purecss": "^1.0.0",
+    "sass": "^1.16.1",
+    "sass-loader": "^7.1.0",
+    "source-map": "^0.7.3"
   }
 }

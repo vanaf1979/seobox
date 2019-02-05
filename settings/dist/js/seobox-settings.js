@@ -36,12 +36,32 @@
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
 /******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
 /******/ 	};
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
@@ -59,18 +79,52 @@
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "/";
 /******/
+/******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */,
-/* 1 */
+/******/ ({
+
+/***/ "./settings/src/js/modules/tabs.js":
+/*!*****************************************!*\
+  !*** ./settings/src/js/modules/tabs.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Utils = __webpack_require__(/*! ./utils.js */ "./settings/src/js/modules/utils.js");
+
+var tabs = {
+  init: function init() {
+    var tabs = Utils.findAll('.seobox-admin-tabs li');
+    Utils.loop(tabs, function (tab) {
+      Utils.addEvent(tab, 'click', function (e) {
+        console.log(e);
+        var currentTab = Utils.find('.seobox-admin-tabs li.active');
+        currentTab.classList.remove('active');
+        e.target.classList.add('active');
+        var currentPanel = Utils.find('.sb-settings-tabs-container .tab.active');
+        currentPanel.classList.remove('active');
+        var nextPanelName = '#' + e.target.dataset.tab;
+        var nextPanel = Utils.find(nextPanelName);
+        nextPanel.classList.add('active');
+      });
+    });
+  }
+};
+module.exports = tabs;
+
+/***/ }),
+
+/***/ "./settings/src/js/modules/utils.js":
+/*!******************************************!*\
+  !*** ./settings/src/js/modules/utils.js ***!
+  \******************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-
 var utils = {
-
   /*
   --  ### MISC
   */
@@ -107,6 +161,7 @@ var utils = {
     for (var i = 0; i < haystack.length; i++) {
       if (haystack[i] == needle) return i;
     }
+
     return -1;
   },
 
@@ -229,7 +284,6 @@ var utils = {
     var style = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
     var parent = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
     var callback = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
-
     var element = document.createElement('link');
     element.type = 'text/css';
     element.rel = 'stylesheet';
@@ -254,7 +308,6 @@ var utils = {
   addScript: function addScript() {
     var script = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
     var callback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-
     var element = document.createElement('script');
     element.type = 'text/javascript';
     element.async = true;
@@ -269,76 +322,41 @@ var utils = {
 
     document[parent].appendChild(element);
   }
-
 };
-
 module.exports = utils;
 
 /***/ }),
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */
+
+/***/ "./settings/src/js/seobox-settings.js":
+/*!********************************************!*\
+  !*** ./settings/src/js/seobox-settings.js ***!
+  \********************************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(9);
-
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
 
 /* Import utilities. */
-var utils = __webpack_require__(1);
+var utils = __webpack_require__(/*! ./modules/utils.js */ "./settings/src/js/modules/utils.js");
 
-var tabs = __webpack_require__(10);
-
+var tabs = __webpack_require__(/*! ./modules/tabs.js */ "./settings/src/js/modules/tabs.js");
 /* Initialize components. */
-utils.domready(function () {
 
-    tabs.init();
+
+utils.domready(function () {
+  tabs.init();
 });
 
 /***/ }),
-/* 10 */
+
+/***/ 1:
+/*!**************************************************!*\
+  !*** multi ./settings/src/js/seobox-settings.js ***!
+  \**************************************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Utils = __webpack_require__(1);
+module.exports = __webpack_require__(/*! /Users/saskia/Documents/repos/websites/va79/wp-content/plugins/seobox/settings/src/js/seobox-settings.js */"./settings/src/js/seobox-settings.js");
 
-var tabs = {
-
-    init: function init() {
-        var tabs = Utils.findAll('.seobox-admin-tabs li');
-
-        Utils.loop(tabs, function (tab) {
-
-            Utils.addEvent(tab, 'click', function (e) {
-
-                console.log(e);
-                var currentTab = Utils.find('.seobox-admin-tabs li.active');
-                currentTab.classList.remove('active');
-
-                e.target.classList.add('active');
-
-                var currentPanel = Utils.find('.sb-settings-tabs-container .tab.active');
-                currentPanel.classList.remove('active');
-
-                var nextPanelName = '#' + e.target.dataset.tab;
-                var nextPanel = Utils.find(nextPanelName);
-
-                nextPanel.classList.add('active');
-            });
-        });
-    }
-
-};
-
-module.exports = tabs;
 
 /***/ })
-/******/ ]);
+
+/******/ });
