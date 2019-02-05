@@ -33,10 +33,17 @@ class Seobox_Public
 		// wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/seobox-public.js', array( 'jquery' ), $this->version, false );
 	}
 
-
-	public function add_seabox_title_to_head( )
+	public function add_seabox_add_theme_support( )
 	{
-		return 'Steph\'s geweldige title';
+		add_theme_support( 'title-tag' );
+	}
+
+
+	public function add_seabox_title_to_head( $title )
+	{
+		global $post;
+		$tag_buider = new Seobox_TagBulder( $post->ID );
+		return $tag_buider->get_browser_title();
 	}
 
 

@@ -16,6 +16,20 @@ class Seobox_TagBulder
     }
 
 
+    public function get_browser_title()
+	{
+        if( $this->wpmetas[ '_seobox_g_browser_title' ][0] > '' )
+        {
+            return $this->wpmetas[ '_seobox_g_browser_title' ][0];
+        }
+        else
+        {   
+            $post = get_post( $this->postid );
+            return $post->post_title;
+        }
+    }
+
+
     public function get_tags_html()
 	{
         $html = '';
@@ -28,12 +42,15 @@ class Seobox_TagBulder
         $html .= $this->get_meta_tag( 'og:type' , '_seobox_fb_open_graph_type' );
         $html .= $this->get_meta_tag( 'og:title' , '_seobox_fb_open_graph_title' );
         $html .= $this->get_meta_tag( 'og:description' , '_seobox_fb_open_graph_description' );
+        // og:url
+        // og:site_nam
         // Image tag
         
-        $html .= $this->get_meta_tag( 'twitter:type' , '_seobox_tw_type' );
+        $html .= $this->get_meta_tag( 'twitter:card' , '_seobox_tw_type' );
         $html .= $this->get_meta_tag( 'twitter:title' , '_seobox_tw_title' );
         $html .= $this->get_meta_tag( 'twitter:description' , '_seobox_tw_description' );
         $html .= $this->get_meta_tag( 'twitter:creator' , '_seobox_tw_author_handle' );
+        // twitter:domain
         // Image tag
 
         $html .= $this->get_meta_tag( 'schema:type' , '_seobox_s_type' );
@@ -46,10 +63,15 @@ class Seobox_TagBulder
 
     private function get_meta_tag( $name , $seoboxname )
 	{   
+        // Populate the meta array.
         $metaarray['name'] = $name;
         $metaarray['seoboxname'] = $seoboxname;
         $metaarray['content'] = $this->wpmetas[ $seoboxname ][0];
+
+        // Run registerd filters on the meta array.
         $metaarray = apply_filters( 'seobox_make_meta_array', $metaarray );
+
+        // Make html tsh of the meta array.
         return $this->make_meta_tag( $metaarray );
 	}
 
@@ -57,8 +79,11 @@ class Seobox_TagBulder
     private static function make_meta_tag( $metaarray )
 	{
         $return = "<meta name=\"{$metaarray['name']}\" content=\"{$metaarray['content']}\" />";
+        
+        // Run registerd filters on the meta tag.
         $return = apply_filters( 'seobox_make_meta_tag', $return , $metaarray['name'] , $metaarray['content'] );
-		return $return . "\n";
+        
+        return $return . "\n";
 	}
 
 }
