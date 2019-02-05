@@ -45,17 +45,20 @@ class Seobox_TagBulder
     
 
     private function get_meta_tag( $name , $seoboxname )
-	{
-        $content = $this->wpmetas[ $seoboxname ][0];
-        //do_action( 'seobox_build_tags',  $arg = '' )
-        return $this->make_meta_tag( $name , $content );
+	{   
+        $metaarray['name'] = $name;
+        $metaarray['seoboxname'] = $seoboxname;
+        $metaarray['content'] = $this->wpmetas[ $seoboxname ][0];
+        $metaarray = apply_filters( 'seobox_make_meta_array', $metaarray );
+        return $this->make_meta_tag( $metaarray );
 	}
 
 
-    private static function make_meta_tag( $name , $content )
+    private static function make_meta_tag( $metaarray )
 	{
-		$return = "<meta name=\"{$name}\" content=\"{$content}\" />" . "\n";
-		return $return;
+        $return = "<meta name=\"{$metaarray['name']}\" content=\"{$metaarray['content']}\" />";
+        $return = apply_filters( 'seobox_make_meta_tag', $return , $metaarray['name'] , $metaarray['content'] );
+		return $return . "\n";
 	}
 
 }
