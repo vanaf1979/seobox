@@ -1,9 +1,9 @@
 
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
 
-<div class="seobox-settings">
+<h2><?php _e( 'Seobox settings', 'seobox' ); ?></h2>
 
-    <h2><?php _e( 'Seobox settings', 'seobox' ); ?></h2>
+<div class="seobox-settings">
 
     <div class="container left">
 
