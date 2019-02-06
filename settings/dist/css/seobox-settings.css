@@ -1,4 +1,4 @@
-.seobox-settings .container {
+@import url(https://use.fontawesome.com/releases/v5.7.1/css/all.css);.seobox-settings .container {
   padding: 10px 10px 10px 10px;
   background: #ffffff;
   border: solid 1px sil #efefefver;
@@ -31,6 +31,10 @@
   background: #ffffff;
   border-top: solid 2px #0073aa;
   border-bottom: none;
+}
+
+.seobox-settings .seobox-admin-tabs li span {
+  color: #0073aa;
 }
 
 .seobox-settings .seobox-admin-tabs li a {

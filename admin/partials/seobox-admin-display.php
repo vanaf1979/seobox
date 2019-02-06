@@ -7,16 +7,16 @@
 
     <ul class="seobox-admin-tabs">
         <li class="active" data-tab="tab-g">
-            <a>Google</a>
+            <span class="fab fa-google"></span> <a>Google</a>
         </li>
         <li data-tab="tab-fb">
-            <a>Facebook</a>
+            <span class="fab fa-facebook"></span> <a>Facebook</a>
         </li>
         <li data-tab="tab-tw">
-            <a>Twitter</a>
+            <span class="fab fa-twitter"></span> <a>Twitter</a>
         </li>
         <li data-tab="tab-sh">
-            <a>Schema</a>
+            <span class="fas fa-network-wired"></span> <a>Schema</a>
         </li>
     </ul>
 

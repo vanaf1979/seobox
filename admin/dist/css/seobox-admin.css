@@ -1,4 +1,4 @@
-.seobox-metabox {
+@import url(https://use.fontawesome.com/releases/v5.7.1/css/all.css);.seobox-metabox {
   margin: 0px 0px 20px 0px;
 }
 
@@ -29,6 +29,10 @@
   background: #ffffff;
   border-top: solid 2px #0073aa;
   border-bottom: none;
+}
+
+.seobox-metabox .seobox-admin-tabs li span {
+  color: #0073aa;
 }
 
 .seobox-metabox .seobox-admin-tabs li a {

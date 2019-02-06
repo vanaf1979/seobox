@@ -17,16 +17,19 @@
 
             <ul class="seobox-admin-tabs">
                 <li class="active" data-tab="tab-g">
-                    <a>Google</a>
+                    <span class="fab fa-google"></span> <a>Google</a>
                 </li>
                 <li data-tab="tab-fb">
-                    <a>Facebook</a>
+                    <span class="fab fa-facebook"></span> <a>Facebook</a>
                 </li>
                 <li data-tab="tab-tw">
-                    <a>Twitter</a>
+                    <span class="fab fa-twitter"></span> <a>Twitter</a>
                 </li>
                 <li data-tab="tab-sh">
-                    <a>Schema</a>
+                    <span class="fas fa-network-wired"></span> <a>Schema</a>
+                </li>
+                <li data-tab="tab-tags">
+                    <span class="fas fa-tag"></span> <a>Tags</a>
                 </li>
             </ul>
 
@@ -53,6 +56,12 @@
                 <div id="tab-sh" class="tab">
 
                     <?php require_once( plugin_dir_path( dirname( __FILE__ ) ) . 'partials/seobox-settings-schema-display.php' ); ?>
+
+                </div>
+
+                <div id="tab-tags" class="tab">
+
+                    <?php require_once( plugin_dir_path( dirname( __FILE__ ) ) . 'partials/seobox-settings-tags-display.php' ); ?>
 
                 </div>
 
