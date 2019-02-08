@@ -27,6 +27,7 @@ class Seobox
 		$this->define_admin_hooks();
 		$this->define_settings_hooks();
 		$this->define_public_hooks();
+		$this->define_shortcodes_hooks();
 	}
 
 
@@ -39,6 +40,8 @@ class Seobox
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-seobox-admin.php';
 
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'settings/class-seobox-settings.php';
+
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'shortcodes/class-seobox-shortcodes.php';
 
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-seobox-public.php';
 
@@ -101,6 +104,16 @@ class Seobox
 			$this->loader->add_action( 'pre_get_document_title' , $plugin_public , 'add_seabox_title_to_head', 15 );
 			$this->loader->add_action( 'wp_head' , $plugin_public , 'add_seabox_tags_to_head' , 1 , 1 );
 		}
+	}
+
+
+	private function define_shortcodes_hooks()
+	{
+		$plugin_shortcodes = new Seobox_Shortcodes( $this->get_plugin_name(), $this->get_version() );
+
+		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_shortcodes, 'enqueue_styles' );
+
+		$this->loader->add_action( 'init' , $plugin_shortcodes , 'register_shortcodes' );
 	}
 
 
