@@ -23,28 +23,48 @@ class Seobox_Shortcodes
 
     public function register_shortcodes( )
 	{
-        add_shortcode( 'sbschema' , array(  $this , 'handle_schema_tag') );
-        add_shortcode( 'sbschemablock' , array(  $this , 'handle_schemablock_tag') );
+        add_shortcode( 'sbsb' , array(  $this , 'handle_schemablock_tag') );
+        add_shortcode( 'sbs' , array(  $this , 'handle_schema_tag') );
+        
 	}
 
 
 	public function handle_schema_tag( $atts , $content = null )
 	{
 		$a = shortcode_atts( array(
-			'type' => 'type'
+            'tag' => 'tag',
+			'prop' => 'prop'
 		), $atts );
 
-		return "<span class=\"{$a['class']}\">{$content}</span>";
+        if( $a['tag'] > '' )
+        {
+            $a['tag'] = "span";
+        }
+
+        $content = do_shortcode( $content );
+		return "<{$a['tag']} class=\"sbshcema\" itemprop=\"{$a['prop']}\">{$content}</{$a['tag']}>";
     }
     
 
     public function handle_schemablock_tag( $atts , $content = null )
 	{
 		$a = shortcode_atts( array(
-			'type' => 'type'
-		), $atts );
-
-		return "<div class=\"{$a['class']}\">{$content}</div>";
+            'tag' => '',
+            'prop' => '',
+			'type' => ''
+        ), $atts );
+        
+        if( $a['tag'] > '' )
+        {
+            $a['tag'] = "div";
+        }
+        
+        if( $a['prop'] > '' )
+        {
+            $a['prop'] = " itemprop=\"{$a['prop']}\"";
+        }
+        $content = do_shortcode( $content );
+		return "<{$a['tag']}{$itemprop} class=\"sbschemablock\" itemscope itemtype=\"{$a['type']}\">{$content}</{$a['tag']}>";
 	}
 
 }
