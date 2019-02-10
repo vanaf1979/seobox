@@ -2,7 +2,7 @@
 
 .seobox-settings-section {
     margin: 0px 0px 10px 0px;
-    padding: 0px 0px 0px 0px;
+    padding: 0px 0px 10px 0px;
     border-bottom: solid 1px #eeeeee;
 }
     .seobox-settings-section thead {
@@ -10,7 +10,7 @@
     }
 
     .seobox-settings-section .row {
-        height: 50px;
+        height: 40px;
         margin: 0px 0px 0px 0px;
         padding: 0px 0px 0px 0px;
     }
@@ -21,8 +21,10 @@
     }
 
     .seobox-settings-section h4 {
-       font-size: 16px;
-       color: #006799;
+        margin: 10px 0px 10px 0px;
+        padding: 0px 0px 0px 0px;
+        font-size: 16px;
+        color: #006799;
     }
 
     .seobox-settings-section .form-wrapper.active {

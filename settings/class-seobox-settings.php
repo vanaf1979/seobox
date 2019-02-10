@@ -35,7 +35,17 @@ class Plugin_Name_Settings
 
 	public function register_settings( )
 	{
-		register_setting( 'seobox-settings', 'seobox-setting-name-1' );
+		// G Browser title
+		register_setting( 'seobox-settings', '_g_browser_title_active', null );
+		register_setting( 'seobox-settings', '_g_browser_title_custom_addition', null );
+		register_setting( 'seobox-settings', '_g_browser_title_addition', null );
+		register_setting( 'seobox-settings', '_g_browser_title_addition_position', null );
+		register_setting( 'seobox-settings', '_g_browser_title_default', null );
+		register_setting( 'seobox-settings', '_g_browser_title_max_lenght', null );
+		register_setting( 'seobox-settings', '_g_browser_title_max_length_overflow', null );
+
+		// G Keywords
+		//register_setting( 'seobox-settings', '_g_browser_title_active', null );
 	}
 
 
