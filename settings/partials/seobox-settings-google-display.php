@@ -4,7 +4,7 @@
     <thead>
         <tr>
             <td valign="top" width="170">
-                <h4><?php _e( 'Browser title', 'seobox' ); ?></h4>
+                <h4><a class="fas fa-info-circle" href="" target="_blank"></a> <?php _e( 'Browser title', 'seobox' ); ?></h4>
             </td>
             <td valign="top">
                 &nbsp;
@@ -133,7 +133,7 @@
     <thead>
         <tr>
             <td valign="top" width="170">
-                <h4>Keywords</h4>
+                <h4><a class="fas fa-info-circle" href="" target="_blank"></a> Keywords</h4>
             </td>
             <td valign="top">
                 &nbsp;
@@ -173,7 +173,7 @@
     <thead>
         <tr>
             <td valign="top" width="170">
-                <h4>Description</h4>
+                <h4><a class="fas fa-info-circle" href="" target="_blank"></a> Description</h4>
             </td>
             <td valign="top">
                 <!-- <div class="form-wrapper active">
@@ -254,7 +254,7 @@
     <thead>
         <tr>
             <td valign="top" width="170">
-                <h4>Robots</h4>
+                <h4><a class="fas fa-info-circle" href="" target="_blank"></a> Robots</h4>
             </td>
             <td valign="top">
                 <!-- <div class="form-wrapper active">
@@ -304,7 +304,7 @@
     <thead>
         <tr>
             <td valign="top" width="170">
-                <h4>Cannonical link</h4>
+                <h4><a class="fas fa-info-circle" href="" target="_blank"></a> Cannonical link</h4>
             </td>
             <td valign="top">
                 <!-- <div class="form-wrapper active">
