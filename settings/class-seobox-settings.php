@@ -64,7 +64,20 @@ class Plugin_Name_Settings
 
 		// G Keywords
 		register_setting( 'seobox-settings', '_g_keywords_active', $args_default );
-		register_setting( 'seobox-settings', '_g_keywords_default_value', $args_text_input );
+		register_setting( 'seobox-settings', '_g_keywords_default_value', $args_default );
+		register_setting( 'seobox-settings', '_g_keywords_max_lenght', $args_text_input );
+		register_setting( 'seobox-settings', '_g_keywords_max_length_overflow', $args_default );
+
+		// G Description
+		register_setting( 'seobox-settings', '_g_description_active', $args_default );
+		register_setting( 'seobox-settings', '_g_description_default_value', $args_default );
+		register_setting( 'seobox-settings', '_g_description_default_value_custom', $args_text_input );
+		register_setting( 'seobox-settings', '_g_description_max_length', $args_text_input );
+		register_setting( 'seobox-settings', '_g_description_max_length_overflow', $args_default );
+
+		// G Robots
+		register_setting( 'seobox-settings', '_g_robots_active', $args_default );
+		register_setting( 'seobox-settings', '_g_robots_default_value', $args_default );
 	}
 
 
