@@ -51,7 +51,7 @@ class Seobox_Admin
 	}
 
 
-	public function meta_box_content( $post )
+	public static function meta_box_content( $post )
 	{
 		require_once( plugin_dir_path( dirname( __FILE__ ) ) . 'admin/partials/seobox-admin-display.php' );
 	}

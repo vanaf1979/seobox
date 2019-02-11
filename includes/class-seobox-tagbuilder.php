@@ -37,7 +37,10 @@ class Seobox_TagBulder
 
     public function get_tags_html()
 	{
+        $values = new Seobox_MetaValue();
         $html = '';
+        // $value = $values->get_seobox_g_keywords();
+        // $html .= $this->get_meta_tag( 'keywords' , '_seobox_g_keywords' , $value );
         $html .= $this->get_meta_tag( 'keywords' , '_seobox_g_keywords' );
         $html .= $this->get_meta_tag( 'description' , '_seobox_g_description' );
         // canonical needs other tags
