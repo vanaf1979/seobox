@@ -10,7 +10,6 @@
         <form action="options.php" method="post">
 
             <?php
-            // wp_nonce_field( basename( __FILE__ ), 'seobox_settings_nonce' );
             settings_fields( 'seobox-settings' );
             do_settings_sections( 'seobox-settings' );
             ?>

@@ -29,23 +29,48 @@ class Plugin_Name_Settings
 
 	public function register_settings_page( )
 	{
-		 add_options_page( 'SeoBox' , 'SeoBox' , 'manage_options' , 'SeoBox' , [ &$this , 'settings_page_content' ] );
+		 add_options_page( 'Seobox' , 'Seobox' , 'manage_options' , 'Seobox' , [ &$this , 'settings_page_content' ] );
 	}
 
 
 	public function register_settings( )
 	{
+		// Default arguments to register_setting
+		$args_default = array(
+			'type'              => 'string',
+			'group'             => 'seobox-settings',
+			'description'       => null,
+			'sanitize_callback' => null,
+			'show_in_rest'      => false
+		);
+		
+		// Arguments to register_setting with sanitazion callback=.
+		$args_text_input = array(
+			'type'              => 'string',
+			'group'             => 'seobox-settings',
+			'description'       => null,
+			'sanitize_callback' => array( $this, 'sanitize_input_callback'),
+			'show_in_rest'      => false
+		);
+
 		// G Browser title
-		register_setting( 'seobox-settings', '_g_browser_title_active', null );
-		register_setting( 'seobox-settings', '_g_browser_title_custom_addition', null );
-		register_setting( 'seobox-settings', '_g_browser_title_addition', null );
-		register_setting( 'seobox-settings', '_g_browser_title_addition_position', null );
-		register_setting( 'seobox-settings', '_g_browser_title_default', null );
-		register_setting( 'seobox-settings', '_g_browser_title_max_lenght', null );
-		register_setting( 'seobox-settings', '_g_browser_title_max_length_overflow', null );
+		register_setting( 'seobox-settings', '_g_browser_title_active', $args_default );
+		register_setting( 'seobox-settings', '_g_browser_title_addition', $args_default );
+		register_setting( 'seobox-settings', '_g_browser_title_custom_addition', $args_text_input );
+		register_setting( 'seobox-settings', '_g_browser_title_addition_position', $args_default );
+		register_setting( 'seobox-settings', '_g_browser_title_default', $args_text_input );
+		register_setting( 'seobox-settings', '_g_browser_title_max_lenght', $args_text_input );
+		register_setting( 'seobox-settings', '_g_browser_title_max_length_overflow', $args_default );
 
 		// G Keywords
-		//register_setting( 'seobox-settings', '_g_browser_title_active', null );
+		register_setting( 'seobox-settings', '_g_keywords_active', $args_default );
+		register_setting( 'seobox-settings', '_g_keywords_default_value', $args_text_input );
+	}
+
+
+	public function sanitize_input_callback( $value  )
+	{
+		return sanitize_text_field( $value );
 	}
 
 

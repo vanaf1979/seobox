@@ -20,7 +20,7 @@ class Seobox
 			$this->version = '0.5.0';
 		}
 
-		$this->plugin_name = 'SeoBox';
+		$this->plugin_name = 'Seobox';
 
 		$this->load_dependencies();
 		$this->set_locale();

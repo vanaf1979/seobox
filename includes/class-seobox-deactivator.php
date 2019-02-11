@@ -5,8 +5,8 @@ class Seobox_Deactivator
 
 	public static function deactivate()
 	{
-		$this->remove_version_from_database();
-		$this->register_deactivation();
+		//$this->remove_version_from_database();
+		//$this->register_deactivation();
 	}
 
 

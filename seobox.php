@@ -7,7 +7,7 @@
  * @package           Seobox
  *
  * @wordpress-plugin
- * Plugin Name:       SeoBox
+ * Plugin Name:       Seobox
  * Plugin URI:        https://seobox.vanaf1979.nl
  * Description:       A Simpler Wordpress Seo plugin.
  * Version:           0.5.0

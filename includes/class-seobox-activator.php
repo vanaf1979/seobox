@@ -6,9 +6,9 @@ class Seobox_Activator
 
 	public static function activate()
 	{
-		$this->set_version_in_database();
-		$this->setup_default_options();
-		$this->register_activation();
+		//$this->set_version_in_database();
+		//$this->setup_default_options();
+		//$this->register_activation();
 	}
 
 

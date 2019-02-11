@@ -1,5 +1,7 @@
 
 
+<!-- / Section: Browser title \ -->
+
 <table width="100%" class="seobox-settings-section">
     <thead>
         <tr>
@@ -60,7 +62,7 @@
             </td>
             <td valign="top">
                 <div class="form-wrapper llar">
-                <input type="text" name="_g_browser_title_custom_addition" placeholder="<?php _e( 'Browser title custom addition', 'seobox' ); ?>" value="<?php echo get_option('_g_browser_title_custom_addition'); ?>"/>
+                <input type="text" name="_g_browser_title_custom_addition" placeholder="<?php _e( 'Browser title custom addition', 'seobox' ); ?>" value="<?php echo esc_attr( get_option('_g_browser_title_custom_addition') ); ?>"/>
                 </div>
             </td>
         </tr>
@@ -90,7 +92,7 @@
             </td>
             <td valign="top">
                 <div class="form-wrapper llar">
-                    <input type="text" name="_g_browser_title_default" placeholder="<?php _e( 'Browser title default value', 'seobox' ); ?>" value="<?php echo get_option('_g_browser_title_default'); ?>"/>
+                    <input type="text" name="_g_browser_title_default" placeholder="<?php _e( 'Browser title default value', 'seobox' ); ?>" value="<?php echo esc_attr( get_option('_g_browser_title_default') ); ?>"/>
                 </div>
             </td>
         </tr>
@@ -100,7 +102,7 @@
             </td>
             <td valign="top">
                 <div class="form-wrapper llar">
-                    <input type="text" name="_g_browser_title_max_lenght" placeholder="<?php _e( 'Browser title max length', 'seobox' ); ?>" value="<?php echo get_option('_g_browser_title_max_lenght'); ?>"/>
+                    <input type="number" min="1" max="300" name="_g_browser_title_max_lenght" placeholder="<?php _e( 'Browser title max length', 'seobox' ); ?>" value="<?php echo esc_attr( get_option('_g_browser_title_max_lenght') ); ?>"/>
                 </div>
             </td>
         </tr>
@@ -127,13 +129,15 @@
     </tbody>
 </table>
 
+<!-- \ Section: Browser title / -->
 
+<!-- / Section: Keywords \ -->
 
 <table width="100%" class="seobox-settings-section">
     <thead>
         <tr>
             <td valign="top" width="170">
-                <h4><a class="fas fa-info-circle" href="" target="_blank"></a> Keywords</h4>
+                <h4><a class="fas fa-info-circle" href="" target="_blank"></a> <?php _e( 'Keywords', 'seobox' ); ?></h4>
             </td>
             <td valign="top">
                 &nbsp;
@@ -141,33 +145,42 @@
         </tr>
     </thead>
     <tbody>
-    <tr class="row">
+        <tr class="row">
             <td valign="top">
-                <label class="title">Active:</label>
+                <label class="title"><?php _e( 'Active', 'seobox' ); ?>:</label>
             </td>
             <td valign="top">
                 <div class="form-wrapper llar">
-                    <input type="radio" name="addition" value="noen"/>
-                    <label>Yes</label>
-                    <input type="radio" name="addition" value="sitename"/>
-                    <label>No</label>
+                    <?php
+                    $current_value = get_option('_g_keywords_active'); 
+                    if( ! $current_value )
+                    {
+                        $current_value = 'yes';
+                    }
+                    ?>
+                    <input type="radio" id="_g_keywords_active_yes" name="_g_keywords_active" value="yes" <?php checked( $current_value, 'yes' ); ?>/>
+                    <label for="_g_keywords_active_yes"><?php _e( 'Yes', 'seobox' ); ?></label>
+                    <input type="radio" id="_g_keywords_active_no" name="_g_keywords_active" value="no" <?php checked( $current_value, 'no' ); ?>/>
+                    <label for="_g_keywords_active_no"><?php _e( 'No', 'seobox' ); ?></label>
                 </div>
             </td>
         </tr>
         <tr class="row">
             <td valign="top">
-                <label class="title">Default value:</label>
+                <label class="title"><?php _e( 'Default value', 'seobox' ); ?>:</label>
             </td>
             <td valign="top">
                 <div class="form-wrapper llar">
-                    <input type="text" name="default_value" placeholder="Browser title default valeu"/>
+                <input type="text" name="_g_keywords_default_value" placeholder="<?php _e( 'Keywords default value', 'seobox' ); ?>" value="<?php echo esc_attr( get_option('_g_keywords_default_value') ); ?>"/>
                 </div>
             </td>
         </tr>
     </tbody>
 </table>
 
+<!-- \ Section: Keywords / -->
 
+<!-- / Section: Description \ -->
 
 <table width="100%" class="seobox-settings-section">
     <thead>
@@ -176,10 +189,7 @@
                 <h4><a class="fas fa-info-circle" href="" target="_blank"></a> Description</h4>
             </td>
             <td valign="top">
-                <!-- <div class="form-wrapper active">
-                    <input type="checkbox" name="" />
-                    <label>Show in post edit screens?</label>
-                </div> -->
+                &nbsp;
             </td>
         </tr>
     </thead>
@@ -248,7 +258,9 @@
     </tbody>
 </table>
 
+<!-- \ Section: Description / -->
 
+<!-- / Section: Robots \ -->
 
 <table width="100%" class="seobox-settings-section">
     <thead>
@@ -298,7 +310,9 @@
     </tbody>
 </table>
 
+<!-- \ Section: Robots / -->
 
+<!-- / Section: Cannonical \ -->
 
 <table width="100%" class="seobox-settings-section">
     <thead>
@@ -356,3 +370,5 @@
     
     </tbody>
 </table>
+
+<!-- \ Section: Cannonical / -->
