@@ -420,9 +420,9 @@ utils.domready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/saskia/Documents/repos/websites/va79/wp-content/plugins/seobox/admin/src/js/seobox-admin.js */"./admin/src/js/seobox-admin.js");
-__webpack_require__(/*! /Users/saskia/Documents/repos/websites/va79/wp-content/plugins/seobox/admin/src/css/seobox-admin.scss */"./admin/src/css/seobox-admin.scss");
-module.exports = __webpack_require__(/*! /Users/saskia/Documents/repos/websites/va79/wp-content/plugins/seobox/settings/src/css/seobox-settings.scss */"./settings/src/css/seobox-settings.scss");
+__webpack_require__(/*! /Users/saskia/Documents/repos/websites/va79-website/app/plugins/seobox/admin/src/js/seobox-admin.js */"./admin/src/js/seobox-admin.js");
+__webpack_require__(/*! /Users/saskia/Documents/repos/websites/va79-website/app/plugins/seobox/admin/src/css/seobox-admin.scss */"./admin/src/css/seobox-admin.scss");
+module.exports = __webpack_require__(/*! /Users/saskia/Documents/repos/websites/va79-website/app/plugins/seobox/settings/src/css/seobox-settings.scss */"./settings/src/css/seobox-settings.scss");
 
 
 /***/ })

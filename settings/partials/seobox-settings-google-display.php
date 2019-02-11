@@ -216,7 +216,7 @@
     <thead>
         <tr>
             <td valign="top" width="170">
-                <h4><a class="fas fa-info-circle" href="" target="_blank"></a> Description</h4>
+                <h4><a class="fas fa-info-circle" href="" target="_blank"></a> <?php _e( 'Description', 'seobox' ); ?></h4>
             </td>
             <td valign="top">
                 &nbsp;
@@ -317,7 +317,7 @@
     <thead>
         <tr>
             <td valign="top" width="170">
-                <h4><a class="fas fa-info-circle" href="" target="_blank"></a> Robots</h4>
+                <h4><a class="fas fa-info-circle" href="" target="_blank"></a> <?php _e( 'Robots', 'seobox' ); ?></h4>
             </td>
             <td valign="top">
                 &nbsp;
@@ -325,7 +325,7 @@
         </tr>
     </thead>
     <tbody>
-    <tr class="row">
+        <tr class="row">
             <td valign="top">
                 <label class="title"><?php _e( 'Active', 'seobox' ); ?>:</label>
             </td>
@@ -341,7 +341,7 @@
                     <input type="radio" id="_g_robots_active_yes" name="_g_robots_active" value="yes" <?php checked( $current_value, 'yes' ); ?>/>
                     <label for="_g_robots_active_yes"><?php _e( 'Yes', 'seobox' ); ?></label>
                     <input type="radio" id="_g_robots_active_no" name="_g_robots_active" value="no" <?php checked( $current_value, 'no' ); ?>/>
-                    <label for="_g_robotsactive_active_no"><?php _e( 'No', 'seobox' ); ?></label>
+                    <label for="_g_robot_active_no"><?php _e( 'No', 'seobox' ); ?></label>
                 </div>
             </td>
         </tr>
@@ -380,52 +380,63 @@
     <thead>
         <tr>
             <td valign="top" width="170">
-                <h4><a class="fas fa-info-circle" href="" target="_blank"></a> Cannonical link</h4>
+                <h4><a class="fas fa-info-circle" href="" target="_blank"></a> <?php _e( 'Canonical link', 'seobox' ); ?></h4>
             </td>
             <td valign="top">
-                <!-- <div class="form-wrapper active">
-                    <input type="checkbox" name="" />
-                    <label>Show in post edit screens?</label>
-                </div> -->
+                &nbsp;
             </td>
         </tr>
     </thead>
     <tbody>
-        <tr class="row">
+    <tr class="row">
             <td valign="top">
-                <label class="title">Active:</label>
+                <label class="title"><?php _e( 'Active', 'seobox' ); ?>:</label>
             </td>
             <td valign="top">
                 <div class="form-wrapper llar">
-                    <input type="radio" name="addition" value="noen"/>
-                    <label>Yes</label>
-                    <input type="radio" name="addition" value="sitename"/>
-                    <label>No</label>
+                    <?php
+                    $current_value = get_option('_g_canonical_active'); 
+                    if( ! $current_value )
+                    {
+                        $current_value = 'yes';
+                    }
+                    ?>
+                    <input type="radio" id="_g_canonical_active_yes" name="_g_canonical_active" value="yes" <?php checked( $current_value, 'yes' ); ?>/>
+                    <label for="_g_canonical_active_yes"><?php _e( 'Yes', 'seobox' ); ?></label>
+                    <input type="radio" id="_g_canonical_active_no" name="_g_canonical_active" value="no" <?php checked( $current_value, 'no' ); ?>/>
+                    <label for="_g_canonical_active_no"><?php _e( 'No', 'seobox' ); ?></label>
                 </div>
             </td>
         </tr>
         <tr class="row">
             <td valign="top">
-                <label class="title">Default value:</label>
+                <label class="title"><?php _e( 'Default value', 'seobox' ); ?>:</label>
             </td>
             <td valign="top">
                 <div class="form-wrapper llar">
-                    <input type="radio" name="addition" value="noen"/>
-                    <label>None</label>
-                    <input type="radio" name="addition" value="sitename"/>
-                    <label>Permalink</label>
-                    <input type="radio" name="addition" value="custom"/>
-                    <label>Custom</label>
+                    <?php
+                    $current_value = get_option('_g_canonical_active_default_value'); 
+                    if( ! $current_value )
+                    {
+                        $current_value = 'permalink';
+                    }
+                    ?>
+                    <input type="radio" id="_g_canonical_active_default_value_none" name="_g_canonical_active_default_value" value="none" <?php checked( $current_value, 'none' ); ?>/>
+                    <label for="_g_canonical_active_default_value_none">None</label>
+                    <input type="radio" id="_g_canonical_active_default_value_permalink" name="_g_canonical_active_default_value" value="permalink" <?php checked( $current_value, 'permalink' ); ?>/>
+                    <label for="_g_canonical_active_default_value_permalink">Permalink</label>
+                    <input type="radio" id="_g_canonical_active_default_value_custom" name="_g_canonical_active_default_value" value="custom" <?php checked( $current_value, 'custom' ); ?>/>
+                    <label for="_g_canonical_active_default_value_custom">Custom</label>
                 </div>
             </td>
         </tr>
         <tr class="row">
             <td valign="top">
-                <label class="title">Custom link:</label>
+                <label class="title"><?php _e( 'Custom link', 'seobox' ); ?>:</label>
             </td>
             <td valign="top">
                 <div class="form-wrapper llar">
-                <input type="text" name="custom_addition" placeholder="Browser title custom addition"/>
+                    <input type="url" name="_g_canonical_custom_devault_value" placeholder="<?php _e( 'Http://example.com/path-to-page', 'seobox' ); ?>" value="<?php echo esc_attr( get_option('_g_canonical_custom_devault_value') ); ?>"/>
                 </div>
             </td>
         </tr>

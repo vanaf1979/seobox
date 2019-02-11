@@ -354,7 +354,7 @@ utils.domready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/saskia/Documents/repos/websites/va79/wp-content/plugins/seobox/settings/src/js/seobox-settings.js */"./settings/src/js/seobox-settings.js");
+module.exports = __webpack_require__(/*! /Users/saskia/Documents/repos/websites/va79-website/app/plugins/seobox/settings/src/js/seobox-settings.js */"./settings/src/js/seobox-settings.js");
 
 
 /***/ })
