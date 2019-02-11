@@ -37,7 +37,9 @@ class Seobox_TagBulder
 
     public function get_tags_html()
 	{
-        $values = new Seobox_MetaValue();
+        global $post;
+        $values = new Seobox_MetaValue( $post->ID );
+        
         $html = '';
         // $value = $values->get_seobox_g_keywords();
         // $html .= $this->get_meta_tag( 'keywords' , '_seobox_g_keywords' , $value );
