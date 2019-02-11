@@ -55,60 +55,60 @@ class Plugin_Name_Settings
 
 		// GOOGLE
 		// G Browser title
-		register_setting( 'seobox-settings', '_g_browser_title_active', $args_default );
-		register_setting( 'seobox-settings', '_g_browser_title_addition', $args_default );
-		register_setting( 'seobox-settings', '_g_browser_title_custom_addition', $args_text_input );
-		register_setting( 'seobox-settings', '_g_browser_title_addition_position', $args_default );
-		register_setting( 'seobox-settings', '_g_browser_title_default', $args_text_input );
-		register_setting( 'seobox-settings', '_g_browser_title_max_lenght', $args_text_input );
-		register_setting( 'seobox-settings', '_g_browser_title_max_length_overflow', $args_default );
+		register_setting( 'seobox-settings-google', '_g_browser_title_active', $args_default );
+		register_setting( 'seobox-settings-google', '_g_browser_title_addition', $args_default );
+		register_setting( 'seobox-settings-google', '_g_browser_title_custom_addition', $args_text_input );
+		register_setting( 'seobox-settings-google', '_g_browser_title_addition_position', $args_default );
+		register_setting( 'seobox-settings-google', '_g_browser_title_default', $args_text_input );
+		register_setting( 'seobox-settings-google', '_g_browser_title_max_lenght', $args_text_input );
+		register_setting( 'seobox-settings-google', '_g_browser_title_max_length_overflow', $args_default );
 
 		// G Keywords
-		register_setting( 'seobox-settings', '_g_keywords_active', $args_default );
-		register_setting( 'seobox-settings', '_g_keywords_default_value', $args_default );
-		register_setting( 'seobox-settings', '_g_keywords_max_lenght', $args_text_input );
-		register_setting( 'seobox-settings', '_g_keywords_max_length_overflow', $args_default );
+		register_setting( 'seobox-settings-google', '_g_keywords_active', $args_default );
+		register_setting( 'seobox-settings-google', '_g_keywords_default_value', $args_default );
+		register_setting( 'seobox-settings-google', '_g_keywords_max_lenght', $args_text_input );
+		register_setting( 'seobox-settings-google', '_g_keywords_max_length_overflow', $args_default );
 
 		// G Description
-		register_setting( 'seobox-settings', '_g_description_active', $args_default );
-		register_setting( 'seobox-settings', '_g_description_default_value', $args_default );
-		register_setting( 'seobox-settings', '_g_description_default_value_custom', $args_text_input );
-		register_setting( 'seobox-settings', '_g_description_max_length', $args_text_input );
-		register_setting( 'seobox-settings', '_g_description_max_length_overflow', $args_default );
+		register_setting( 'seobox-settings-google', '_g_description_active', $args_default );
+		register_setting( 'seobox-settings-google', '_g_description_default_value', $args_default );
+		register_setting( 'seobox-settings-google', '_g_description_default_value_custom', $args_text_input );
+		register_setting( 'seobox-settings-google', '_g_description_max_length', $args_text_input );
+		register_setting( 'seobox-settings-google', '_g_description_max_length_overflow', $args_default );
 
 		// G Robots
-		register_setting( 'seobox-settings', '_g_robots_active', $args_default );
-		register_setting( 'seobox-settings', '_g_robots_default_value', $args_default );
+		register_setting( 'seobox-settings-google', '_g_robots_active', $args_default );
+		register_setting( 'seobox-settings-google', '_g_robots_default_value', $args_default );
 
 		// FB Canonical link
-		register_setting( 'seobox-settings', '_g_canonical_active', $args_default );
-		register_setting( 'seobox-settings', '_g_canonical_active_default_value', $args_default );
-		register_setting( 'seobox-settings', '_g_canonical_custom_devault_value', $args_text_input );
+		register_setting( 'seobox-settings-google', '_g_canonical_active', $args_default );
+		register_setting( 'seobox-settings-google', '_g_canonical_active_default_value', $args_default );
+		register_setting( 'seobox-settings-google', '_g_canonical_custom_devault_value', $args_text_input );
 
 		// FACEBOOK
 		// FB open graph type
-		register_setting( 'seobox-settings', '_fb_ogtype_active', $args_default );
-		register_setting( 'seobox-settings', '_fb_ogtype_default_value', $args_default );
+		register_setting( 'seobox-settings-facebook', '_fb_ogtype_active', $args_default );
+		register_setting( 'seobox-settings-facebook', '_fb_ogtype_default_value', $args_default );
 
 		// FB open graph title
-		register_setting( 'seobox-settings', '_fb_ogtitle_active', $args_default );
-		register_setting( 'seobox-settings', '_fb_ogtitle_addition', $args_default );
-		register_setting( 'seobox-settings', '_fb_ogtitle_custom_addition', $args_text_input );
-		register_setting( 'seobox-settings', '_fb_ogtitle_addition_position', $args_default );
-		register_setting( 'seobox-settings', '_fb_ogtitle_default', $args_text_input );
-		register_setting( 'seobox-settings', '_fb_ogtitle_max_lenght', $args_text_input );
-		register_setting( 'seobox-settings', '_fb_ogtitle_max_length_overflow', $args_default );
+		register_setting( 'seobox-settings-facebook', '_fb_ogtitle_active', $args_default );
+		register_setting( 'seobox-settings-facebook', '_fb_ogtitle_addition', $args_default );
+		register_setting( 'seobox-settings-facebook', '_fb_ogtitle_custom_addition', $args_text_input );
+		register_setting( 'seobox-settings-facebook', '_fb_ogtitle_addition_position', $args_default );
+		register_setting( 'seobox-settings-facebook', '_fb_ogtitle_default', $args_text_input );
+		register_setting( 'seobox-settings-facebook', '_fb_ogtitle_max_lenght', $args_text_input );
+		register_setting( 'seobox-settings-facebook', '_fb_ogtitle_max_length_overflow', $args_default );
 
 		// FB open graph description
-		register_setting( 'seobox-settings', '_fb_ogdescription_active', $args_default );
-		register_setting( 'seobox-settings', '_fb_ogdescription_default_value', $args_default );
-		register_setting( 'seobox-settings', '_fb_ogdescription_default_value_custom', $args_text_input );
-		register_setting( 'seobox-settings', '_fb_ogdescription_max_length', $args_text_input );
-		register_setting( 'seobox-settings', '_fb_ogdescription_max_length_overflow', $args_default );
+		register_setting( 'seobox-settings-facebook', '_fb_ogdescription_active', $args_default );
+		register_setting( 'seobox-settings-facebook', '_fb_ogdescription_default_value', $args_default );
+		register_setting( 'seobox-settings-facebook', '_fb_ogdescription_default_value_custom', $args_text_input );
+		register_setting( 'seobox-settings-facebook', '_fb_ogdescription_max_length', $args_text_input );
+		register_setting( 'seobox-settings-facebook', '_fb_ogdescription_max_length_overflow', $args_default );
 
 		// FB open graph image
-		register_setting( 'seobox-settings', '_fb_ogimage_active', $args_default );
-		register_setting( 'seobox-settings', '_fb_ogimage_default_value', $args_default );
+		register_setting( 'seobox-settings-facebook', '_fb_ogimage_active', $args_default );
+		register_setting( 'seobox-settings-facebook', '_fb_ogimage_default_value', $args_default );
 	}
 
 

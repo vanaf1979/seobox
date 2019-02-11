@@ -6,7 +6,7 @@
     <thead>
         <tr>
             <td valign="top" width="170">
-                <h4><a class="fas fa-info-circle" href="" target="_blank"></a> Open graph type</h4>
+                <h4><a class="fas fa-info-circle" href="" target="_blank"></a> <?php _e( 'Open graph type', 'seobox' ); ?></h4>
             </td>
             <td valign="top">
                 &nbsp;
@@ -205,17 +205,14 @@
 <table width="100%" class="seobox-settings-section">
     <thead>
         <tr>
-            <td valign="top" width="170">
-                <h4><a class="fas fa-info-circle" href="" target="_blank"></a> <?php _e( 'Description', 'seobox' ); ?></h4>
-            </td>
-            <td valign="top">
-                &nbsp;
+            <td valign="top" width="170" colspan="2">
+                <h4><a class="fas fa-info-circle" href="" target="_blank"></a> <?php _e( 'Open graph description', 'seobox' ); ?></h4>
             </td>
         </tr>
     </thead>
     <tbody>
         <tr class="row">
-            <td valign="top">
+            <td valign="top" width="170">
                 <label class="title"><?php _e( 'Active', 'seobox' ); ?>:</label>
             </td>
             <td valign="top">
@@ -307,7 +304,7 @@
     <thead>
         <tr>
             <td valign="top" width="170">
-                <h4><a class="fas fa-info-circle" href="" target="_blank"></a> <?php _e( 'Image', 'seobox' ); ?></h4>
+                <h4><a class="fas fa-info-circle" href="" target="_blank"></a> <?php _e( 'Open graph image', 'seobox' ); ?></h4>
             </td>
             <td valign="top">
                 &nbsp;

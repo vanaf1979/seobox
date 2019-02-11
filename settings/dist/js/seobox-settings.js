@@ -86,37 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./settings/src/js/modules/tabs.js":
-/*!*****************************************!*\
-  !*** ./settings/src/js/modules/tabs.js ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Utils = __webpack_require__(/*! ./utils.js */ "./settings/src/js/modules/utils.js");
-
-var tabs = {
-  init: function init() {
-    var tabs = Utils.findAll('.seobox-admin-tabs li');
-    Utils.loop(tabs, function (tab) {
-      Utils.addEvent(tab, 'click', function (e) {
-        console.log(e);
-        var currentTab = Utils.find('.seobox-admin-tabs li.active');
-        currentTab.classList.remove('active');
-        e.target.classList.add('active');
-        var currentPanel = Utils.find('.sb-settings-tabs-container .tab.active');
-        currentPanel.classList.remove('active');
-        var nextPanelName = '#' + e.target.dataset.tab;
-        var nextPanel = Utils.find(nextPanelName);
-        nextPanel.classList.add('active');
-      });
-    });
-  }
-};
-module.exports = tabs;
-
-/***/ }),
-
 /***/ "./settings/src/js/modules/utils.js":
 /*!******************************************!*\
   !*** ./settings/src/js/modules/utils.js ***!
@@ -336,14 +305,10 @@ module.exports = utils;
 
 /* Import utilities. */
 var utils = __webpack_require__(/*! ./modules/utils.js */ "./settings/src/js/modules/utils.js");
-
-var tabs = __webpack_require__(/*! ./modules/tabs.js */ "./settings/src/js/modules/tabs.js");
 /* Initialize components. */
 
 
-utils.domready(function () {
-  tabs.init();
-});
+utils.domready(function () {});
 
 /***/ }),
 
