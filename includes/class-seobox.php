@@ -45,6 +45,8 @@ class Seobox
 
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-seobox-public.php';
 
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-seobox-tagbuilder.php';
+
 		$this->loader = new Seobox_Loader();
 	}
 
