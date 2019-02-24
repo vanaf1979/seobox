@@ -365,17 +365,19 @@
                     
                         <img class="seobox-image-upload-src" src="" />
 
-                        <a class="seobox-image-upload-edit" href="#">
+                        <!--a class="seobox-image-upload-edit" href="#">
                             <span class="fas fa-pencil-alt"></span>
-                        </a>
+                        </a-->
 
                         <a class="seobox-image-upload-delete" href="#">
                             <span class="fas fa-times"></span>
                         </a>
+
+                        <input type="hidden" class="seobox-image-upload-field" value="" name="" />
                     
                     </div>
                     
-                    <button class="button button-large"><?php esc_attr_e( 'Select image', 'seobox' ); ?></button>
+                    <button class="seobox-image-upload-select button button-large"><?php esc_attr_e( 'Select image', 'seobox' ); ?></button>
 
                 </div>
             </td>
