@@ -86,6 +86,34 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./settings/src/js/modules/seoboximages.js":
+/*!*************************************************!*\
+  !*** ./settings/src/js/modules/seoboximages.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var seoboximages = {
+  init: function init() {
+    console.log('seobox images');
+    this.start();
+  },
+  start: function start() {
+    frame = wp.media({
+      title: 'Select or Upload Media Of Your Chosen Persuasion',
+      button: {
+        text: 'Use this media'
+      },
+      multiple: false // Set to true to allow multiple files to be selected
+
+    });
+    console.log(frame);
+  }
+};
+module.exports = seoboximages;
+
+/***/ }),
+
 /***/ "./settings/src/js/modules/utils.js":
 /*!******************************************!*\
   !*** ./settings/src/js/modules/utils.js ***!
@@ -300,15 +328,23 @@ module.exports = utils;
 /*!********************************************!*\
   !*** ./settings/src/js/seobox-settings.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_utils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/utils.js */ "./settings/src/js/modules/utils.js");
+/* harmony import */ var _modules_utils_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_utils_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _modules_seoboximages_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/seoboximages.js */ "./settings/src/js/modules/seoboximages.js");
+/* harmony import */ var _modules_seoboximages_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_seoboximages_js__WEBPACK_IMPORTED_MODULE_1__);
 /* Import utilities. */
-var utils = __webpack_require__(/*! ./modules/utils.js */ "./settings/src/js/modules/utils.js");
+
+
 /* Initialize components. */
 
-
-utils.domready(function () {});
+_modules_utils_js__WEBPACK_IMPORTED_MODULE_0___default.a.domready(function () {
+  _modules_seoboximages_js__WEBPACK_IMPORTED_MODULE_1___default.a.init();
+});
 
 /***/ }),
 
@@ -319,7 +355,7 @@ utils.domready(function () {});
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/saskia/Documents/repos/websites/va79-website/app/plugins/seobox/settings/src/js/seobox-settings.js */"./settings/src/js/seobox-settings.js");
+module.exports = __webpack_require__(/*! /Users/saskia/Documents/repos/websites/wptest/wp-content/plugins/seobox/settings/src/js/seobox-settings.js */"./settings/src/js/seobox-settings.js");
 
 
 /***/ })

@@ -360,7 +360,23 @@
             </td>
             <td valign="top">
                 <div class="form-wrapper llar">
-                    <p>[ Image selector ]</p>
+
+                    <div class="seobox-image-upload-container">
+                    
+                        <img class="seobox-image-upload-src" src="" />
+
+                        <a class="seobox-image-upload-edit" href="#">
+                            <span class="fas fa-pencil-alt"></span>
+                        </a>
+
+                        <a class="seobox-image-upload-delete" href="#">
+                            <span class="fas fa-times"></span>
+                        </a>
+                    
+                    </div>
+                    
+                    <button class="button button-large"><?php esc_attr_e( 'Select image', 'seobox' ); ?></button>
+
                 </div>
             </td>
         </tr>
