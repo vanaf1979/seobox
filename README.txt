@@ -27,12 +27,13 @@ This section describes how to install the plugin and get it working.
 = 0.6.0 =
 - Created tag_builder class.
 - Added persistent tabs to settings page.
-- Added all google settings functions.
-- Added all facebook settings functions.
+- Added google settings.
+- Added facebook settings.
 - Added a class for schema shortcodes.
 - Added seobox_make_meta_array hook.
 - Added seobox_make_meta_tag hook.
 - Added support for the title tag to tag builder class.
+- Added twitter settings.
 
 = 0.5.0 =
 - Added scripts for media upload.
