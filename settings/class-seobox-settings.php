@@ -109,6 +109,37 @@ class Plugin_Name_Settings
 		// FB open graph image
 		register_setting( 'seobox-settings-facebook', '_fb_ogimage_active', $args_default );
 		register_setting( 'seobox-settings-facebook', '_fb_ogimage_default_value', $args_default );
+		register_setting( 'seobox-settings-facebook', '_fb_ogimage_custom_default_value', $args_default );
+
+		// TWITTER
+		// Twiiter card type
+		register_setting( 'seobox-settings-twitter', '_tw_cardtype_active', $args_default );
+		register_setting( 'seobox-settings-twitter', '_tw_cardtype_default_value', $args_default );
+
+		// Twiiter card author handle
+		register_setting( 'seobox-settings-twitter', '_tw_cardauthor_active', $args_default );
+		register_setting( 'seobox-settings-twitter', '_tw_cardauthor_default', $args_default );
+
+		// Twiiter card title
+		register_setting( 'seobox-settings-twitter', '_tw_cardtitle_active', $args_default );
+		register_setting( 'seobox-settings-twitter', '_tw_cardtitle_addition', $args_default );
+		register_setting( 'seobox-settings-twitter', '_tw_cardtitle_custom_addition', $args_text_input );
+		register_setting( 'seobox-settings-twitter', '_tw_cardtitle_addition_position', $args_default );
+		register_setting( 'seobox-settings-twitter', '_tw_cardtitle_default', $args_text_input );
+		register_setting( 'seobox-settings-twitter', '_tw_cardtitle_max_lenght', $args_text_input );
+		register_setting( 'seobox-settings-twitter', '_tw_cardtitle_max_length_overflow', $args_default );
+
+		// Twiiter card description
+		register_setting( 'seobox-settings-twitter', '_tw_carddescription_active', $args_default );
+		register_setting( 'seobox-settings-twitter', '_tw_carddescription_default_value', $args_default );
+		register_setting( 'seobox-settings-twitter', '_tw_carddescription_default_value_custom', $args_text_input );
+		register_setting( 'seobox-settings-twitter', '_tw_carddescription_max_length', $args_default );
+		register_setting( 'seobox-settings-twitter', '_tw_carddescription_max_length_overflow', $args_default );
+
+		// Twiiter card image
+		register_setting( 'seobox-settings-twitter', '_tw_cardimage_active', $args_default );
+		register_setting( 'seobox-settings-twitter', '_tw_cardimage_default_value', $args_default );
+		register_setting( 'seobox-settings-twitter', '_tw_cardimage_custom_default_value', $args_default );
 	}
 
 

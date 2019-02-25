@@ -373,7 +373,7 @@
                             <span class="fas fa-times"></span>
                         </a>
 
-                        <input type="hidden" class="seobox-image-upload-field" value="" name="" />
+                        <input type="hidden" class="seobox-image-upload-field" value="" name="_fb_ogimage_custom_default_value" />
                     
                     </div>
                     
