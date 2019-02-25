@@ -204,7 +204,7 @@ class Plugin_Name_Settings
 	}
 
 
-	public function remove_plugin_meta( $plugin_meta , $plugin_file )
+	public function change_plugin_meta( $plugin_meta , $plugin_file )
 	{
 		$plugin_meta[1] = str_replace( 'href="https://vanaf1979.nl"', 'href="https://vanaf1979.nl" target="_blank"' , $plugin_meta[1] );
 		unset( $plugin_meta[2] );
