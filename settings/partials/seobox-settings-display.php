@@ -35,6 +35,11 @@
                 settings_fields( 'seobox-settings-tags' );
                 do_settings_sections( 'seobox-settings-tags' );
             }
+            else if( isset( $_GET['tab'] ) && $_GET['tab'] == 'seobox' )
+            {
+                settings_fields( 'seobox-settings-seobox' );
+                do_settings_sections( 'seobox-settings-seobox' );
+            }
             ?>
 
             <ul class="seobox-settings-tabs">
@@ -52,6 +57,9 @@
                 </li>
                 <li class="<?php if( isset( $_GET['tab'] ) && $_GET['tab'] == 'tags' ) { echo 'active'; } ?>">
                     <span class="fas fa-tag"></span> <a href="<?php echo admin_url( 'options-general.php?page=Seobox&tab=tags' ); ?>">Tags</a>
+                </li>
+                <li class="<?php if( isset( $_GET['tab'] ) && $_GET['tab'] == 'seobox' ) { echo 'active'; } ?>">
+                    <span class="fas fa-cog"></span> <a href="<?php echo admin_url( 'options-general.php?page=Seobox&tab=seobox' ); ?>">Seobox</a>
                 </li>
             </ul>
 
@@ -116,6 +124,19 @@
                 <div class="tab active">
 
                     <?php require_once( plugin_dir_path( dirname( __FILE__ ) ) . 'partials/seobox-settings-tags-display.php' ); ?>
+
+                </div>
+                <?php
+                }
+                ?>
+
+                <?php 
+                if( isset( $_GET['tab'] ) && $_GET['tab'] == 'seobox' )
+                {
+                ?>
+                <div class="tab active">
+
+                    <?php require_once( plugin_dir_path( dirname( __FILE__ ) ) . 'partials/seobox-settings-seobox-display.php' ); ?>
 
                 </div>
                 <?php
