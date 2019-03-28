@@ -7,10 +7,10 @@
  * @package           Seobox
  *
  * @wordpress-plugin
- * Plugin Name:       SeoBox
+ * Plugin Name:       Seobox
  * Plugin URI:        https://seobox.vanaf1979.nl
  * Description:       A Simpler Wordpress Seo plugin.
- * Version:           0.5.0
+ * Version:           0.6.0
  * Author:            Vanaf1979
  * Author URI:        https://vanaf1979.nl
  * License:           GPL-2.0+
@@ -18,6 +18,9 @@
  * Text Domain:       seobox
  * Domain Path:       /languages
  */
+
+/* Bootstrap SeoBox */
+require_once plugin_dir_path( dirname( __FILE__ ) ) . 'seobox/seobox/includes/bootstrap.php';
 
 
 if ( ! defined( 'WPINC' ) )
@@ -29,38 +32,44 @@ if ( ! defined( 'WPINC' ) )
 define( 'PLUGIN_NAME_VERSION', '0.4.0' );
 
 
-function activate_seobox()
-{
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-seobox-activator.php';
-	Seobox_Activator::activate();
+use SeoBox\Includes\Activator as Activator;
+
+function activate_seobox() {
+
+	Activator::activate();
+
 }
-
-
-function deactivate_seobox()
-{
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-seobox-deactivator.php';
-	Seobox_Deactivator::deactivate();
-}
-
-
-function uninstall_seobox()
-{
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-seobox-uninstall.php';
-	Seobox_Uninstall::uninstall();
-}
-
 
 register_activation_hook( __FILE__, 'activate_seobox' );
+
+
+use SeoBox\Includes\Deactivator as Deactivator;
+
+function deactivate_seobox() {
+
+	Deactivator::deactivate();
+
+}
+
 register_deactivation_hook( __FILE__, 'deactivate_seobox' );
+
+
+use SeoBox\Includes\Uninstaller as Uninstaller;
+
+function uninstall_seobox() {
+
+	Uninstaller::uninstall();
+
+}
+
 register_uninstall_hook( __FILE__, 'uninstall_seobox' );
 
 
-require plugin_dir_path( __FILE__ ) . 'includes/class-seobox.php';
+// use SeoBox\SeoBox as SeoBox;
 
-
-function run_seobox()
-{
-	$plugin = new Seobox();
-	$plugin->run();
-}
-run_seobox();
+// function run_seobox()
+// {
+// 	$plugin = new SeoBox();
+// 	$plugin->run();
+// }
+// run_seobox();
