@@ -21,8 +21,26 @@ SeoBox Wordpress Seo Plugin
 This section describes how to install the plugin and get it working.
 
 
-
 == Changelog ==
+
+= 0.6.0 =
+- Created tag_builder class.
+- Added persistent tabs to settings page.
+- Added google settings.
+- Added facebook settings.
+- Added a class for schema shortcodes.
+- Added seobox_make_meta_array hook.
+- Added seobox_make_meta_tag hook.
+- Added support for the title tag to tag builder class.
+- Added twitter settings.
+- Added Schema settings.
+- Added Tags settings.
+- Added Seobox settings.
+- Refactored to include a bootstrap.php.
+- Refactored to use PSR-4 Autoloading.
+- Refactored to use Php Namespaces.
+- Reindented code base to use 4 spaces.
+- Added content for the readme.md.
 
 = 0.5.0 =
 - Added scripts for media upload.

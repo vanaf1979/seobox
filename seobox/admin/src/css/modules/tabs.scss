@@ -1,0 +1,44 @@
+
+.seobox-metabox {
+    margin: 0px 0px 20px 0px;
+}
+.seobox-metabox .seobox-admin-tabs  {
+    display: inline-block;
+    width: 100%;
+    height: 36px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 5px;
+    list-style: none;
+    border-bottom: solid 1px #dedede;
+}
+    .seobox-metabox .seobox-admin-tabs li {
+        display: inline-block;
+        height: 26px;
+        padding: 7px 20px 0px 20px;
+        margin: 0px 1px 0px 0px;
+        background: #efefef;
+        border: solid 1px #dedede;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+        .seobox-metabox .seobox-admin-tabs li.active {
+            height: 27px;
+            padding: 8px 20px 0px 20px;
+            background: #ffffff;
+            border-top: solid 2px #0073aa;
+            border-bottom: none;
+        }
+
+        .seobox-metabox .seobox-admin-tabs li span {
+            color: #0073aa;
+        }
+        .seobox-metabox .seobox-admin-tabs li a {
+            pointer-events: none;
+        }
+
+    .seobox-metabox .sb-admin-tabs-container .tab {
+        display: none;
+    }
+        .seobox-metabox .sb-admin-tabs-container .tab.active {
+            display: block;
+        }
