@@ -1,71 +1,82 @@
 <?php
+/**
+ * This class handles the plugins shortcodes.
+ *
+ * @link       https://seobox.vanaf1979.nl
+ * @since      1.0.0
+ *
+ * @package    SeoBox
+* @subpackage SeoBox/Shortcodes
+ */
 
 namespace SeoBox\Shortcodes;
 
-class Shortcodes {
 
-	private $plugin_name;
-
-	private $version;
+use SeoBox\Includes\Plugin as Plugin;
 
 
-	public function __construct( $plugin_name, $version )
-	{
-		$this->plugin_name = $plugin_name;
-		$this->version = $version;
-	}
+class Shortcodes extends Plugin {
 
 
-	public function enqueue_styles()
-	{
-		// wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/seobox-public.css', array(), $this->version, 'all' );
-    }
+    public function __construct() { }
+
+
+    public function enqueue_styles() {
+
+        // wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/seobox-public.css', array(), $this->version, 'all' );
     
+    }
 
-    public function register_shortcodes( )
-	{
+
+    public function register_shortcodes( ) {
+
         add_shortcode( 'sbsb' , array(  $this , 'handle_schemablock_tag') );
         add_shortcode( 'sbs' , array(  $this , 'handle_schema_tag') );
-        
-	}
+
+    }
 
 
-	public function handle_schema_tag( $atts , $content = null )
-	{
-		$a = shortcode_atts( array(
+    public function handle_schema_tag( $atts , $content = null ) {
+
+        $a = shortcode_atts( array(
             'tag' => 'tag',
-			'prop' => 'prop'
-		), $atts );
+            'prop' => 'prop'
+        ), $atts );
 
-        if( $a['tag'] > '' )
-        {
+        if( $a['tag'] > '' ) {
+
             $a['tag'] = "span";
+        
         }
 
         $content = do_shortcode( $content );
-		return "<{$a['tag']} class=\"sbshcema\" itemprop=\"{$a['prop']}\">{$content}</{$a['tag']}>";
+        return "<{$a['tag']} class=\"sbshcema\" itemprop=\"{$a['prop']}\">{$content}</{$a['tag']}>";
     }
-    
 
-    public function handle_schemablock_tag( $atts , $content = null )
-	{
-		$a = shortcode_atts( array(
+
+    public function handle_schemablock_tag( $atts , $content = null ) {
+
+        $a = shortcode_atts( array(
             'tag' => '',
             'prop' => '',
-			'type' => ''
+            'type' => ''
         ), $atts );
-        
-        if( $a['tag'] > '' )
-        {
+
+        if( $a['tag'] > '' ) {
+
             $a['tag'] = "div";
+
         }
-        
-        if( $a['prop'] > '' )
-        {
+
+        if( $a['prop'] > '' ) {
+
             $a['prop'] = " itemprop=\"{$a['prop']}\"";
+        
         }
+
         $content = do_shortcode( $content );
-		return "<{$a['tag']}{$itemprop} class=\"sbschemablock\" itemscope itemtype=\"{$a['type']}\">{$content}</{$a['tag']}>";
-	}
+        return "<{$a['tag']}{$itemprop} class=\"sbschemablock\" itemscope itemtype=\"{$a['type']}\">{$content}</{$a['tag']}>";
+    
+    }
 
 }

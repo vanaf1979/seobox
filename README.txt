@@ -21,7 +21,6 @@ SeoBox Wordpress Seo Plugin
 This section describes how to install the plugin and get it working.
 
 
-
 == Changelog ==
 
 = 0.6.0 =
@@ -37,6 +36,11 @@ This section describes how to install the plugin and get it working.
 - Added Schema settings.
 - Added Tags settings.
 - Added Seobox settings.
+- Refactored to include a bootstrap.php.
+- Refactored to use PSR-4 Autoloading.
+- Refactored to use Php Namespaces.
+- Reindented code base to use 4 spaces.
+- Added content for the readme.md.
 
 = 0.5.0 =
 - Added scripts for media upload.

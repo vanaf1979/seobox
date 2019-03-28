@@ -6,7 +6,7 @@
  * @since      1.0.0
  *
  * @package    SeoBox
- * @subpackage SeoBox/Includes/Autoloader
+ * @subpackage SeoBox/Includes
  */
 
 namespace SeoBox\includes;

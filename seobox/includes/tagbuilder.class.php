@@ -1,48 +1,63 @@
 <?php
+/**
+ * This class creates meta tag html output.
+ *
+ * @link       https://seobox.vanaf1979.nl
+ * @since      1.0.0
+ *
+ * @package    SeoBox
+ * @subpackage SeoBox/Includes
+ */
 
 namespace SeoBox\Includes;
 
+
 use SeoBox\Includes\Metavalues as Metavalues;
+
 
 class Tagbuilder {
 
-	private $postid;
+    private $postid;
 
-	private $wpmetas;
+    private $wpmetas;
 
 
-	public function __construct( $postid )
-	{
+    public function __construct( $postid ) {
+
         $this->postid = $postid;
-        
+
         $this->wpmetas = get_post_meta( $this->postid );
+
     }
 
 
-    public function get_browser_title()
-	{
-        if( ! isset( $this->wpmetas[ '_seobox_g_browser_title' ] ) )
-        {
+    public function get_browser_title() {
+
+        if( ! isset( $this->wpmetas[ '_seobox_g_browser_title' ] ) ) {
+
             return;
+
         }
 
-        if( $this->wpmetas[ '_seobox_g_browser_title' ][0] > '' )
-        {
+        if( $this->wpmetas[ '_seobox_g_browser_title' ][0] > '' ) {
+
             return $this->wpmetas[ '_seobox_g_browser_title' ][0];
-        }
-        else
-        {   
+
+        } else {   
+
             $post = get_post( $this->postid );
             return $post->post_title;
+
         }
+
     }
 
 
     public function get_tags_html()
-	{
+    {
         global $post;
         $values = new Metavalues( $post->ID );
-        
+
         $html = '';
         // $value = $values->get_seobox_g_keywords();
         // $html .= $this->get_meta_tag( 'keywords' , '_seobox_g_keywords' , $value );
@@ -58,7 +73,7 @@ class Tagbuilder {
         // og:url
         // og:site_nam
         // Image tag
-        
+
         $html .= $this->get_meta_tag( 'twitter:card' , '_seobox_tw_type' );
         $html .= $this->get_meta_tag( 'twitter:title' , '_seobox_tw_title' );
         $html .= $this->get_meta_tag( 'twitter:description' , '_seobox_tw_description' );
@@ -69,16 +84,17 @@ class Tagbuilder {
         $html .= $this->get_meta_tag( 'schema:type' , '_seobox_s_type' );
         $html .= $this->get_meta_tag( 'schema:title' , '_seobox_s_title' );
         $html .= $this->get_meta_tag( 'schema:description' , '_seobox_s_description' );
-        
+
         return $html;
     }
-    
 
-    private function get_meta_tag( $name , $seoboxname )
-	{   
-        if( ! isset( $this->wpmetas[ $seoboxname ] ) )
-        {
+
+    private function get_meta_tag( $name , $seoboxname ) {   
+        
+        if( ! isset( $this->wpmetas[ $seoboxname ] ) ) {
+
             return;
+
         }
 
         // Populate the meta array.
@@ -91,17 +107,19 @@ class Tagbuilder {
 
         // Make html tsh of the meta array.
         return $this->make_meta_tag( $metaarray );
-	}
+
+    }
 
 
-    private static function make_meta_tag( $metaarray )
-	{
+    private static function make_meta_tag( $metaarray ) {
+
         $return = "<meta name=\"{$metaarray['name']}\" content=\"{$metaarray['content']}\" />";
-        
+
         // Run registerd filters on the meta tag.
         $return = apply_filters( 'seobox_make_meta_tag', $return , $metaarray['name'] , $metaarray['content'] );
-        
+
         return $return . "\n";
-	}
+        
+    }
 
 }
