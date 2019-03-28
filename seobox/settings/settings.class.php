@@ -1,7 +1,8 @@
 <?php
 
-class Plugin_Name_Settings
-{
+namespace SeoBox\Settings;
+
+class Settings {
 
 	private $plugin_name;
 
@@ -29,7 +30,8 @@ class Plugin_Name_Settings
 
 	public function register_settings_page( )
 	{
-		 add_options_page( 'Seobox' , 'Seobox' , 'manage_options' , 'Seobox' , [ &$this , 'settings_page_content' ] );
+		
+		add_options_page( 'Seobox' , 'Seobox' , 'manage_options' , 'Seobox' , [ &$this , 'settings_page_content' ] );
 	}
 
 

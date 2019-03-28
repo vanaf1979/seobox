@@ -1,6 +1,8 @@
 <?php
 
-class Seobox_i18n
+namespace SeoBox\Includes;
+
+class I18n
 {
 
 	public function load_plugin_textdomain()

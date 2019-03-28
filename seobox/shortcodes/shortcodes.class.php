@@ -1,7 +1,8 @@
 <?php
 
-class Seobox_Shortcodes
-{
+namespace SeoBox\Shortcodes;
+
+class Shortcodes {
 
 	private $plugin_name;
 

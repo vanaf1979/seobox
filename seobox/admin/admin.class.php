@@ -1,7 +1,9 @@
 <?php
 
-class Seobox_Admin
-{
+namespace SeoBox\Admin;
+
+class Admin {
+	
 	private $plugin_name;
 
 	private $version;

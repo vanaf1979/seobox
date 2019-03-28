@@ -1,6 +1,8 @@
 <?php
 
-class Seobox_Deactivator
+namespace SeoBox\Includes;
+
+class Deactivator
 {
 
 	public static function deactivate()

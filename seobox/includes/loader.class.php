@@ -1,7 +1,9 @@
 <?php
 
-class Seobox_Loader
-{
+namespace SeoBox\Includes;
+
+class Loader {
+	
 	protected $actions;
 
 	protected $filters;

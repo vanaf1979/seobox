@@ -1,7 +1,8 @@
 <?php
 
-class Seobox_MetaValue
-{
+namespace SeoBox\Includes;
+
+class MetaValues {
 
 	private $postid;
 

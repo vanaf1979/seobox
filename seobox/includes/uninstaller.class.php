@@ -1,7 +1,8 @@
 <?php
 
-class Seobox_Uninstall
-{
+namespace SeoBox\Includes;
+
+class Uninstaller {
 
 	public static function uninstall()
 	{

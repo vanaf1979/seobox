@@ -1,7 +1,10 @@
 <?php
 
-class Seobox_TagBulder
-{
+namespace SeoBox\Includes;
+
+use SeoBox\Includes\Metavalues as Metavalues;
+
+class Tagbuilder {
 
 	private $postid;
 
@@ -38,7 +41,7 @@ class Seobox_TagBulder
     public function get_tags_html()
 	{
         global $post;
-        $values = new Seobox_MetaValue( $post->ID );
+        $values = new Metavalues( $post->ID );
         
         $html = '';
         // $value = $values->get_seobox_g_keywords();

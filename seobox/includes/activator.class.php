@@ -1,7 +1,9 @@
 <?php
 
-class Seobox_Activator
-{
+namespace SeoBox\Includes;
+
+class Activator {
+	
 	protected $version;
 
 	public static function activate()

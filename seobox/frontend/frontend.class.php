@@ -1,6 +1,10 @@
 <?php
 
-class Seobox_Public
+namespace SeoBox\Frontend;
+
+use SeoBox\Includes\Tagbuilder as Tagbuilder;
+
+class Frontend
 {
 
 	private $plugin_name;
@@ -35,7 +39,7 @@ class Seobox_Public
 	public function add_seabox_title_to_head( $title )
 	{
 		global $post;
-		$tag_buider = new Seobox_TagBulder( $post->ID );
+		$tag_buider = new Tagbuilder( $post->ID );
 		return $tag_buider->get_browser_title();
 	}
 
@@ -43,7 +47,7 @@ class Seobox_Public
 	public function add_seabox_tags_to_head( )
 	{
 		global $post;
-		$tag_buider = new Seobox_TagBulder( $post->ID );
+		$tag_buider = new Tagbuilder( $post->ID );
 		echo $tag_buider->get_tags_html();
 	}
 
