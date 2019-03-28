@@ -27,7 +27,7 @@ class Plugin {
 
         $this->pluginname = 'Seobox';
 
-        $this->version = '0.6.0';
+        $this->version = '0.7.0';
 
         $this->textdomain = 'seobox';
 

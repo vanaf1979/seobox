@@ -39,7 +39,7 @@ class SeoBox extends Plugin {
         $this->define_public_hooks();
         $this->define_shortcodes_hooks();
 
-        $this->run();
+        $this->loader->run();
 
     }
 
@@ -115,34 +115,6 @@ class SeoBox extends Plugin {
         $this->loader->add_action( 'wp_enqueue_scripts', $shortcodes, 'enqueue_styles' );
 
         $this->loader->add_action( 'init' , $shortcodes , 'register_shortcodes' );
-
-    }
-
-
-    public function run() {
-
-        $this->loader->run();
-
-    }
-
-
-    public function get_plugin_name() {
-
-        return $this->pluginname;
-
-    }
-
-
-    public function get_loader() {
-
-        return $this->loader;
-
-    }
-
-
-    public function get_version() {
-
-        return $this->version;
 
     }
 

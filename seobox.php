@@ -19,17 +19,17 @@
  * Domain Path:       /languages
  */
 
-/* Bootstrap SeoBox */
-require_once plugin_dir_path( dirname( __FILE__ ) ) . 'seobox/seobox/includes/bootstrap.php';
-
-
 if ( ! defined( 'WPINC' ) )
 {
 	die;
 }
 
 
-define( 'PLUGIN_NAME_VERSION', '0.4.0' );
+/* Bootstrap SeoBox */
+require_once plugin_dir_path( dirname( __FILE__ ) ) . 'seobox/seobox/includes/bootstrap.php';
+
+
+define( 'PLUGIN_NAME_VERSION', '0.7.0' );
 
 
 use SeoBox\Includes\Activator as Activator;
@@ -63,13 +63,3 @@ function uninstall_seobox() {
 }
 
 register_uninstall_hook( __FILE__, 'uninstall_seobox' );
-
-
-// use SeoBox\SeoBox as SeoBox;
-
-// function run_seobox()
-// {
-// 	$plugin = new SeoBox();
-// 	$plugin->run();
-// }
-// run_seobox();

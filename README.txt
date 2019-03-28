@@ -23,6 +23,9 @@ This section describes how to install the plugin and get it working.
 
 == Changelog ==
 
+= 0.7.0 =
+- ....
+
 = 0.6.0 =
 - Created tag_builder class.
 - Added persistent tabs to settings page.
