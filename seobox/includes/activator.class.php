@@ -29,7 +29,7 @@ class Activator extends Plugin {
 
     private function set_version_in_database() {
 
-        if ( defined( 'PLUGIN_NAME_VERSION' ) ) {
+        if ( defined( 'SEOBOX_VERSION' ) ) {
 
             // put the version number in de database as an array. $this->version
         

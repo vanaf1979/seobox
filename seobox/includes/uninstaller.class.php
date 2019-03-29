@@ -22,6 +22,7 @@ class Uninstaller extends Plugin {
         
         $this->remove_metas();
         $this->remove_settings();
+        $this->remove_version_from_database();
         $this->register_uninstall();
 
     }
@@ -40,6 +41,17 @@ class Uninstaller extends Plugin {
     private function remove_settings() {
 
         // Remove settings from database.
+
+    }
+
+
+    private function remove_version_from_database() {
+
+        if ( defined( 'SEOBOX_VERSION' ) ) {
+
+            // remove the version number from the database.
+        
+        }
 
     }
 

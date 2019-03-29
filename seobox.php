@@ -29,7 +29,7 @@ if ( ! defined( 'WPINC' ) )
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'seobox/seobox/includes/bootstrap.php';
 
 
-define( 'PLUGIN_NAME_VERSION', '0.7.0' );
+define( 'SEOBOX_VERSION', '0.7.0' );
 
 
 use SeoBox\Includes\Activator as Activator;

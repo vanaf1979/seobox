@@ -17,6 +17,7 @@ use SeoBox\Includes\Plugin as Plugin;
 
 class Deactivator extends Plugin {
 
+
     public static function deactivate() {
 
         $this->remove_version_from_database();
@@ -27,7 +28,11 @@ class Deactivator extends Plugin {
 
     private function remove_version_from_database() {
 
-        // remove the version number from the database.
+        if ( defined( 'SEOBOX_VERSION' ) ) {
+
+            // remove the version number from the database.
+        
+        }
 
     }
 
