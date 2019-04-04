@@ -66,6 +66,9 @@
                 </div>
             </td>
         </tr>
+        
+        <!-- TODO: Add title seperator option! -->
+
         <tr class="row">
             <td valign="top">
                 <label class="title"><?php _e( 'Position', 'seobox' ); ?>:</label>

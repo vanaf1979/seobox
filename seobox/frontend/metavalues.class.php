@@ -9,7 +9,7 @@
  * @subpackage SeoBox/Includes
  */
 
-namespace SeoBox\Includes;
+namespace SeoBox\Frontend;
 
 
 class MetaValues {

@@ -13,7 +13,10 @@ namespace SeoBox\Frontend;
 
 
 use SeoBox\Includes\Plugin as Plugin;
-use SeoBox\Includes\Tagbuilder as Tagbuilder;
+use SeoBox\Frontend\Tagbuilder as Tagbuilder;
+use SeoBox\Frontend\Titlevalue as Titlevalue;
+use SeoBox\Frontend\Metavalues as Metavalues;
+use SeoBox\Frontend\ValuesGoogle as ValuesGoogle;
 
 
 class Frontend extends Plugin {
@@ -46,18 +49,51 @@ class Frontend extends Plugin {
     public function add_seabox_title_to_head( $title ) {
 
         global $post;
-        $tag_buider = new Tagbuilder( $post->ID );
-        return $tag_buider->get_browser_title();
+
+        $title = new Titlevalue( $post->ID );
+
+        return $title->get_title_value();
 
     }
 
 
-    public function add_seabox_tags_to_head( ) {
+    public function add_seobox_tags_to_head( ) {
 
         global $post;
+
         $tag_buider = new Tagbuilder( $post->ID );
-        echo $tag_buider->get_tags_html();
-        
+
+        $output = '';
+
+        // GOOGLE.
+        $gvalues = new ValuesGoogle( $post->ID );
+        // Keywords
+        $value = $gvalues->get_keywords_value();
+        $output .= $tag_buider->write_meta_tag( 'keywords' , $value );
+        // Description.
+        $value = $gvalues->get_description_value();
+        $output .= $tag_buider->write_meta_tag( 'description' , $value );
+        // Robots
+        $value = $gvalues->get_robots_value();
+        $output .= $tag_buider->write_meta_tag( 'robots' , $value );
+        // Conanical.
+        $value = $gvalues->get_conanical_value();
+        $output .= $tag_buider->write_meta_tag( 'conanical' , $value );
+
+
+        // FACEBOOK.
+
+
+        // TWITTER.
+
+
+        // SCHEMA.
+
+
+        // TAGS.
+
+        echo $output;
+
     }
 
 }

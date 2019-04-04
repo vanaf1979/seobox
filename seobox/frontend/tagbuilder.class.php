@@ -9,10 +9,7 @@
  * @subpackage SeoBox/Includes
  */
 
-namespace SeoBox\Includes;
-
-
-use SeoBox\Includes\Metavalues as Metavalues;
+namespace SeoBox\Frontend;
 
 
 class Tagbuilder {
@@ -31,28 +28,19 @@ class Tagbuilder {
     }
 
 
-    public function get_browser_title() {
+    public static function write_meta_tag( $name , $value ) {
 
-        if( ! isset( $this->wpmetas[ '_seobox_g_browser_title' ] ) ) {
+        $return = "<meta name=\"{$name}\" content=\"{$value}\" />";
 
-            return;
+        // Run registerd filters on the meta tag.
+        $return = apply_filters( 'seobox_make_meta_tag', $return , $metaarray['name'] , $metaarray['content'] );
 
-        }
-
-        if( $this->wpmetas[ '_seobox_g_browser_title' ][0] > '' ) {
-
-            return $this->wpmetas[ '_seobox_g_browser_title' ][0];
-
-        } else {   
-
-            $post = get_post( $this->postid );
-            return $post->post_title;
-
-        }
-
+        return $return . "\n";
+        
     }
 
 
+    // TODO: Remove, depercated.
     public function get_tags_html()
     {
         global $post;
@@ -89,6 +77,7 @@ class Tagbuilder {
     }
 
 
+    // TODO: Remove, depercated.
     private function get_meta_tag( $name , $seoboxname ) {   
         
         if( ! isset( $this->wpmetas[ $seoboxname ] ) ) {
@@ -111,6 +100,7 @@ class Tagbuilder {
     }
 
 
+    // TODO: Remove, depercated.
     private static function make_meta_tag( $metaarray ) {
 
         $return = "<meta name=\"{$metaarray['name']}\" content=\"{$metaarray['content']}\" />";

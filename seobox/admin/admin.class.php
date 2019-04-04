@@ -115,7 +115,7 @@ public function __construct() { }
 
     public function save_seobox_meta( $post_id , $key ) {
         
-        if( array_key_exists( $key , $_POST ) and trim( $_POST[ $key ] ) > ''  ) {	
+        if( array_key_exists( $key , $_POST )  ) {	
             
             $new_value = $_POST[ $key ];
             $new_value = apply_filters( 'seobox_before_save_meta', $new_value , $key );

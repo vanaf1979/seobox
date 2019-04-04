@@ -101,7 +101,7 @@ class SeoBox extends Plugin {
 
             $this->loader->add_action( 'after_setup_theme' , $frontend , 'add_seabox_add_theme_support');
             $this->loader->add_action( 'pre_get_document_title' , $frontend , 'add_seabox_title_to_head', 15 );
-            $this->loader->add_action( 'wp_head' , $frontend , 'add_seabox_tags_to_head' , 1 , 1 );
+            $this->loader->add_action( 'wp_head' , $frontend , 'add_seobox_tags_to_head' , 1 , 1 );
 
         }
 
