@@ -1,6 +1,6 @@
 {
-    "/admin/dist/js/seobox-admin.js": "/admin/dist/js/seobox-admin.js",
-    "/admin/dist/css/seobox-admin.css": "/admin/dist/css/seobox-admin.css",
-    "/settings/dist/css/seobox-settings.css": "/settings/dist/css/seobox-settings.css",
-    "/settings/dist/js/seobox-settings.js": "/settings/dist/js/seobox-settings.js"
+    "/seobox/admin/dist/js/seobox-admin.js": "/seobox/admin/dist/js/seobox-admin.js",
+    "/seobox/admin/dist/css/seobox-admin.css": "/seobox/admin/dist/css/seobox-admin.css",
+    "/seobox/settings/dist/css/seobox-settings.css": "/seobox/settings/dist/css/seobox-settings.css",
+    "/seobox/settings/dist/js/seobox-settings.js": "/seobox/settings/dist/js/seobox-settings.js"
 }

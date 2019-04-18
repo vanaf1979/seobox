@@ -30,7 +30,9 @@
   "bugs": {
     "url": "https://github.com/vanaf1979/seobox/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@yaireo/tagify": "^2.15.1"
+  },
   "devDependencies": {
     "copy-webpack-plugin": "^4.6.0",
     "cssnext": "^1.8.4",

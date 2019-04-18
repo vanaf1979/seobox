@@ -14,18 +14,8 @@ namespace SeoBox\Frontend;
 
 class Tagbuilder {
 
-    private $postid;
 
-    private $wpmetas;
-
-
-    public function __construct( $postid ) {
-
-        $this->postid = $postid;
-
-        $this->wpmetas = get_post_meta( $this->postid );
-
-    }
+    public function __construct() { }
 
 
     public static function write_meta_tag( $name , $value ) {

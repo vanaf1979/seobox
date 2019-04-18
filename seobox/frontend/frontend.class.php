@@ -22,7 +22,11 @@ use SeoBox\Frontend\ValuesGoogle as ValuesGoogle;
 class Frontend extends Plugin {
 
 
-    public function __construct() { }
+    public function __construct() { 
+
+        parent::__construct();
+        
+    }
 
 
     public function enqueue_styles() {
@@ -57,11 +61,11 @@ class Frontend extends Plugin {
     }
 
 
-    public function add_seobox_tags_to_head( ) {
+    public function add_seobox_tags_to_head() {
 
         global $post;
 
-        $tag_buider = new Tagbuilder( $post->ID );
+        $tag_buider = new Tagbuilder();
 
         $output = '';
 

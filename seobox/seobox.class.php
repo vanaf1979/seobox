@@ -31,6 +31,8 @@ class SeoBox extends Plugin {
 
     public function __construct() {
 
+        parent::__construct();
+
         $this->loader = new Loader();
 
         $this->set_locale();
