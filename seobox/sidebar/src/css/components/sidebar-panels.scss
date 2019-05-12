@@ -1,0 +1,40 @@
+
+
+.components-panel__body h2 button {
+    font-size: 15px;
+    color: rgb(85, 85, 85) !important;
+    font-weight: normal !important;
+}
+
+.components-panel__body.google h2 button:before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f1a0";
+    display: inline-block;
+    width: 22px;
+    padding: 0px 0px 0px 0px;
+    color: rgb(85, 85, 85) !important;
+}
+
+.components-panel__body.facebook h2 button:before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f39e";
+    width: 22px;
+    padding: 0px 0px 0px 0px;
+    color: rgb(85, 85, 85) !important;
+}
+
+.components-panel__body.twitter h2 button:before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f099";
+    width: 22px;
+    padding: 0px 0px 0px 0px;
+    color: rgb(85, 85, 85) !important;
+}
+
+.components-panel__body.schema h2 button:before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f384";
+    width: 22px;
+    padding: 0px 0px 0px 0px;
+    color: rgb(85, 85, 85) !important;
+}

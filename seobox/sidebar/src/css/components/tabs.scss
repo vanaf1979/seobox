@@ -1,0 +1,60 @@
+
+
+.seobox-tabs {
+    display: block;
+    height: 34px;
+    padding: 0px 0px 0px 5px;
+    background: #ffffff;
+    border-bottom: solid 1px #cccccc;
+}
+    .seobox-tabs button {
+        height: 33px;
+        margin-right: 1px;
+        padding: 8px 12px 0px 12px;
+        background: #efefef;
+        border-right: solid 1px #cccccc;
+        border-top: solid 1px #cccccc;
+        border-left: solid 1px #cccccc;
+        border-bottom: solid 1px #ffffff;
+    }
+        .seobox-tabs button.active-tab {
+            height: 35px;
+            background: #ffffff;
+            border-right: solid 1px #cccccc;
+            border-top: solid 2px #0185ba;
+            border-left: solid 1px #cccccc;
+            border-bottom: solid 1px #ffffff;
+        }
+
+        .seobox-tabs button.google:before {
+            font-family: "Font Awesome 5 Brands";
+            content: "\f1a0";
+            display: inline-block;
+            text-align: left;
+            padding: 1px 4px 0px 0px;
+            color: rgb(85, 85, 85) !important;
+        }
+        
+        .seobox-tabs button.facebook:before {
+            font-family: "Font Awesome 5 Brands";
+            content: "\f39e";
+            text-align: left;
+            padding: 1px 4px 0px 0px;
+            color: rgb(85, 85, 85) !important;
+        }
+        
+        .seobox-tabs button.twitter:before {
+            font-family: "Font Awesome 5 Brands";
+            content: "\f099";
+            text-align: left;
+            padding: 1px 4px 0px 0px;
+            color: rgb(85, 85, 85) !important;
+        }
+        
+        .seobox-tabs button.schema:before {
+            font-family: "Font Awesome 5 Brands";
+            content: "\f384";
+            text-align: left;
+            padding: 1px 4px 0px 0px;
+            color: rgb(85, 85, 85) !important;
+        }

@@ -553,16 +553,28 @@ utils.domready(function () {
 
 /***/ }),
 
+/***/ "./seobox/sidebar/src/css/seobox-sidebar.scss":
+/*!****************************************************!*\
+  !*** ./seobox/sidebar/src/css/seobox-sidebar.scss ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!*******************************************************************************************************************************************!*\
-  !*** multi ./seobox/admin/src/js/seobox-admin.js ./seobox/admin/src/css/seobox-admin.scss ./seobox/settings/src/css/seobox-settings.scss ***!
-  \*******************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** multi ./seobox/admin/src/js/seobox-admin.js ./seobox/admin/src/css/seobox-admin.scss ./seobox/settings/src/css/seobox-settings.scss ./seobox/sidebar/src/css/seobox-sidebar.scss ***!
+  \****************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/saskia/Documents/repos/websites/wptest/wp-content/plugins/seobox/seobox/admin/src/js/seobox-admin.js */"./seobox/admin/src/js/seobox-admin.js");
 __webpack_require__(/*! /Users/saskia/Documents/repos/websites/wptest/wp-content/plugins/seobox/seobox/admin/src/css/seobox-admin.scss */"./seobox/admin/src/css/seobox-admin.scss");
-module.exports = __webpack_require__(/*! /Users/saskia/Documents/repos/websites/wptest/wp-content/plugins/seobox/seobox/settings/src/css/seobox-settings.scss */"./seobox/settings/src/css/seobox-settings.scss");
+__webpack_require__(/*! /Users/saskia/Documents/repos/websites/wptest/wp-content/plugins/seobox/seobox/settings/src/css/seobox-settings.scss */"./seobox/settings/src/css/seobox-settings.scss");
+module.exports = __webpack_require__(/*! /Users/saskia/Documents/repos/websites/wptest/wp-content/plugins/seobox/seobox/sidebar/src/css/seobox-sidebar.scss */"./seobox/sidebar/src/css/seobox-sidebar.scss");
 
 
 /***/ })

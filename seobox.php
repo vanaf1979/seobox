@@ -43,15 +43,15 @@ function activate_seobox() {
 register_activation_hook( __FILE__, 'activate_seobox' );
 
 
-use SeoBox\Includes\Deactivator as Deactivator;
+// use SeoBox\Includes\Deactivator as Deactivator;
 
-function deactivate_seobox() {
+// function deactivate_seobox() {
 
-	Deactivator::deactivate();
+// 	Deactivator::deactivate();
 
-}
+// }
 
-register_deactivation_hook( __FILE__, 'deactivate_seobox' );
+// register_deactivation_hook( __FILE__, 'deactivate_seobox' );
 
 
 use SeoBox\Includes\Uninstaller as Uninstaller;

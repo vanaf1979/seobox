@@ -18,6 +18,7 @@ use SeoBox\Admin\Admin as Admin;
 use SeoBox\Settings\Settings as Settings;
 use SeoBox\Shortcodes\Shortcodes as Shortcodes;
 use SeoBox\Frontend\Frontend as Frontend;
+use SeoBox\Sidebar\Sidebar as Sidebar;
 
 
 class SeoBox extends Plugin {
@@ -40,6 +41,7 @@ class SeoBox extends Plugin {
         $this->define_settings_hooks();
         $this->define_public_hooks();
         $this->define_shortcodes_hooks();
+        $this->define_sidebar_hooks();
 
         $this->loader->run();
 
@@ -68,6 +70,26 @@ class SeoBox extends Plugin {
             $this->loader->add_action( 'save_post', $admin, 'save_seobox' );
 
         }
+
+    }
+
+
+    private function define_sidebar_hooks() {
+
+        $sidebar = new Sidebar();
+
+        if( is_admin() ) {
+
+            // Sidebar assets.
+            $this->loader->add_action( 'enqueue_block_editor_assets' , $sidebar , 'enqueue_sidebar_assats' );
+
+        }
+
+        // Register Sidebar meta fields.
+        $this->loader->add_action( 'init' , $sidebar , 'register_meta_fields' );
+
+        // Ajax settings handler.
+        $this->loader->add_action( 'wp_ajax_seobox_settings' , $sidebar , 'ajax_ge_settings' );
 
     }
 
