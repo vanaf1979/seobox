@@ -3336,19 +3336,19 @@ function _possibleConstructorReturn(self, call) {
   return _assertThisInitialized(self);
 }
 
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
+}
+
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
 
   return self;
-}
-
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
 }
 
 function _inherits(subClass, superClass) {
@@ -3381,7 +3381,11 @@ var Fragment = wp.element.Fragment;
 var _wp$components = wp.components,
     TextControl = _wp$components.TextControl,
     TextareaControl = _wp$components.TextareaControl,
-    RadioControl = _wp$components.RadioControl;
+    RadioControl = _wp$components.RadioControl,
+    Button = _wp$components.Button,
+    Popover = _wp$components.Popover,
+    MenuGroup = _wp$components.MenuGroup,
+    MenuItem = _wp$components.MenuItem;
 
 var ViewGoogle =
 /*#__PURE__*/
@@ -3395,15 +3399,62 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(ViewGoogle).call(this));
     _this.state = {
-      value: false
+      isVisible: false
     };
+    _this.toggleVisible = _this.toggleVisible.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(ViewGoogle, [{
+    key: "toggleVisible",
+    value: function toggleVisible() {
+      var _this2 = this;
+
+      this.setState(function (state) {
+        return _this2.isVisible = !_this2.isVisible;
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Google inputs view"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Here goes a great description of this view."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextControl, {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Google inputs view"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
+        isDefault: true,
+        onClick: this.toggleVisible,
+        className: "drop-bt"
+      }, this.isVisible && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Popover, {
+        position: "bottom left"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuGroup, {
+        label: "Content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuItem, {
+        icon: "facebook-alt",
+        info: "Copy value from Facebook title",
+        isSelected: false,
+        onClick: function onClick() {
+          console.log('click');
+        }
+      }, "Copy Facebook title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuItem, {
+        icon: "twitter",
+        info: "Copy value from Twitter title",
+        isSelected: false,
+        onClick: function onClick() {
+          console.log('click');
+        }
+      }, "Copy from Twitter"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuItem, {
+        icon: "share",
+        info: "Copy value from Schema title",
+        isSelected: false,
+        onClick: function onClick() {
+          console.log('click');
+        }
+      }, "Copy from Schema")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuGroup, {
+        label: "Tools"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuItem, {
+        icon: "book",
+        isSelected: false,
+        onClick: function onClick() {
+          console.log('click');
+        }
+      }, "Field documentation")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextControl, {
         label: "Browser title",
         value: "Google browser title",
         onChange: ""

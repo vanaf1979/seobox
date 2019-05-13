@@ -2,7 +2,7 @@ import React from 'react'
 
 const { __ } = wp.i18n;
 const { Fragment } = wp.element;
-const { TextControl, TextareaControl, RadioControl } = wp.components;
+const { TextControl, TextareaControl, RadioControl, Button, Popover, MenuGroup, MenuItem } = wp.components;
 
 
 class ViewGoogle extends React.Component {
@@ -12,10 +12,20 @@ class ViewGoogle extends React.Component {
         super()
 
         this.state = {
-            value: false
+            isVisible: false
         }
 
+
+        this.toggleVisible = this.toggleVisible.bind(this);
+
     }
+
+
+    toggleVisible() {
+		this.setState( ( state ) => ( 
+            this.isVisible = ! this.isVisible
+        ) );
+	}
 
 
     render() {
@@ -25,7 +35,50 @@ class ViewGoogle extends React.Component {
 
                 <h3>Google inputs view</h3>
 
-                <p>Here goes a great description of this view.</p>
+                <Button isDefault onClick={ this.toggleVisible } className="drop-bt">
+                    { this.isVisible && (
+                        <Popover position="bottom left">
+                            
+                            <MenuGroup label="Content">
+                                <MenuItem
+                                    icon='facebook-alt'
+                                    info="Copy value from Facebook title"
+                                    isSelected={ false }
+                                    onClick={ () => { console.log('click') } }
+                                >
+                                    Copy Facebook title
+                                </MenuItem>
+                                <MenuItem
+                                    icon='twitter'
+                                    info="Copy value from Twitter title"
+                                    isSelected={ false }
+                                    onClick={ () => { console.log('click') } }
+                                >
+                                    Copy from Twitter
+                                </MenuItem>
+                                <MenuItem
+                                    icon='share'
+                                    info="Copy value from Schema title"
+                                    isSelected={ false }
+                                    onClick={ () => { console.log('click') } }
+                                >
+                                    Copy from Schema
+                                </MenuItem>
+                            </MenuGroup>
+                            <MenuGroup label="Tools">
+                                <MenuItem
+                                    icon='book'
+                                    isSelected={ false }
+                                    onClick={ () => { console.log('click') } }
+                                >
+                                    Field documentation
+                                </MenuItem>
+                            </MenuGroup>
+
+                        </Popover>
+                    ) }
+                </Button>
+                    
 
                 <TextControl
                     label="Browser title"
