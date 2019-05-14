@@ -1,4 +1,5 @@
 import React from 'react'
+import ProtoTextfield from './fields/proto-textfield.js';
 
 const { __ } = wp.i18n;
 const { Fragment } = wp.element;
@@ -78,6 +79,8 @@ class ViewGoogle extends React.Component {
                         </Popover>
                     ) }
                 </Button>
+
+                <ProtoTextfield/>
                     
                 {/* Use for tags: https://github.com/yairEO/tagify */}
                 <TextControl
