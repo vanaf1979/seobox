@@ -19,6 +19,7 @@
 - ~~Prototype dropdowns for per field options.~~
 - Cleanup the codebase.
 - Prototype Text field with state and dropdown.
+- Prototype a basic indicator in the sidebar (Is a field populated yes/no/correct)
 - Prototype Textarea field with state and dropdown.
 - Prototype Radio field with state.
 - Prototype Select field with state.
