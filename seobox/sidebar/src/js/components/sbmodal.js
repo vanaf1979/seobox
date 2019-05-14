@@ -5,7 +5,7 @@ import Modal from 'react-modal';
 const { __ } = wp.i18n;
 
 
-Modal.setAppElement('body');
+Modal.setAppElement('#editor');
 
 
 class SbModal extends React.Component {

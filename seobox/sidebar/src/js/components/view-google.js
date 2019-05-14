@@ -38,6 +38,8 @@ class ViewGoogle extends React.Component {
 
                 <Button isDefault onClick={ this.toggleVisible } className="drop-bt">
                     { this.isVisible && (
+
+                        // Click outside fix? https://medium.com/@pitipatdop/little-neat-trick-to-capture-click-outside-react-component-5604830beb7f
                         <Popover position="bottom left">
                             
                             <MenuGroup label="Content">

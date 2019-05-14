@@ -2981,7 +2981,7 @@ function _setPrototypeOf(o, p) {
 
 
 var __ = wp.i18n.__;
-react_modal__WEBPACK_IMPORTED_MODULE_1___default.a.setAppElement('body');
+react_modal__WEBPACK_IMPORTED_MODULE_1___default.a.setAppElement('#editor');
 
 var SbModal =
 /*#__PURE__*/
@@ -3583,7 +3583,8 @@ function (_React$Component) {
         isDefault: true,
         onClick: this.toggleVisible,
         className: "drop-bt"
-      }, this.isVisible && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Popover, {
+      }, this.isVisible && // Click outside fix? https://medium.com/@pitipatdop/little-neat-trick-to-capture-click-outside-react-component-5604830beb7f
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Popover, {
         position: "bottom left"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuGroup, {
         label: "Content"
