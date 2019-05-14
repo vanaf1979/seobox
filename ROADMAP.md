@@ -1,6 +1,10 @@
 
 ## Development roadmap/todos (v0.7.0 pre-release).
 
+### General
+- ~~Refactor php namespaces.~~
+- ~~Refactor autoloading class.~~
+
 ### Gutenberg sidebar
 
 - ~~Enqueue assets for Gutenberg.~~
@@ -29,8 +33,9 @@
 
 
 ### Metabox (For backwards compatability)
-- Restyle the Metabox.
+- Restyle the Metabox to match the Sidebar Modal.
 - Add Dropdowns to Textfields and Textareas.
+- Refactor and style the image pickers.
 
 
 ### Settings pages.
