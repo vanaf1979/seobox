@@ -26,10 +26,10 @@
 - Prototype Tags field with state and dropdown.
 - Prototype textare with state and dropdown.
 - Cleanup the codebase.
-- Develope Google view in Modal.
-- Develope Facebook view in Modal.
-- Develope Twitter view in Modal.
-- Develope Schema view in Modal.
+- Develop Google view in Modal.
+- Develop Facebook view in Modal.
+- Develop Twitter view in Modal.
+- Develop Schema view in Modal.
 
 
 ### Metabox (For backwards compatability)
@@ -46,11 +46,11 @@
 
 
 ### Public output.
-- Develope ValuesTitle class.
-- Develope ValuesGoogle class.
-- Develope ValuesFacebook class.
-- Develope ValuesTwitter class.
-- Develope ValuesSchema class.
-- Develope ValuesTags class.
-- Develope and cleanup TagBuilder class.
-- Develope and cleanup Frontend class.
+- Develop ValuesTitle class.
+- Develop ValuesGoogle class.
+- Develop ValuesFacebook class.
+- Develop ValuesTwitter class.
+- Develop ValuesSchema class.
+- Develop ValuesTags class.
+- Develop and cleanup TagBuilder class.
+- Develop and cleanup Frontend class.
