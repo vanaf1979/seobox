@@ -3385,7 +3385,8 @@ var _wp$components = wp.components,
     Button = _wp$components.Button,
     Popover = _wp$components.Popover,
     MenuGroup = _wp$components.MenuGroup,
-    MenuItem = _wp$components.MenuItem;
+    MenuItem = _wp$components.MenuItem,
+    Tooltip = _wp$components.Tooltip;
 
 var ViewGoogle =
 /*#__PURE__*/
@@ -3440,7 +3441,7 @@ function (_React$Component) {
           console.log('click');
         }
       }, "Copy from Twitter"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuItem, {
-        icon: "share",
+        icon: "networking",
         info: "Copy value from Schema title",
         isSelected: false,
         onClick: function onClick() {

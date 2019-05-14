@@ -2,7 +2,7 @@ import React from 'react'
 
 const { __ } = wp.i18n;
 const { Fragment } = wp.element;
-const { TextControl, TextareaControl, RadioControl, Button, Popover, MenuGroup, MenuItem } = wp.components;
+const { TextControl, TextareaControl, RadioControl, Button, Popover, MenuGroup, MenuItem, Tooltip } = wp.components;
 
 
 class ViewGoogle extends React.Component {
@@ -57,7 +57,7 @@ class ViewGoogle extends React.Component {
                                     Copy from Twitter
                                 </MenuItem>
                                 <MenuItem
-                                    icon='share'
+                                    icon='networking'
                                     info="Copy value from Schema title"
                                     isSelected={ false }
                                     onClick={ () => { console.log('click') } }
@@ -79,7 +79,7 @@ class ViewGoogle extends React.Component {
                     ) }
                 </Button>
                     
-
+                {/* Use for tags: https://github.com/yairEO/tagify */}
                 <TextControl
                     label="Browser title"
                     value="Google browser title"
