@@ -69,6 +69,8 @@ class Sidebar extends Plugin {
         );
 
         register_meta( 'post' , 'seobox_sidebar_test_field' , $args );
+
+        register_meta( 'post' , '_seobox_g_browser_title' , $args );
         
     }
 

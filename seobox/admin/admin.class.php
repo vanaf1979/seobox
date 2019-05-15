@@ -61,7 +61,17 @@ class Admin extends Plugin {
         // Add meta box to all post types edit pages
         foreach ( $screens as $screen ) {
 
-            add_meta_box( 'seobox-meta', 'SeoBox', [self::class, 'meta_box_content'], $screen );
+            add_meta_box(
+                'seobox-meta',
+                'SeoBox',
+                [self::class, 'meta_box_content'],
+                $screen,
+                'advanced',
+                'default',
+                array(
+                    '__back_compat_meta_box' => true,
+                )
+            );
 
         }
 
