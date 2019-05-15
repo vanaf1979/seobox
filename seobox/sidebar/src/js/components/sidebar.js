@@ -55,11 +55,11 @@ class Sidebar extends React.Component {
 
                 <PluginSidebarMoreMenuItem target="silk-sidebar" icon="buddicons-replies">
 
-                    {__("SeoBox", "silk")}
+                    {__("Silk seo", "silk")}
 
                 </PluginSidebarMoreMenuItem>
 
-                <PluginSidebar name="silk-sidebar" title={__("Silk", "silk")} >
+                <PluginSidebar name="silk-sidebar" title={__("Silk SEO", "silk")} >
 
                     <Panel>
 

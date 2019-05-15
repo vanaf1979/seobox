@@ -18,6 +18,8 @@
 - ~~Ad some test fields.~~
 - ~~Prototype dropdowns for per field options.~~
 - Cleanup the codebase.
+- Refactor all meta field names without leading underscore.
+- Refactor codebase and repo to new plugin name.
 - Prototype Text field with state and dropdown.
 - Prototype a basic indicator in the sidebar (Is a field populated yes/no/correct)
 - Prototype Textarea field with state and dropdown.

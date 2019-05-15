@@ -3238,9 +3238,9 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PluginSidebarMoreMenuItem, {
         target: "silk-sidebar",
         icon: "buddicons-replies"
-      }, __("SeoBox", "silk")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PluginSidebar, {
+      }, __("Silk seo", "silk")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PluginSidebar, {
         name: "silk-sidebar",
-        title: __("Silk", "silk")
+        title: __("Silk SEO", "silk")
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Panel, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PanelBody, {
         className: "google",
         title: "Google",
