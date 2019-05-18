@@ -23,7 +23,8 @@ class Sidebar extends Plugin {
         'wp-edit-post',
         'wp-element',
         'wp-components',
-        'wp-data'
+        'wp-data',
+        'wp-dom-ready'
     );
 
 
@@ -39,7 +40,7 @@ class Sidebar extends Plugin {
         wp_enqueue_style( $this->pluginname . '-sidebar' , plugin_dir_url( __FILE__ ) . 'dist/css/seobox-sidebar.css' , array() , $this->version , 'all' );
 
         wp_enqueue_script( $this->pluginname . '-sidebar' , plugin_dir_url( __FILE__ ) . 'dist/js/seobox-sidebar.js' , $this->dependancies , $this->version , 'all' );
-        
+
         // oad plugin settings.
         // wp_localize_script( $this->pluginname . '-sidebar', 'seoboxp-settings', $this->enqueue_sidebar_styles() );
 
@@ -51,13 +52,6 @@ class Sidebar extends Plugin {
         
 
     }
-
-
-    // private function get_seobox_settings() {
-
-    //     return array();
-
-    // }
     
 
     public function register_meta_fields() {

@@ -223,10 +223,14 @@ class Settings extends Plugin {
 
     public function change_plugin_meta( $plugin_meta , $plugin_file ) {
 
-        $plugin_meta[1] = str_replace( 'href="https://vanaf1979.nl"', 'href="https://vanaf1979.nl" target="_blank"' , $plugin_meta[1] );
-        unset( $plugin_meta[2] );
-        $plugin_meta[] = '<a href="https://twitter.com/wpseobox" target="_blank">Twitter</a>';
-        
+        if ( strpos( $file, 'seobox.class.php' ) !== false ) {
+
+            $plugin_meta[1] = str_replace( 'href="https://vanaf1979.nl"', 'href="https://vanaf1979.nl" target="_blank"' , $plugin_meta[1] );
+            unset( $plugin_meta[2] );
+            $plugin_meta[] = '<a href="https://twitter.com/wpseobox" target="_blank">Twitter</a>';
+
+        }
+
         return $plugin_meta;
 
     }

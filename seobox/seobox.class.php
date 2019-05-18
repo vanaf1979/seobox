@@ -105,8 +105,7 @@ class SeoBox extends Plugin {
 
             $this->loader->add_action( 'admin_menu', $settings, 'register_settings_page' );
             $this->loader->add_action( 'admin_init', $settings, 'register_settings' );
-
-            $this->loader->add_filter( 'plugin_action_links', $settings, 'seobox_settings_links', $priority = 10 );
+            $this->loader->add_filter( 'plugin_action_links_seobox/seobox.php' , $settings, 'seobox_settings_links', $priority = 10 );
             $this->loader->add_filter( 'plugin_row_meta', $settings, 'change_plugin_meta', 10, 2 );
 
         }
