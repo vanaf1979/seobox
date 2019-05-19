@@ -64,15 +64,15 @@ class Frontend extends Plugin {
 
     
     /**
-     * enqueue_styles.
+     * add_theme_support.
      *
-     * Enqueue styles for the frontend.
+     * Add theme support for the title tag.
      *
      * @since 1.0.0
      * @access public
      * @return void
      */
-    public function s( ) {
+    public function add_theme_support( ) {
         
         add_theme_support( 'title-tag' );
 
