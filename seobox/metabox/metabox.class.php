@@ -1,6 +1,6 @@
 <?php
 /**
- * Admin area specific functionality of this plugin.
+ * Back compat metabox functionality.
  *
  * @link       https://seobox.vanaf1979.nl
  * @since      1.0.0
@@ -17,7 +17,9 @@ use SeoBox\Includes\Plugin as Plugin;
 
 class Metabox extends Plugin {
 
-
+    /**
+     * Constructor.
+     */
     public function __construct() { 
 
         parent::__construct();
@@ -25,6 +27,15 @@ class Metabox extends Plugin {
     }
 
 
+    /**
+     * enqueue_styles.
+     *
+     * Enqueue styles for the frontend.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
     public function enqueue_styles() {
 
         wp_enqueue_style( $this->pluginname . '-metabox' , plugin_dir_url( __FILE__ ) . 'dist/css/seobox-admin.css', array(), $this->version, 'all' );
@@ -32,6 +43,15 @@ class Metabox extends Plugin {
     }
 
 
+    /**
+     * enqueue_scripts.
+     *
+     * Enqueue scripts for the frontend.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
     public function enqueue_scripts() {
 
         wp_enqueue_script( $this->pluginname . '-metabox' , plugin_dir_url( __FILE__ ) . 'dist/js/seobox-admin.js', array(), $this->version, false );
@@ -45,6 +65,15 @@ class Metabox extends Plugin {
     }
 
 
+    /**
+     * add_seo_metabox.
+     *
+     * Add a meta box to the post screens.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
     public function add_seo_metabox() {
 
         // TODO: Add a setting to choose post types.
@@ -78,6 +107,16 @@ class Metabox extends Plugin {
     }
 
 
+    /**
+     * meta_box_content.
+     *
+     * Render the content of the metabox.
+     *
+     * @since 1.0.0
+     * @access public
+     * @param  object $post
+     * @return void
+     */
     public static function meta_box_content( $post ) {
 
         require_once( plugin_dir_path( dirname( __FILE__ ) ) . 'admin/partials/seobox-admin-display.php' );
@@ -85,6 +124,16 @@ class Metabox extends Plugin {
     }
 
 
+    /**
+     * save_seobox.
+     *
+     * Collect meta values before saving.
+     *
+     * @since 1.0.0
+     * @access public
+     * @param  int $post_id
+     * @return void
+     */
     public static function save_seobox( $post_id ) {
 
         if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
@@ -127,6 +176,17 @@ class Metabox extends Plugin {
     }
 
 
+    /**
+     * save_seobox_meta.
+     *
+     * Save metabox values to the database.
+     *
+     * @since 1.0.0
+     * @access public
+     * @param  int $post_id
+     * @param  string $key
+     * @return void
+     */
     public function save_seobox_meta( $post_id , $key ) {
         
         if( array_key_exists( $key , $_POST )  ) {	
