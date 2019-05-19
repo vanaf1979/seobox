@@ -106,10 +106,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 
-/***/ "./seobox/admin/src/css/seobox-admin.scss":
-/*!************************************************!*\
-  !*** ./seobox/admin/src/css/seobox-admin.scss ***!
-  \************************************************/
+/***/ "./seobox/metabox/src/css/seobox-admin.scss":
+/*!**************************************************!*\
+  !*** ./seobox/metabox/src/css/seobox-admin.scss ***!
+  \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -117,14 +117,14 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 
-/***/ "./seobox/admin/src/js/modules/media-upload.js":
-/*!*****************************************************!*\
-  !*** ./seobox/admin/src/js/modules/media-upload.js ***!
-  \*****************************************************/
+/***/ "./seobox/metabox/src/js/modules/media-upload.js":
+/*!*******************************************************!*\
+  !*** ./seobox/metabox/src/js/modules/media-upload.js ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Utils = __webpack_require__(/*! ./utils.js */ "./seobox/admin/src/js/modules/utils.js");
+var Utils = __webpack_require__(/*! ./utils.js */ "./seobox/metabox/src/js/modules/utils.js");
 
 var mediaUpload = {
   init: function init() {
@@ -159,14 +159,14 @@ module.exports = mediaUpload;
 
 /***/ }),
 
-/***/ "./seobox/admin/src/js/modules/tabs.js":
-/*!*********************************************!*\
-  !*** ./seobox/admin/src/js/modules/tabs.js ***!
-  \*********************************************/
+/***/ "./seobox/metabox/src/js/modules/tabs.js":
+/*!***********************************************!*\
+  !*** ./seobox/metabox/src/js/modules/tabs.js ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Utils = __webpack_require__(/*! ./utils.js */ "./seobox/admin/src/js/modules/utils.js");
+var Utils = __webpack_require__(/*! ./utils.js */ "./seobox/metabox/src/js/modules/utils.js");
 
 var tabs = {
   init: function init() {
@@ -189,10 +189,10 @@ module.exports = tabs;
 
 /***/ }),
 
-/***/ "./seobox/admin/src/js/modules/tags.js":
-/*!*********************************************!*\
-  !*** ./seobox/admin/src/js/modules/tags.js ***!
-  \*********************************************/
+/***/ "./seobox/metabox/src/js/modules/tags.js":
+/*!***********************************************!*\
+  !*** ./seobox/metabox/src/js/modules/tags.js ***!
+  \***********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -304,10 +304,10 @@ var Tags = {
 
 /***/ }),
 
-/***/ "./seobox/admin/src/js/modules/utils.js":
-/*!**********************************************!*\
-  !*** ./seobox/admin/src/js/modules/utils.js ***!
-  \**********************************************/
+/***/ "./seobox/metabox/src/js/modules/utils.js":
+/*!************************************************!*\
+  !*** ./seobox/metabox/src/js/modules/utils.js ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -514,22 +514,22 @@ module.exports = utils;
 
 /***/ }),
 
-/***/ "./seobox/admin/src/js/seobox-admin.js":
-/*!*********************************************!*\
-  !*** ./seobox/admin/src/js/seobox-admin.js ***!
-  \*********************************************/
+/***/ "./seobox/metabox/src/js/seobox-admin.js":
+/*!***********************************************!*\
+  !*** ./seobox/metabox/src/js/seobox-admin.js ***!
+  \***********************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_tags_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/tags.js */ "./seobox/admin/src/js/modules/tags.js");
+/* harmony import */ var _modules_tags_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/tags.js */ "./seobox/metabox/src/js/modules/tags.js");
 /* Import utilities. */
-var utils = __webpack_require__(/*! ./modules/utils.js */ "./seobox/admin/src/js/modules/utils.js");
+var utils = __webpack_require__(/*! ./modules/utils.js */ "./seobox/metabox/src/js/modules/utils.js");
 
-var tabs = __webpack_require__(/*! ./modules/tabs.js */ "./seobox/admin/src/js/modules/tabs.js");
+var tabs = __webpack_require__(/*! ./modules/tabs.js */ "./seobox/metabox/src/js/modules/tabs.js");
 
-var mediaUpload = __webpack_require__(/*! ./modules/media-upload.js */ "./seobox/admin/src/js/modules/media-upload.js");
+var mediaUpload = __webpack_require__(/*! ./modules/media-upload.js */ "./seobox/metabox/src/js/modules/media-upload.js");
 
 
 /* Initialize components. */
@@ -565,14 +565,14 @@ utils.domready(function () {
 /***/ }),
 
 /***/ 0:
-/*!****************************************************************************************************************************************************************************************!*\
-  !*** multi ./seobox/admin/src/js/seobox-admin.js ./seobox/admin/src/css/seobox-admin.scss ./seobox/settings/src/css/seobox-settings.scss ./seobox/sidebar/src/css/seobox-sidebar.scss ***!
-  \****************************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************************!*\
+  !*** multi ./seobox/metabox/src/js/seobox-admin.js ./seobox/metabox/src/css/seobox-admin.scss ./seobox/settings/src/css/seobox-settings.scss ./seobox/sidebar/src/css/seobox-sidebar.scss ***!
+  \********************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/saskia/Documents/repos/websites/wptest/wp-content/plugins/seobox/seobox/admin/src/js/seobox-admin.js */"./seobox/admin/src/js/seobox-admin.js");
-__webpack_require__(/*! /Users/saskia/Documents/repos/websites/wptest/wp-content/plugins/seobox/seobox/admin/src/css/seobox-admin.scss */"./seobox/admin/src/css/seobox-admin.scss");
+__webpack_require__(/*! /Users/saskia/Documents/repos/websites/wptest/wp-content/plugins/seobox/seobox/metabox/src/js/seobox-admin.js */"./seobox/metabox/src/js/seobox-admin.js");
+__webpack_require__(/*! /Users/saskia/Documents/repos/websites/wptest/wp-content/plugins/seobox/seobox/metabox/src/css/seobox-admin.scss */"./seobox/metabox/src/css/seobox-admin.scss");
 __webpack_require__(/*! /Users/saskia/Documents/repos/websites/wptest/wp-content/plugins/seobox/seobox/settings/src/css/seobox-settings.scss */"./seobox/settings/src/css/seobox-settings.scss");
 module.exports = __webpack_require__(/*! /Users/saskia/Documents/repos/websites/wptest/wp-content/plugins/seobox/seobox/sidebar/src/css/seobox-sidebar.scss */"./seobox/sidebar/src/css/seobox-sidebar.scss");
 

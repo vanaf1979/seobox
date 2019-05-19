@@ -6,7 +6,7 @@
  * @since      1.0.0
  *
  * @package    SeoBox
- * @subpackage SeoBox/Includes
+ * @subpackage SeoBox/Frontend
  */
 
 namespace SeoBox\Frontend;
@@ -14,9 +14,17 @@ namespace SeoBox\Frontend;
 
 class Titlevalue {
 
+    /**
+     * Current post id.
+     *
+     * @var object $post_id
+     */
     private $post_id;
 
 
+    /**
+     * Constructor.
+     */
     public function __construct( $post_id ) {
 
         $this->post_id = $post_id;
@@ -24,6 +32,15 @@ class Titlevalue {
     }
 
 
+    /**
+     * get_title_value.
+     *
+     * get title meta value.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
     public function get_title_value()
     {
         // Is this field active?

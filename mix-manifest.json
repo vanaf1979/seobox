@@ -1,9 +1,8 @@
 {
-    "/seobox/admin/dist/js/seobox-admin.js": "/seobox/admin/dist/js/seobox-admin.js",
-    "/seobox/admin/dist/css/seobox-admin.css": "/seobox/admin/dist/css/seobox-admin.css",
+    "/seobox/metabox/dist/js/seobox-admin.js": "/seobox/metabox/dist/js/seobox-admin.js",
+    "/seobox/metabox/dist/css/seobox-admin.css": "/seobox/metabox/dist/css/seobox-admin.css",
     "/seobox/settings/dist/css/seobox-settings.css": "/seobox/settings/dist/css/seobox-settings.css",
     "/seobox/sidebar/dist/css/seobox-sidebar.css": "/seobox/sidebar/dist/css/seobox-sidebar.css",
-    "/seobox/animblocks/dist/animblocks.js": "/seobox/animblocks/dist/animblocks.js",
     "/seobox/settings/dist/js/seobox-settings.js": "/seobox/settings/dist/js/seobox-settings.js",
     "/seobox/sidebar/dist/js/seobox-sidebar.js": "/seobox/sidebar/dist/js/seobox-sidebar.js"
 }

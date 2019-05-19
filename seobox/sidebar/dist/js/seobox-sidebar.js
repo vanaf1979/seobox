@@ -3583,9 +3583,9 @@ function (_React$Component) {
         isDefault: true,
         onClick: this.toggleVisible,
         className: "drop-bt"
-      }, this.isVisible && // Click outside fix? https://medium.com/@pitipatdop/little-neat-trick-to-capture-click-outside-react-component-5604830beb7f
-      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Popover, {
-        position: "bottom left"
+      }, this.isVisible && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Popover, {
+        position: "bottom left",
+        onClickOutside: this.toggleVisible
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuGroup, {
         label: "Content"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuItem, {
