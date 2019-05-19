@@ -6,16 +6,16 @@
  * @since      1.0.0
  *
  * @package    SeoBox
- * @subpackage SeoBox/Admin
+ * @subpackage SeoBox/Metabox
  */
 
-namespace SeoBox\Admin;
+namespace SeoBox\Metabox;
 
 
 use SeoBox\Includes\Plugin as Plugin;
 
 
-class Admin extends Plugin {
+class Metabox extends Plugin {
 
 
     public function __construct() { 

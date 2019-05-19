@@ -1,6 +1,6 @@
 <?php
 /**
- * Fontend specific functionality of this plugin.
+ * Fontend specific functionality.
  *
  * @link       https://seobox.vanaf1979.nl
  * @since      1.0.0
@@ -29,6 +29,15 @@ class Frontend extends Plugin {
     }
 
 
+    /**
+     * enqueue_styles.
+     *
+     * Enqueue styles for the frontend.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
     public function enqueue_styles() {
 
         // wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/seobox-public.css', array(), $this->version, 'all' );
@@ -36,6 +45,15 @@ class Frontend extends Plugin {
     }
 
 
+    /**
+     * enqueue_styles.
+     *
+     * Enqueue scripts for the frontend.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
     public function enqueue_scripts() {
     
         // wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/seobox-public.js', array( 'jquery' ), $this->version, false );
@@ -43,13 +61,31 @@ class Frontend extends Plugin {
     }
 
     
-    public function add_seabox_add_theme_support( ) {
+    /**
+     * enqueue_styles.
+     *
+     * Enqueue styles for the frontend.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
+    public function s( ) {
         
         add_theme_support( 'title-tag' );
 
     }
 
 
+    /**
+     * add_seabox_title_to_head.
+     *
+     * Add a title tag to the head.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
     public function add_seabox_title_to_head( $title ) {
 
         global $post;
@@ -61,6 +97,15 @@ class Frontend extends Plugin {
     }
 
 
+    /**
+     * add_seobox_tags_to_head.
+     *
+     * Add seo meta tags to the head.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
     public function add_seobox_tags_to_head() {
 
         global $post;
