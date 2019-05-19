@@ -19,12 +19,11 @@ use SeoBox\Includes\Plugin as Plugin;
 
 class Sidebar extends Plugin {
 
-
     /**
-	 * Gutenberg dependancies.
-	 *
-	 * @var array $dependancies
-	 */
+     * Gutenberg dependancies.
+     *
+     * @var array $dependancies
+     */
     private $dependancies = array(
         'wp-plugins',
         'wp-edit-post',
@@ -36,8 +35,8 @@ class Sidebar extends Plugin {
 
 
     /**
-	 * Constructor.
-	 */
+     * Constructor.
+     */
     public function __construct() { 
 
         parent::__construct();

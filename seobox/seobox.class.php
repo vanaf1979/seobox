@@ -23,14 +23,12 @@ use SeoBox\Sidebar\Sidebar as Sidebar;
 
 class SeoBox extends Plugin {
 
-
     /**
      * Loader instance.
      *
      * @var object $loader
      */
     protected $loader;
-
 
 
     /**

@@ -21,7 +21,9 @@ use SeoBox\Frontend\ValuesGoogle as ValuesGoogle;
 
 class Frontend extends Plugin {
 
-
+    /**
+     * Constructor.
+     */
     public function __construct() { 
 
         parent::__construct();
