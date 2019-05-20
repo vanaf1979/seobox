@@ -2866,13 +2866,17 @@ function (_React$Component) {
         }
       }); // Replace meta field name with props.fieldName
       // dispatch( 'core/editor' ).editPost( { meta: { [ props.fieldName ]: value } } );
+    },
+    setSetting: function setSetting(key, value) {
+      dispatch('silk/settings').setSetting(key, value);
     }
   };
 }), withSelect(function (select, props) {
   return {
-    metaFieldValue: select('core/editor').getEditedPostAttribute('meta')['seobox_sidebar_test_field'] // Replace meta field name with props.fieldName
-    //metaFieldValue: select( 'core/editor' ).getEditedPostAttribute( 'meta' )[ props.fieldName ],
-
+    // Replace meta field name with props.fieldName
+    // metaFieldValue: select( 'core/editor' ).getEditedPostAttribute( 'meta' )[ props.fieldName ],
+    metaFieldValue: select('core/editor').getEditedPostAttribute('meta')['seobox_sidebar_test_field'],
+    getSettings: select('silk/settings').getSettings()['g_browser_title_max_lenght']
   };
 })])(ProtoTextfield)); // WP Data: https://wordpress.org/gutenberg/handbook/designers-developers/developers/packages/packages-data/
 // Data: https://github.com/WordPress/gutenberg/tree/master/packages/data
@@ -2981,6 +2985,10 @@ function _setPrototypeOf(o, p) {
 
 
 var __ = wp.i18n.__;
+var compose = wp.compose.compose;
+var _wp$data = wp.data,
+    withDispatch = _wp$data.withDispatch,
+    withSelect = _wp$data.withSelect;
 react_modal__WEBPACK_IMPORTED_MODULE_1___default.a.setAppElement('#editor');
 
 var SbModal =
@@ -2994,46 +3002,31 @@ function (_React$Component) {
     _classCallCheck(this, SbModal);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(SbModal).call(this));
-    _this.state = {
-      modalIsOpen: false
-    };
+    _this.state = {};
     _this.openModal = _this.openModal.bind(_assertThisInitialized(_this));
-    _this.afterOpenModal = _this.afterOpenModal.bind(_assertThisInitialized(_this));
     _this.closeModal = _this.closeModal.bind(_assertThisInitialized(_this));
+    _this.afterOpenModal = _this.afterOpenModal.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(SbModal, [{
     key: "openModal",
     value: function openModal() {
-      this.setState({
-        modalIsOpen: true
-      });
+      this.props.toggleModalOpen();
     }
   }, {
     key: "closeModal",
     value: function closeModal() {
-      this.setState({
-        modalIsOpen: false
-      });
+      this.props.toggleModalOpen();
     }
   }, {
     key: "afterOpenModal",
-    value: function afterOpenModal() {// references are now sync'd and can be accessed.
-      //this.subtitle.style.color = '#f00';
-    }
-  }, {
-    key: "componentWillReceiveProps",
-    value: function componentWillReceiveProps(nextProps) {
-      this.setState({
-        modalIsOpen: nextProps.isOpen
-      });
-    }
+    value: function afterOpenModal() {}
   }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_modal__WEBPACK_IMPORTED_MODULE_1___default.a, {
-        isOpen: this.state.modalIsOpen,
+        isOpen: this.props.modalOpenState,
         onAfterOpen: this.afterOpenModal,
         onRequestClose: this.closeModal,
         contentLabel: "Example Modal",
@@ -3051,7 +3044,17 @@ function (_React$Component) {
   return SbModal;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (SbModal);
+/* harmony default export */ __webpack_exports__["default"] = (compose([withDispatch(function (dispatch, props) {
+  return {
+    toggleModalOpen: function toggleModalOpen() {
+      dispatch('silk/ui').toggleModalOpen();
+    }
+  };
+}), withSelect(function (select, props) {
+  return {
+    modalOpenState: select('silk/ui').getModalOpemState()
+  };
+})])(SbModal));
 
 /***/ }),
 
@@ -3190,6 +3193,10 @@ var _wp$components = wp.components,
     TextControl = _wp$components.TextControl,
     TextareaControl = _wp$components.TextareaControl,
     RadioControl = _wp$components.RadioControl;
+var compose = wp.compose.compose;
+var _wp$data = wp.data,
+    withDispatch = _wp$data.withDispatch,
+    withSelect = _wp$data.withSelect;
 
 var Sidebar =
 /*#__PURE__*/
@@ -3202,28 +3209,16 @@ function (_React$Component) {
     _classCallCheck(this, Sidebar);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Sidebar).call(this));
-    _this.state = {
-      modalIsOpen: false // Bind methods
+    _this.state = {}; // Bind methods
 
-    };
     _this.openModal = _this.openModal.bind(_assertThisInitialized(_this));
-    _this.closeModal = _this.closeModal.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(Sidebar, [{
     key: "openModal",
     value: function openModal() {
-      this.setState({
-        modalIsOpen: true
-      });
-    }
-  }, {
-    key: "closeModal",
-    value: function closeModal() {
-      this.setState({
-        modalIsOpen: false
-      });
+      this.props.toggleModalOpen();
     }
   }, {
     key: "onSelect",
@@ -3263,10 +3258,7 @@ function (_React$Component) {
         title: "Schema.org",
         icon: "",
         initialOpen: false
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PanelRow, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Schema.org"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_sbmodal_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        ref: this.SbModal,
-        isOpen: this.state.modalIsOpen
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TabPanel, (_React$createElement = {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PanelRow, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Schema.org"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_sbmodal_js__WEBPACK_IMPORTED_MODULE_1__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TabPanel, (_React$createElement = {
         className: "edit-post",
         activeClass: "active-tab",
         onSelect: this.onSelect
@@ -3301,9 +3293,20 @@ function (_React$Component) {
   }]);
 
   return Sidebar;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component); //export default Sidebar
 
-/* harmony default export */ __webpack_exports__["default"] = (Sidebar);
+
+/* harmony default export */ __webpack_exports__["default"] = (compose([withDispatch(function (dispatch, props) {
+  return {
+    toggleModalOpen: function toggleModalOpen() {
+      dispatch('silk/ui').toggleModalOpen();
+    }
+  };
+}), withSelect(function (select, props) {
+  return {
+    modalOpenState: select('silk/ui').getModalOpemState()
+  };
+})])(Sidebar));
 
 /***/ }),
 
@@ -3916,6 +3919,12 @@ function (_React$Component) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_sidebar_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/sidebar.js */ "./seobox/sidebar/src/js/components/sidebar.js");
+/* harmony import */ var _store_uistore_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./store/uistore.js */ "./seobox/sidebar/src/js/store/uistore.js");
+/* harmony import */ var _store_uistore_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_store_uistore_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _store_settingsstore_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store/settingsstore.js */ "./seobox/sidebar/src/js/store/settingsstore.js");
+/* harmony import */ var _store_settingsstore_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_store_settingsstore_js__WEBPACK_IMPORTED_MODULE_2__);
+
+
 
 var registerPlugin = wp.plugins.registerPlugin; // Gebruiken: https://github.com/reactjs/react-modal#demos
 
@@ -3923,6 +3932,180 @@ registerPlugin("silk", {
   icon: "buddicons-replies",
   // The Plugin Dashicon
   render: _components_sidebar_js__WEBPACK_IMPORTED_MODULE_0__["default"]
+});
+
+/***/ }),
+
+/***/ "./seobox/sidebar/src/js/store/settingsstore.js":
+/*!******************************************************!*\
+  !*** ./seobox/sidebar/src/js/store/settingsstore.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+    var ownKeys = Object.keys(source);
+
+    if (typeof Object.getOwnPropertySymbols === 'function') {
+      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
+        return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+      }));
+    }
+
+    ownKeys.forEach(function (key) {
+      _defineProperty(target, key, source[key]);
+    });
+  }
+
+  return target;
+}
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+var registerStore = wp.data.registerStore; // https://wordpress.stackexchange.com/questions/324979/getting-a-custom-gutenberg-components-state-from-outside-that-component?rq=1
+
+var initial_state = {
+  settings: {
+    g_browser_title_max_lenght: 150
+  }
+};
+
+var reducer = function reducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initial_state;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case "SET_SETTING":
+      {
+        return _objectSpread({}, state, {
+          settings: _defineProperty({}, action.key, action.value)
+        });
+      }
+  }
+
+  return state;
+};
+
+var actions = {
+  setSetting: function setSetting(key, value) {
+    return {
+      type: "SET_SETTING",
+      key: key,
+      value: value
+    };
+  }
+};
+var selectors = {
+  getSettings: function getSettings(state) {
+    return state.settings;
+  }
+};
+registerStore("silk/settings", {
+  reducer: reducer,
+  actions: actions,
+  selectors: selectors
+});
+
+/***/ }),
+
+/***/ "./seobox/sidebar/src/js/store/uistore.js":
+/*!************************************************!*\
+  !*** ./seobox/sidebar/src/js/store/uistore.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+    var ownKeys = Object.keys(source);
+
+    if (typeof Object.getOwnPropertySymbols === 'function') {
+      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
+        return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+      }));
+    }
+
+    ownKeys.forEach(function (key) {
+      _defineProperty(target, key, source[key]);
+    });
+  }
+
+  return target;
+}
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+var registerStore = wp.data.registerStore; // https://wordpress.stackexchange.com/questions/324979/getting-a-custom-gutenberg-components-state-from-outside-that-component?rq=1
+
+var initial_state = {
+  modal: {
+    isOpen: false
+  }
+};
+
+var reducer = function reducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initial_state;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case "TOGGLE_MODAL_OPEN":
+      {
+        return _objectSpread({}, state, {
+          modal: {
+            isOpen: !state.modal.isOpen
+          }
+        });
+      }
+  }
+
+  return state;
+};
+
+var actions = {
+  toggleModalOpen: function toggleModalOpen() {
+    return {
+      type: "TOGGLE_MODAL_OPEN"
+    };
+  }
+};
+var selectors = {
+  getModalOpemState: function getModalOpemState(state) {
+    return state.modal.isOpen;
+  }
+};
+registerStore("silk/ui", {
+  reducer: reducer,
+  actions: actions,
+  selectors: selectors
 });
 
 /***/ }),

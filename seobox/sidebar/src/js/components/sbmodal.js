@@ -3,6 +3,8 @@ import Modal from 'react-modal';
 
 
 const { __ } = wp.i18n;
+const { compose } = wp.compose;
+const { withDispatch, withSelect } = wp.data;
 
 
 Modal.setAppElement('#editor');
@@ -16,41 +18,32 @@ class SbModal extends React.Component {
         super()
 
         this.state = {
-            modalIsOpen: false
+            
         }
 
         this.openModal = this.openModal.bind(this);
-        this.afterOpenModal = this.afterOpenModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
-
+        this.afterOpenModal = this.afterOpenModal.bind(this);
+        
     }
 
 
     openModal() {
 
-        this.setState({modalIsOpen: true});
+        this.props.toggleModalOpen()
 
     }
 
     
     closeModal() {
         
-        this.setState({modalIsOpen: false});
+        this.props.toggleModalOpen()
 
     }
 
 
     afterOpenModal() {
 
-        // references are now sync'd and can be accessed.
-        //this.subtitle.style.color = '#f00';
-
-    }
-    
-
-    componentWillReceiveProps( nextProps ) {
-
-        this.setState({modalIsOpen: nextProps.isOpen});
 
     }
 
@@ -58,7 +51,7 @@ class SbModal extends React.Component {
     render() {
         return (
             <Modal
-                isOpen={this.state.modalIsOpen}
+                isOpen={this.props.modalOpenState}
                 onAfterOpen={this.afterOpenModal}
                 onRequestClose={this.closeModal}
                 contentLabel="Example Modal"
@@ -87,4 +80,23 @@ class SbModal extends React.Component {
 
 }
 
-export default SbModal
+export default compose([
+
+    withDispatch(( dispatch , props ) => {
+
+        return {
+            toggleModalOpen: function( ) {
+                dispatch( 'silk/ui' ).toggleModalOpen()
+            }
+        }
+
+    }),
+    withSelect(( select , props ) => {
+        
+        return {
+            modalOpenState: select( 'silk/ui' ).getModalOpemState()
+        };
+
+    }),
+
+])( SbModal );

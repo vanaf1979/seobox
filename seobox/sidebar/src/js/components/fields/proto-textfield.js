@@ -47,6 +47,10 @@ export default compose([
                 dispatch( 'core/editor' ).editPost( { meta: { seobox_sidebar_test_field: value } } );
                 // Replace meta field name with props.fieldName
                 // dispatch( 'core/editor' ).editPost( { meta: { [ props.fieldName ]: value } } );
+                
+            },
+            setSetting: function( key , value ) {
+                dispatch( 'silk/settings' ).setSetting( key , value )
             }
         }
 
@@ -54,9 +58,10 @@ export default compose([
     withSelect(( select , props ) => {
         
         return {
-            metaFieldValue: select( 'core/editor' ).getEditedPostAttribute( 'meta' )[ 'seobox_sidebar_test_field' ]
             // Replace meta field name with props.fieldName
-            //metaFieldValue: select( 'core/editor' ).getEditedPostAttribute( 'meta' )[ props.fieldName ],
+            // metaFieldValue: select( 'core/editor' ).getEditedPostAttribute( 'meta' )[ props.fieldName ],
+            metaFieldValue: select( 'core/editor' ).getEditedPostAttribute( 'meta' )[ 'seobox_sidebar_test_field' ],
+            getSettings: select( 'silk/settings' ).getSettings()['g_browser_title_max_lenght']
         };
 
     }),

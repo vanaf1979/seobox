@@ -9,6 +9,8 @@ const { __ } = wp.i18n;
 const { Fragment } = wp.element;
 const { PluginSidebar, PluginSidebarMoreMenuItem } = wp.editPost;
 const { Panel, PanelBody, PanelRow, TabPanel, TextControl, TextareaControl, RadioControl } = wp.components;
+const { compose } = wp.compose;
+const { withDispatch, withSelect } = wp.data;
 
 
 class Sidebar extends React.Component {
@@ -18,26 +20,19 @@ class Sidebar extends React.Component {
         super()
 
         this.state = {
-            modalIsOpen: false
+            
         }
 
         // Bind methods
         this.openModal = this.openModal.bind(this);
-        this.closeModal = this.closeModal.bind(this);
 
     }
 
 
     openModal() {
 
-        this.setState({modalIsOpen: true});
-
-    }
-
-    closeModal() {
+        this.props.toggleModalOpen()
         
-        this.setState({modalIsOpen: false});
-
     }
 
 
@@ -119,7 +114,7 @@ class Sidebar extends React.Component {
 
                 </PluginSidebar>
 
-                <SbModal ref={this.SbModal} isOpen={this.state.modalIsOpen}>
+                <SbModal>
                 
                     <TabPanel className="edit-post"
                         activeClass="active-tab"
@@ -180,4 +175,25 @@ class Sidebar extends React.Component {
 
 }
 
-export default Sidebar
+//export default Sidebar
+
+export default compose([
+
+    withDispatch(( dispatch , props ) => {
+
+        return {
+            toggleModalOpen: function( ) {
+                dispatch( 'silk/ui' ).toggleModalOpen()
+            }
+        }
+
+    }),
+    withSelect(( select , props ) => {
+        
+        return {
+            modalOpenState: select( 'silk/ui' ).getModalOpemState()
+        };
+
+    }),
+
+])( Sidebar );
