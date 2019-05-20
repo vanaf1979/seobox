@@ -39,6 +39,7 @@ class Sidebar extends React.Component {
     onSelect( tabName ) {
 
         console.log( 'Selecting tab', tabName );
+        // TODO: Set active tab in UI Stora.
 
     }
 
@@ -120,6 +121,7 @@ class Sidebar extends React.Component {
                         activeClass="active-tab"
                         onSelect={ this.onSelect }
                         className="seobox-tabs"
+                        initialTabName="Facebook"
                         tabs={ [
                             {
                                 name: 'Google',

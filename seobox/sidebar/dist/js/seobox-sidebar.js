@@ -3223,7 +3223,7 @@ function (_React$Component) {
   }, {
     key: "onSelect",
     value: function onSelect(tabName) {
-      console.log('Selecting tab', tabName);
+      console.log('Selecting tab', tabName); // TODO: Set active tab in UI Stora.
     }
   }, {
     key: "render",
@@ -3262,7 +3262,7 @@ function (_React$Component) {
         className: "edit-post",
         activeClass: "active-tab",
         onSelect: this.onSelect
-      }, _defineProperty(_React$createElement, "className", "seobox-tabs"), _defineProperty(_React$createElement, "tabs", [{
+      }, _defineProperty(_React$createElement, "className", "seobox-tabs"), _defineProperty(_React$createElement, "initialTabName", "Facebook"), _defineProperty(_React$createElement, "tabs", [{
         name: 'Google',
         title: 'Google',
         className: 'google'
