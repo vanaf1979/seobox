@@ -129,7 +129,7 @@ class Frontend extends Plugin {
         $output .= $tag_buider->write_meta_tag( 'robots' , $value );
         // Conanical.
         $value = $gvalues->get_conanical_value();
-        $output .= $tag_buider->write_meta_tag( 'conanical' , $value );
+        $output .= $tag_buider->write_meta_tag( 'canonical' , $value );
 
 
         // FACEBOOK.
