@@ -82,39 +82,25 @@ class ViewGoogle extends React.Component {
 
                 <ProtoTextfield/>
                     
-                {/* Use for tags: https://github.com/yairEO/tagify */}
-                <TextControl
-                    label="Browser title"
-                    value="Google browser title"
-                    onChange=""
-                />
-
-                <TextControl
-                    label="Keywords"
-                    value="Google keywords"
-                    onChange=""
-                />
-
                 <TextareaControl
                     label="Description"
-                    help="Enter some text"
-                    value="Google description"
+                    help="Description about this field"
+                    value="Google description google description google description google description google description google description google description google description google description google description google description google description"
                 />
 
                 <TextControl
                     label="Canonical"
+                    help="Description about this field"
                     value="Canonical url"
                     onChange=""
                 />
 
-                {/* <RadioControl
-                    label="User type"
-                    help="The type of the current user"
-                    options={ [
-                    { label: 'Author', value: 'a' },
-                    { label: 'Editor', value: 'e' },
-                    ] }
-                /> */}
+                <TextControl
+                    label="Canonical"
+                    help="Description about this field"
+                    value="Canonical url"
+                    onChange=""
+                />
 
             </Fragment>
         )

@@ -2848,6 +2848,7 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextControl, {
         label: "Browser title",
+        help: "Description about this field",
         value: this.props.metaFieldValue,
         onChange: this.props.setMetaFieldValue
       }));
@@ -3262,7 +3263,7 @@ function (_React$Component) {
         className: "edit-post",
         activeClass: "active-tab",
         onSelect: this.onSelect
-      }, _defineProperty(_React$createElement, "className", "seobox-tabs"), _defineProperty(_React$createElement, "initialTabName", "Facebook"), _defineProperty(_React$createElement, "tabs", [{
+      }, _defineProperty(_React$createElement, "className", "seobox-tabs"), _defineProperty(_React$createElement, "initialTabName", "Google"), _defineProperty(_React$createElement, "tabs", [{
         name: 'Google',
         title: 'Google',
         className: 'google'
@@ -3281,12 +3282,9 @@ function (_React$Component) {
       }]), _React$createElement), function (tab) {
         if (tab.title == 'Google') {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_view_google_js__WEBPACK_IMPORTED_MODULE_2__["default"], null);
-        } else if (tab.title == 'Facebook') {
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_view_facebook_js__WEBPACK_IMPORTED_MODULE_3__["default"], null);
-        } else if (tab.title == 'Twitter') {
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_view_twitter_js__WEBPACK_IMPORTED_MODULE_4__["default"], null);
-        } else if (tab.title == 'Schema') {
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_view_schema_js__WEBPACK_IMPORTED_MODULE_5__["default"], null);
+        } else if (tab.title == 'Facebook') {// return ( <ViewFacebook/> )
+        } else if (tab.title == 'Twitter') {// return ( <ViewTwitter/> )
+        } else if (tab.title == 'Schema') {// return ( <ViewSchema/> )
         }
       })));
     }
@@ -3620,20 +3618,18 @@ function (_React$Component) {
         onClick: function onClick() {
           console.log('click');
         }
-      }, "Field documentation")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fields_proto_textfield_js__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextControl, {
-        label: "Browser title",
-        value: "Google browser title",
-        onChange: ""
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextControl, {
-        label: "Keywords",
-        value: "Google keywords",
-        onChange: ""
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextareaControl, {
+      }, "Field documentation")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fields_proto_textfield_js__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextareaControl, {
         label: "Description",
-        help: "Enter some text",
-        value: "Google description"
+        help: "Description about this field",
+        value: "Google description google description google description google description google description google description google description google description google description google description google description google description"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextControl, {
         label: "Canonical",
+        help: "Description about this field",
+        value: "Canonical url",
+        onChange: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextControl, {
+        label: "Canonical",
+        help: "Description about this field",
         value: "Canonical url",
         onChange: ""
       }));

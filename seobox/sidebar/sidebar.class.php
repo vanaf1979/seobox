@@ -55,7 +55,12 @@ class Sidebar extends Plugin {
      */
     public function enqueue_sidebar_styles() {
 
-        wp_enqueue_style( $this->pluginname . '-sidebar' , plugin_dir_url( __FILE__ ) . 'dist/css/seobox-sidebar.css' , array() , $this->version , 'all' );
+        wp_enqueue_style(
+            $this->pluginname . '-sidebar',
+            plugin_dir_url( __FILE__ ) . 'dist/css/seobox-sidebar.css',
+            array() , $this->version,
+            'all'
+        );
 
     }
 
@@ -71,7 +76,13 @@ class Sidebar extends Plugin {
      */
     public function enqueue_sidebar_scripts() {
 
-        wp_enqueue_script( $this->pluginname . '-sidebar' , plugin_dir_url( __FILE__ ) . 'dist/js/seobox-sidebar.js' , $this->dependancies , $this->version , 'all' );
+        wp_enqueue_script(
+            $this->pluginname . '-sidebar',
+            plugin_dir_url( __FILE__ ) . 'dist/js/seobox-sidebar.js',
+            $this->dependancies,
+            $this->version,
+            'all'
+        );
 
     }
     
@@ -93,7 +104,11 @@ class Sidebar extends Plugin {
             'type' => 'string',
         );
 
-        register_meta( 'post' , 'seobox_sidebar_test_field' , $args );
+        register_meta(
+            'post',
+            'seobox_sidebar_test_field',
+            $args
+        );
         
     }
     

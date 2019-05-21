@@ -16,7 +16,6 @@ use SeoBox\Includes\Loader as Loader;
 use SeoBox\Includes\I18n as I18n;
 use SeoBox\Metabox\Metabox as Metabox;
 use SeoBox\Settings\Settings as Settings;
-use SeoBox\Shortcodes\Shortcodes as Shortcodes;
 use SeoBox\Frontend\Frontend as Frontend;
 use SeoBox\Sidebar\Sidebar as Sidebar;
 

@@ -18,28 +18,33 @@ use SeoBox\Includes\Plugin as Plugin;
 class Deactivator extends Plugin {
 
 
+    /**
+     * deactivate.
+     *
+     * Deinitialize the plugin.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
     public static function deactivate() {
 
         $this->remove_version_from_database();
-        $this->register_deactivation();
 
     }
 
 
+    /**
+     * remove_version_from_database.
+     *
+     * Remove the plugoin version from the databse.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
     private function remove_version_from_database() {
 
-        if ( defined( 'SEOBOX_VERSION' ) ) {
-
-            // remove the version number from the database.
-        
-        }
-
-    }
-
-
-    private function register_deactivation() {
-
-        // register deactivation to remote database.
 
     }
     

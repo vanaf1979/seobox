@@ -27,6 +27,7 @@ class ProtoTextfield extends React.Component {
 
                 <TextControl
                     label="Browser title"
+                    help="Description about this field"
                     value={this.props.metaFieldValue}
                     onChange={this.props.setMetaFieldValue} />
 

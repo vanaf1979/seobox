@@ -38,7 +38,13 @@ class Metabox extends Plugin {
      */
     public function enqueue_styles() {
 
-        wp_enqueue_style( $this->pluginname . '-metabox' , plugin_dir_url( __FILE__ ) . 'dist/css/seobox-admin.css', array(), $this->version, 'all' );
+        wp_enqueue_style(
+            $this->pluginname . '-metabox',
+            plugin_dir_url( __FILE__ ) . 'dist/css/seobox-admin.css',
+            array(),
+            $this->version,
+            'all'
+        );
 
     }
 
@@ -54,7 +60,13 @@ class Metabox extends Plugin {
      */
     public function enqueue_scripts() {
 
-        wp_enqueue_script( $this->pluginname . '-metabox' , plugin_dir_url( __FILE__ ) . 'dist/js/seobox-admin.js', array(), $this->version, false );
+        wp_enqueue_script(
+            $this->pluginname . '-metabox',
+            plugin_dir_url( __FILE__ ) . 'dist/js/seobox-admin.js',
+            array(),
+            $this->version,
+            false
+        );
 
         if ( ! did_action( 'wp_enqueue_media' ) ) {
 
@@ -76,9 +88,12 @@ class Metabox extends Plugin {
      */
     public function add_seo_metabox() {
 
-        // TODO: Add a setting to choose post types.
-        // Find custom post types
-        $args = array( 'public' => true, 'exclude_from_search' => false, '_builtin' => false ); 
+        $args = array(
+            'public' => true,
+            'exclude_from_search' => false,
+            '_builtin' => false
+        ); 
+
         $output = 'names';
         $operator = 'and';
         $screens = get_post_types( $args , $output , $operator );

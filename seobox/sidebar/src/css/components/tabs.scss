@@ -1,12 +1,16 @@
 
 
 .seobox-tabs {
-    display: block;
-    height: 34px;
-    padding: 0px 0px 0px 5px;
-    background: #ffffff;
-    border-bottom: solid 1px #cccccc;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
 }
+    .seobox-tabs .components-tab-panel__tabs {
+        height: 34px;
+        padding: 0px 0px 0px 5px;
+        background: #ffffff;
+        border-bottom: solid 1px #cccccc;
+    }
     .seobox-tabs button {
         height: 33px;
         margin-right: 1px;
@@ -63,4 +67,16 @@
         .drop-title {
             float: right;
             width: 100px;
-        }        
+        }       
+        
+            .seobox-tabs .components-tab-panel__tab-content {
+                flex-basis: 0;
+                flex-grow: 1;
+                flex-shrink: 1;
+                overflow-y: scroll;
+                overflow-x: hidden;
+            }
+            .seobox-tabs .components-tab-panel__tab-content textarea {
+                height: 60px;
+                resize: none;
+            }

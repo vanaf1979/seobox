@@ -23,6 +23,9 @@ class Plugin {
     protected $plugin_path;
 
 
+    /**
+     * __construct.
+     */
     public function __construct() {
 
         $this->pluginname = 'Seobox';

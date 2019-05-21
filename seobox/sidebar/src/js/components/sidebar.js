@@ -121,7 +121,7 @@ class Sidebar extends React.Component {
                         activeClass="active-tab"
                         onSelect={ this.onSelect }
                         className="seobox-tabs"
-                        initialTabName="Facebook"
+                        initialTabName="Google"
                         tabs={ [
                             {
                                 name: 'Google',
@@ -153,15 +153,15 @@ class Sidebar extends React.Component {
 
                                 } else if( tab.title == 'Facebook' ) {
                                     
-                                    return ( <ViewFacebook/> )
+                                    // return ( <ViewFacebook/> )
                                     
                                 } else if( tab.title == 'Twitter' ) {
                                     
-                                    return ( <ViewTwitter/> )
+                                    // return ( <ViewTwitter/> )
 
                                 } else if( tab.title == 'Schema' ) {
                                     
-                                    return ( <ViewSchema/> )
+                                    // return ( <ViewSchema/> )
                                     
                                 }
                             }

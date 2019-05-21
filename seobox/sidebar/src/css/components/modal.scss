@@ -10,10 +10,12 @@
 }
 
 .seobox-modal {
+    display: flex;
+    flex-flow: column;
     width: 100%;
     max-width: 800px;
-    height: 80%;
-    max-height: 700px;
+    height: 90%;
+    max-height: 610px;
     margin-right: -50%;
 
     position: absolute;
@@ -76,8 +78,12 @@
             }
 
     .seobox-modal main {
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
         padding: 8px 16px 16px 16px;
     }
+        
 
     .drop-bt {
         display: block;

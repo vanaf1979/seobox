@@ -25,27 +25,81 @@ class Settings extends Plugin {
     }
 
 
+    /**
+     * enqueue_styles.
+     *
+     * Enqueue styles for admin pages.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
     public function enqueue_styles() {
 
-        wp_enqueue_style( $this->pluginname . '-settings', plugin_dir_url( __FILE__ ) . 'dist/css/seobox-settings.css', array(), $this->version, 'all' );
+        wp_enqueue_style(
+            $this->pluginname . '-settings',
+            plugin_dir_url( __FILE__ ) . 'dist/css/seobox-settings.css',
+            array(),
+            $this->version,
+            'all'
+        );
     
     }
 
 
+    /**
+     * enqueue_scripts.
+     *
+     * Enqueue scripts for admin pages.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
     public function enqueue_scripts() {
 
-        wp_enqueue_script( $this->pluginname . '-settings', plugin_dir_url( __FILE__ ) . 'dist/js/seobox-settings.js', array(), $this->version, false );
+        wp_enqueue_script(
+            $this->pluginname . '-settings',
+            plugin_dir_url( __FILE__ ) . 'dist/js/seobox-settings.js',
+            array(),
+            $this->version,
+            false
+        );
     
     }
 
 
+    /**
+     * register_settings_page.
+     *
+     * Register the settings page under settings.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
     public function register_settings_page( ) {
 
-        add_options_page( 'Seobox' , 'Seobox' , 'manage_options' , 'Seobox' , [ &$this , 'settings_page_content' ] );
+        add_options_page(
+            'Seobox',
+            'Seobox',
+            'manage_options',
+            'Seobox',
+            [ &$this , 'settings_page_content' ]
+        );
     
     }
 
 
+    /**
+     * register_settings.
+     *
+     * Register settings with WordPress.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
     public function register_settings( ) {
 
         // Default arguments to register_setting
@@ -57,7 +111,7 @@ class Settings extends Plugin {
             'show_in_rest'      => false
         );
 
-        // Arguments to register_setting with sanitazion callback=.
+        // Arguments to register_setting with sanitazion callback.
         $args_text_input = array(
             'type'              => 'string',
             'group'             => 'seobox-settings',
@@ -66,6 +120,7 @@ class Settings extends Plugin {
             'show_in_rest'      => false
         );
 
+        
         // GOOGLE
         // Google Browser title.
         register_setting( 'seobox-settings-google', '_g_browser_title_active', $args_default );
@@ -195,6 +250,15 @@ class Settings extends Plugin {
     }
 
 
+    /**
+     * sanitize_input_callback.
+     *
+     * Sanatize user input.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
     public function sanitize_input_callback( $value  ) {
 
         return sanitize_text_field( $value );
@@ -202,6 +266,15 @@ class Settings extends Plugin {
     }
 
 
+    /**
+     * settings_page_content.
+     *
+     * Load template for the settings page.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
     public function settings_page_content( ) {
 
         require_once( plugin_dir_path( dirname( __FILE__ ) ) . 'settings/partials/seobox-settings-display.php' );
@@ -209,6 +282,15 @@ class Settings extends Plugin {
     }
 
 
+    /**
+     * seobox_settings_links.
+     *
+     * Add settings link to plugin page.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
     public function seobox_settings_links( $links ) {
 
         $mylinks = array(
@@ -221,6 +303,15 @@ class Settings extends Plugin {
     }
 
 
+    /**
+     * change_plugin_meta.
+     *
+     * Add site and twitter link to plugins page.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
     public function change_plugin_meta( $plugin_meta , $plugin_file ) {
 
         if ( strpos( $file, 'seobox.class.php' ) !== false ) {

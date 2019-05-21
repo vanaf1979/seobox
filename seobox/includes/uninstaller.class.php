@@ -18,6 +18,15 @@ use SeoBox\Includes\Plugin as Plugin;
 class Uninstaller extends Plugin {
 
 
+    /**
+     * uninstall.
+     *
+     * Remove any plugin data on deinstallation.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
     public static function uninstall() {
         
         $this->remove_metas();
@@ -28,6 +37,15 @@ class Uninstaller extends Plugin {
     }
 
 
+    /**
+     * remove_metas.
+     *
+     * Remove all meta fields from database.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
     private function remove_metas() {
 
         // Remove metas from database
@@ -38,6 +56,15 @@ class Uninstaller extends Plugin {
     }
 
 
+    /**
+     * remove_settings.
+     *
+     * Remove all settings fields from database.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
     private function remove_settings() {
 
         // Remove settings from database.
@@ -45,20 +72,17 @@ class Uninstaller extends Plugin {
     }
 
 
+    /**
+     * remove_version_from_database.
+     *
+     * Remove plugin version from database.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
     private function remove_version_from_database() {
 
-        if ( defined( 'SEOBOX_VERSION' ) ) {
-
-            // remove the version number from the database.
-        
-        }
-
-    }
-
-
-    private function register_uninstall() {
-
-        // register uninstall to remote database.
 
     }
     

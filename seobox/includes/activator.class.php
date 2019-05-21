@@ -18,37 +18,34 @@ use SeoBox\Includes\Plugin as Plugin;
 class Activator extends Plugin {
 
 
+    /**
+     * activate.
+     *
+     * Run initialazations on plugin activation.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
     public static function activate() {
 
-        //$this->set_version_in_database();
-        //$this->setup_default_options();
-        //$this->register_activation();
+        $this->set_version_in_database();
 
     }
 
 
+    /**
+     * set_version_in_database.
+     *
+     * Store plugin version in the database.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
     private function set_version_in_database() {
 
-        if ( defined( 'SEOBOX_VERSION' ) ) {
-
-            // put the version number in de database as an array. $this->version
-        
-        }
 
     }
 
-
-    private function setup_default_options() {
-
-        // settup options, and default values.
-
-    }
-
-
-    private function register_activation() {
-
-        // register activation to remote database.
-
-    }
-    
 }
