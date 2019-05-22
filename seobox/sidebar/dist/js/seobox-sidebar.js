@@ -2848,7 +2848,6 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextControl, {
         label: "Browser title",
-        help: "Description about this field",
         value: this.props.metaFieldValue,
         onChange: this.props.setMetaFieldValue
       }));
@@ -3282,9 +3281,12 @@ function (_React$Component) {
       }]), _React$createElement), function (tab) {
         if (tab.title == 'Google') {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_view_google_js__WEBPACK_IMPORTED_MODULE_2__["default"], null);
-        } else if (tab.title == 'Facebook') {// return ( <ViewFacebook/> )
-        } else if (tab.title == 'Twitter') {// return ( <ViewTwitter/> )
-        } else if (tab.title == 'Schema') {// return ( <ViewSchema/> )
+        } else if (tab.title == 'Facebook') {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_view_facebook_js__WEBPACK_IMPORTED_MODULE_3__["default"], null);
+        } else if (tab.title == 'Twitter') {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_view_twitter_js__WEBPACK_IMPORTED_MODULE_4__["default"], null);
+        } else if (tab.title == 'Schema') {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_view_schema_js__WEBPACK_IMPORTED_MODULE_5__["default"], null);
         }
       })));
     }
@@ -3407,6 +3409,15 @@ function _setPrototypeOf(o, p) {
 
 var __ = wp.i18n.__;
 var Fragment = wp.element.Fragment;
+var _wp$components = wp.components,
+    TextControl = _wp$components.TextControl,
+    TextareaControl = _wp$components.TextareaControl,
+    RadioControl = _wp$components.RadioControl,
+    Button = _wp$components.Button,
+    Popover = _wp$components.Popover,
+    MenuGroup = _wp$components.MenuGroup,
+    MenuItem = _wp$components.MenuItem,
+    Tooltip = _wp$components.Tooltip;
 
 var ViewFacebook =
 /*#__PURE__*/
@@ -3428,7 +3439,12 @@ function (_React$Component) {
   _createClass(ViewFacebook, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Facebook inputs view"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Here goes a great description of this view."));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Facebook inputs view"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Here goes a great description of this view."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextControl, {
+        label: "Canonical",
+        help: "Description about this field",
+        value: "Canonical url",
+        onChange: ""
+      }));
     }
   }]);
 
@@ -3620,17 +3636,14 @@ function (_React$Component) {
         }
       }, "Field documentation")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fields_proto_textfield_js__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextareaControl, {
         label: "Description",
-        help: "Description about this field",
         value: "Google description google description google description google description google description google description google description google description google description google description google description google description"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextControl, {
         label: "Canonical",
-        help: "Description about this field",
-        value: "Canonical url",
+        value: "",
         onChange: ""
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextControl, {
-        label: "Canonical",
-        help: "Description about this field",
-        value: "Canonical url",
+        label: "Robots",
+        value: "",
         onChange: ""
       }));
     }

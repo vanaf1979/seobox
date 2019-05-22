@@ -84,21 +84,18 @@ class ViewGoogle extends React.Component {
                     
                 <TextareaControl
                     label="Description"
-                    help="Description about this field"
                     value="Google description google description google description google description google description google description google description google description google description google description google description google description"
                 />
 
                 <TextControl
                     label="Canonical"
-                    help="Description about this field"
-                    value="Canonical url"
+                    value=""
                     onChange=""
                 />
 
                 <TextControl
-                    label="Canonical"
-                    help="Description about this field"
-                    value="Canonical url"
+                    label="Robots"
+                    value=""
                     onChange=""
                 />
 

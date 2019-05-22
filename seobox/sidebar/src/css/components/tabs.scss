@@ -80,3 +80,25 @@
                 height: 60px;
                 resize: none;
             }
+
+    .components-base-control {
+        padding: 0px 0px 5px 0px;
+        margin: 0px 0px 14px 0px;
+        border-bottom: solid 1px #efefef;
+    }
+
+    .components-base-control__help {
+        margin: 0px 0px 0px 0px;
+        color: #bbbbbb;
+    }
+
+    .components-base-control__label {
+        font-size: 15px;
+        margin: 0px 0px 4px 0px;
+        color: #0185ba;
+    }
+
+    .components-text-control__input,
+    .components-textarea-control__input {
+        color: rgba( 0 , 0 , 0 , 0.75 ) !important;
+    }
