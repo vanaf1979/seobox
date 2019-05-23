@@ -2,12 +2,12 @@
 const mix = require('laravel-mix');
 
 mix.autoload({})
-.js('seobox/metabox/src/js/seobox-admin.js', 'seobox/metabox/dist/js/seobox-admin.js')
-.js('seobox/settings/src/js/seobox-settings.js', 'seobox/settings/dist/js/seobox-settings.js')
-.react('seobox/sidebar/src/js/seobox-sidebar.js', 'seobox/sidebar/dist/js/seobox-sidebar.js')
-.sass('seobox/metabox/src/css/seobox-admin.scss', 'seobox/metabox/dist/css/seobox-admin.css')
-.sass('seobox/settings/src/css/seobox-settings.scss', 'seobox/settings/dist/css/seobox-settings.css')
-.sass('seobox/sidebar/src/css/seobox-sidebar.scss', 'seobox/sidebar/dist/css/seobox-sidebar.css')
+.js('silk/metabox/src/js/silk-admin.js', 'silk/metabox/dist/js/silk-admin.js')
+.js('silk/settings/src/js/silk-settings.js', 'silk/settings/dist/js/silk-settings.js')
+.react('silk/sidebar/src/js/silk-sidebar.js', 'silk/sidebar/dist/js/silk-sidebar.js')
+.sass('silk/metabox/src/css/seobox-admin.scss', 'silk/metabox/dist/css/silk-admin.css')
+.sass('silk/settings/src/css/silk-settings.scss', 'silk/settings/dist/css/silk-settings.css')
+.sass('silk/sidebar/src/css/silk-sidebar.scss', 'silk/sidebar/dist/css/silk-sidebar.css')
 .options({
     processCssUrls: false,
     autoprefixer: {

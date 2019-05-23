@@ -1,9 +1,9 @@
 {
-  "name": "seobox",
+  "name": "silk",
   "version": "0.7.0",
-  "description": "Seobox wordpress seo plugin",
+  "description": "Silk wordpress seo plugin",
   "author": "Vanaf1979.nl",
-  "homepage": "https://github.com/vanaf1979/seobox#readme",
+  "homepage": "https://github.com/vanaf1979/silk#readme",
   "contributors": [
     {
       "name": "Stephan Nijman",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vanaf1979/seobox.git"
+    "url": "git+https://github.com/vanaf1979/silk.git"
   },
   "keywords": [
     "Seo",
@@ -28,7 +28,7 @@
     "Plugin"
   ],
   "bugs": {
-    "url": "https://github.com/vanaf1979/seobox/issues"
+    "url": "https://github.com/vanaf1979/silk/issues"
   },
   "dependencies": {
     "@yaireo/tagify": "^2.15.1",

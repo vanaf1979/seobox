@@ -1,0 +1,49 @@
+.silk-image-upload-container {
+    display: block;
+    width: 120px;
+    height: 120px;
+    border: solid 1px #eeeeee;
+
+    position: relative;
+}
+
+    .silk-image-upload-container .silk-image-upload-src {
+        display: block;
+        width: 120px;
+        height: 120px;
+
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+
+    .silk-image-upload-container .silk-image-upload-edit,
+    .silk-image-upload-container .silk-image-upload-delete {
+        display: block;
+        width: 24px;
+        height: 24px;
+
+        position: absolute;
+        right: 34px;
+        top: 5px;
+
+        background: rgba( 0 , 0 , 0 , 0.7 );
+        border-radius: 12px;
+
+        color: #ffffff;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .silk-image-upload-container .silk-image-upload-delete {
+        right: 5px;
+    }
+
+        .silk-image-upload-container .silk-image-upload-edit span,
+        .silk-image-upload-container .silk-image-upload-delete span {
+            display: block;
+            margin: 6px 0px 0px 0px;
+
+            font-size: 12px;
+            font-weight: 600;
+        }
