@@ -9,7 +9,7 @@
  * @subpackage Silk/Includes
  */
 
-namespace SeoBox\Includes;
+namespace Silk\Includes;
 
 
 class Loader {

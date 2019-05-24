@@ -29,7 +29,7 @@ class Deactivator extends Plugin {
      */
     public static function deactivate() {
 
-        $this->remove_version_from_database();
+        self::remove_version_from_database();
 
     }
 

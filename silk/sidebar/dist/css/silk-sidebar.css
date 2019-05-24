@@ -1,0 +1,260 @@
+@import url(https://use.fontawesome.com/releases/v5.7.1/css/all.css);@charset "UTF-8";
+.components-panel__body h2 button {
+  font-size: 15px;
+  color: #555555 !important;
+  font-weight: normal !important;
+}
+
+.components-panel__body.google h2 button:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "\F1A0";
+  display: inline-block;
+  width: 22px;
+  padding: 0px 0px 0px 0px;
+  color: #555555 !important;
+}
+
+.components-panel__body.facebook h2 button:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "\F39E";
+  width: 22px;
+  padding: 0px 0px 0px 0px;
+  color: #555555 !important;
+}
+
+.components-panel__body.twitter h2 button:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "\F099";
+  width: 22px;
+  padding: 0px 0px 0px 0px;
+  color: #555555 !important;
+}
+
+.components-panel__body.schema h2 button:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "\F384";
+  width: 22px;
+  padding: 0px 0px 0px 0px;
+  color: #555555 !important;
+}
+
+.silk-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: 9999;
+}
+
+.silk-modal {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: column;
+          flex-flow: column;
+  width: 90%;
+  max-width: 800px;
+  height: 90%;
+  max-height: 610px;
+  margin-right: -50%;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  border: 1px solid #e2e4e7;
+  background: #fff;
+  box-shadow: 0 3px 30px rgba(25, 30, 35, 0.2);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border-radius: 2px;
+}
+
+.silk-modal.ReactModal__Content--after-open {
+  opacity: 1;
+  top: 50%;
+}
+
+.silk-modal header {
+  box-sizing: border-box;
+  display: block;
+  height: 50px;
+  width: 100%;
+  padding: 0px 16px 0px 16px;
+  border-bottom: 1px solid #e2e4e7;
+}
+
+.silk-modal header h4 {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 16px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  float: left;
+  color: rgba(0, 0, 0, 0.6) !important;
+  font-size: 16px;
+}
+
+.silk-modal header a {
+  display: block;
+  width: 22px;
+  height: 18px;
+  margin: 14px 0px 0px 0px;
+  padding: 3px 0px 0px 0px;
+  float: right;
+  color: rgba(0, 0, 0, 0.6) !important;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  border: solid 1px rgba(0, 0, 0, 0);
+  border-radius: 100px;
+}
+
+.silk-modal header a:hover {
+  border: solid 1px rgba(0, 0, 0, 0.2);
+}
+
+.silk-modal main {
+  -webkit-flex-basis: 0;
+          flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+          flex-grow: 1;
+  -webkit-flex-shrink: 1;
+          flex-shrink: 1;
+  padding: 8px 16px 16px 16px;
+}
+
+.drop-bt {
+  display: block;
+  float: right;
+  width: 10px !important;
+  height: 10px !important;
+  padding: 0px 0px 0px 0px !important;
+  margin: 5px 0px 0px 0px !important;
+  border: solid 1px rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.6) !important;
+  border-radius: 100px !important;
+}
+
+.silk-tabs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: column;
+          flex-flow: column;
+  height: 100%;
+}
+
+.silk-tabs .components-tab-panel__tabs {
+  height: 34px;
+  padding: 0px 0px 0px 5px;
+  background: #ffffff;
+  border-bottom: solid 1px #cccccc;
+}
+
+.silk-tabs button {
+  height: 33px;
+  margin-right: 1px;
+  padding: 8px 12px 0px 12px;
+  background: #efefef;
+  border-right: solid 1px #cccccc;
+  border-top: solid 1px #cccccc;
+  border-left: solid 1px #cccccc;
+  border-bottom: solid 1px #ffffff;
+}
+
+.silk-tabs button.active-tab {
+  height: 35px;
+  background: #ffffff;
+  border-right: solid 1px #cccccc;
+  border-top: solid 2px #0185ba;
+  border-left: solid 1px #cccccc;
+  border-bottom: solid 1px #ffffff;
+}
+
+.silk-tabs button.google:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "\F1A0";
+  display: inline-block;
+  text-align: left;
+  padding: 1px 4px 0px 0px;
+  color: #555555 !important;
+}
+
+.silk-tabs button.facebook:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "\F39E";
+  text-align: left;
+  padding: 1px 4px 0px 0px;
+  color: #555555 !important;
+}
+
+.silk-tabs button.twitter:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "\F099";
+  text-align: left;
+  padding: 1px 4px 0px 0px;
+  color: #555555 !important;
+}
+
+.silk-tabs button.schema:before {
+  font-family: "Font Awesome 5 Brands";
+  content: "\F384";
+  text-align: left;
+  padding: 1px 4px 0px 0px;
+  color: #555555 !important;
+}
+
+.drop-title {
+  float: right;
+  width: 100px;
+}
+
+.silk-tabs .components-tab-panel__tab-content {
+  -webkit-flex-basis: 0;
+          flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+          flex-grow: 1;
+  -webkit-flex-shrink: 1;
+          flex-shrink: 1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.silk-tabs .components-tab-panel__tab-content textarea {
+  height: 60px;
+  resize: none;
+}
+
+.components-base-control {
+  padding: 0px 0px 5px 0px;
+  margin: 0px 0px 14px 0px;
+  border-bottom: solid 1px #efefef;
+}
+
+.components-base-control__help {
+  margin: 0px 0px 0px 0px;
+  color: #bbbbbb;
+}
+
+.components-base-control__label {
+  font-size: 15px;
+  margin: 0px 0px 4px 0px;
+  color: #0185ba;
+}
+
+.components-text-control__input,
+.components-textarea-control__input {
+  color: rgba(0, 0, 0, 0.75) !important;
+}

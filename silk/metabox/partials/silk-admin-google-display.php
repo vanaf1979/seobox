@@ -11,15 +11,6 @@
 
 <div class="form-wrapper">
 
-    <label class="main"><?php _e( 'Keywords', 'silk' ); ?></label>
-
-    <input type="text" name="silk_g_keywords" value="<?php echo esc_attr( get_post_meta( get_the_ID(), 'silk_g_keywords', true ) ); ?>" placeholder="<?php esc_attr_e( 'Keywords', 'silk' ); ?>"/>
-
-</div>
-
-
-<div class="form-wrapper">
-
     <label class="main"><?php _e( 'Description', 'silk' ); ?></label>
 
     <textarea name="silk_g_description" placeholder="<?php esc_attr_e( 'Description', 'silk' ); ?>"><?php echo esc_attr( get_post_meta( get_the_ID(), 'silk_g_description', true ) ); ?></textarea>

@@ -29,7 +29,7 @@ class Activator extends Plugin {
      */
     public static function activate() {
 
-        $this->set_version_in_database();
+        self::set_version_in_database();
 
     }
 

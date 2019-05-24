@@ -1,0 +1,96 @@
+
+
+{
+    "@context": "https:\/\/schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "http:\/\/blog.test\/#organization",
+        "name": "",
+        "url": "http:\/\/blog.test\/",
+        "sameAs": [
+          "https:\/\/www.facebook.com\/vanaf1979\/",
+          "https:\/\/www.linkedin.com\/in\/stephannijman\/",
+          "https:\/\/www.linkedin.com\/in\/stephannijman\/",
+          "https:\/\/twitter.com\/Vanaf1979"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "http:\/\/blog.test\/#website",
+        "url": "http:\/\/blog.test\/",
+        "name": "Vanaf1979",
+        "publisher": {
+          "@id": "http:\/\/blog.test\/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "http:\/\/blog.test\/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https:\/\/medium.com\/@vanaf1979\/wordpress-dev-monthly-recap-for-april-cbf10e792a64#webpage",
+        "url": "https:\/\/medium.com\/@vanaf1979\/wordpress-dev-monthly-recap-for-april-cbf10e792a64",
+        "inLanguage": "en-US",
+        "name": "Wordpress Dev Monthly Recap April 2019 - Vanaf1979",
+        "isPartOf": {
+          "@id": "http:\/\/blog.test\/#website"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "@id": "https:\/\/medium.com\/@vanaf1979\/wordpress-dev-monthly-recap-for-april-cbf10e792a64#primaryimage",
+          "url": "http:\/\/blog.test\/wp-content\/uploads\/2019\/04\/wordpress-dev-monthly-recap-april.jpg",
+          "width": 1000,
+          "height": 450
+        },
+        "primaryImageOfPage": {
+          "@id": "https:\/\/medium.com\/@vanaf1979\/wordpress-dev-monthly-recap-for-april-cbf10e792a64#primaryimage"
+        },
+        "datePublished": "2019-04-30T18:18:41+00:00",
+        "dateModified": "2019-05-22T18:03:22+00:00",
+        "description": "A curated list of WordPress theme and plugin development related news articles, tutorials and other resources written or updated in April of 2019."
+      },
+      {
+        "@type": "Article",
+        "@id": "https:\/\/medium.com\/@vanaf1979\/wordpress-dev-monthly-recap-for-april-cbf10e792a64#article",
+        "isPartOf": {
+          "@id": "https:\/\/medium.com\/@vanaf1979\/wordpress-dev-monthly-recap-for-april-cbf10e792a64#webpage"
+        },
+        "author": {
+          "@id": "http:\/\/blog.test\/author\/stephan\/#author",
+          "name": "Stephan Nijman"
+        },
+        "publisher": {
+          "@id": "http:\/\/blog.test\/#organization"
+        },
+        "headline": "WordPress Dev Monthly Recap April 2019",
+        "datePublished": "2019-04-30T18:18:41+00:00",
+        "dateModified": "2019-05-22T18:03:22+00:00",
+        "commentCount": 0,
+        "mainEntityOfPage": "https:\/\/medium.com\/@vanaf1979\/wordpress-dev-monthly-recap-for-april-cbf10e792a64#webpage",
+        "image": {
+          "@id": "https:\/\/medium.com\/@vanaf1979\/wordpress-dev-monthly-recap-for-april-cbf10e792a64#primaryimage"
+        },
+        "keywords": "Javascript,Php,Web development,WordPress Development",
+        "articleSection": ""
+      },
+      {
+        "@type": "Person",
+        "@id": "http:\/\/blog.test\/author\/stephan\/#author",
+        "name": "Stephan Nijman",
+        "image": {
+          "@type": "ImageObject",
+          "@id": "http:\/\/blog.test\/#personlogo",
+          "url": "http:\/\/0.gravatar.com\/avatar\/9eaf8ca4502be40f5bec4332f799caa3?s=96&d=mm&r=g",
+          "caption": "Stephan Nijman"
+        },
+        "sameAs": [
+          
+        ]
+      }
+    ]
+  }
+  
+  

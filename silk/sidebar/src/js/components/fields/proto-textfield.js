@@ -44,7 +44,7 @@ export default compose([
 
         return {
             setMetaFieldValue: function( value ) {
-                dispatch( 'core/editor' ).editPost( { meta: { seobox_sidebar_test_field: value } } );
+                dispatch( 'core/editor' ).editPost( { meta: { silk_g_browser_title: value } } );
                 // Replace meta field name with props.fieldName
                 // dispatch( 'core/editor' ).editPost( { meta: { [ props.fieldName ]: value } } );
                 
@@ -60,7 +60,7 @@ export default compose([
         return {
             // Replace meta field name with props.fieldName
             // metaFieldValue: select( 'core/editor' ).getEditedPostAttribute( 'meta' )[ props.fieldName ],
-            metaFieldValue: select( 'core/editor' ).getEditedPostAttribute( 'meta' )[ 'seobox_sidebar_test_field' ],
+            metaFieldValue: select( 'core/editor' ).getEditedPostAttribute( 'meta' )[ 'silk_g_browser_title' ],
             getSettings: select( 'silk/settings' ).getSettings()['g_browser_title_max_lenght']
         };
 

@@ -13,10 +13,14 @@ namespace Silk\Frontend;
 
 
 use Silk\Includes\Plugin as Plugin;
-use Silk\Frontend\Tagbuilder as Tagbuilder;
-use Silk\Frontend\Titlevalue as Titlevalue;
-use Silk\Frontend\Metavalues as Metavalues;
-use Silk\Frontend\ValuesGoogle as ValuesGoogle;
+use Silk\Frontend\Helpers\Tagbuilder as Tagbuilder;
+use Silk\Frontend\Helpers\Titlevalue as Titlevalue;
+use Silk\Frontend\Helpers\Metavalues as Metavalues;
+use Silk\Frontend\Helpers\ValuesGoogle as ValuesGoogle;
+use Silk\Frontend\Helpers\ValuesFacebook as ValuesFacebook;
+use Silk\Frontend\Helpers\ValuesTwitter as ValuesTwitter;
+use Silk\Frontend\Helpers\ValuesSchema as ValuesSchema;
+use Silk\Frontend\Helpers\JsonLd as JsonLd;
 
 
 class Frontend extends Plugin {
@@ -100,7 +104,7 @@ class Frontend extends Plugin {
 
 
     /**
-     * add_seobox_tags_to_head.
+     * add_silk_tags_to_head.
      *
      * Add seo meta tags to the head.
      *
@@ -118,9 +122,6 @@ class Frontend extends Plugin {
 
         // GOOGLE.
         $gvalues = new ValuesGoogle( $post->ID );
-        // Keywords
-        $value = $gvalues->get_keywords_value();
-        $output .= $tag_buider->write_meta_tag( 'keywords' , $value );
         // Description.
         $value = $gvalues->get_description_value();
         $output .= $tag_buider->write_meta_tag( 'description' , $value );
@@ -133,17 +134,72 @@ class Frontend extends Plugin {
 
 
         // FACEBOOK.
+        $fbvalues = new ValuesFacebook( $post->ID );
 
+        $value = $fbvalues->get_open_graph_type();
+        $output .= $tag_buider->write_meta_tag( 'og:type' , $value );
+        
+        $value = $fbvalues->get_open_graph_title();
+        $output .= $tag_buider->write_meta_tag( 'og:title' , $value );
 
+        $value = $fbvalues->get_open_graph_description();
+        $output .= $tag_buider->write_meta_tag( 'og:description' , $value );
+
+        $value = $fbvalues->get_open_graph_image();
+        $output .= $tag_buider->write_meta_tag( 'og:image' , $value );
+
+        
         // TWITTER.
+        $twvalues = new ValuesTwitter( $post->ID );
+
+        $value = $twvalues->get_card_type();
+        $output .= $tag_buider->write_meta_tag( 'twitter:card' , $value );
+
+        // ?
+        $value = $twvalues->get_author_handle();
+        $output .= $tag_buider->write_meta_tag( 'twitter:author' , $value );
+
+        $value = $twvalues->get_title();
+        $output .= $tag_buider->write_meta_tag( 'twitter:title' , $value );
+
+        $value = $twvalues->get_description();
+        $output .= $tag_buider->write_meta_tag( 'twitter:description' , $value );
+        
+        $value = $twvalues->get_image();
+        $output .= $tag_buider->write_meta_tag( 'twitter:image' , $value );
 
 
         // SCHEMA.
+        $svalues = new ValuesSchema( $post->ID );
+
+        $value = $svalues->get_schema_type();
+        $output .= $tag_buider->write_meta_tag( 'schema:type' , $value );
+
+        $value = $svalues->get_schema_title();
+        $output .= $tag_buider->write_meta_tag( 'schema:title' , $value );
+
+        $value = $svalues->get_schema_description();
+        $output .= $tag_buider->write_meta_tag( 'schema:description' , $value );
+
+        $value = $svalues->get_schema_image();
+        $output .= $tag_buider->write_meta_tag( 'schema:image' , $value );
 
 
         // TAGS.
 
         echo $output;
+        
+    }
+
+
+    public function write_jsonld_to_head() {
+
+        global $post;
+
+        $jsonLd = new JsonLd( $post->ID );
+        $json = $jsonLd->writeJsonLd();
+
+        echo "\t<script type=\"application/ld+json\">{$json}</script>";
 
     }
 

@@ -1,8 +1,8 @@
 {
-    "/seobox/metabox/dist/js/seobox-admin.js": "/seobox/metabox/dist/js/seobox-admin.js",
-    "/seobox/metabox/dist/css/seobox-admin.css": "/seobox/metabox/dist/css/seobox-admin.css",
-    "/seobox/settings/dist/css/seobox-settings.css": "/seobox/settings/dist/css/seobox-settings.css",
-    "/seobox/sidebar/dist/css/seobox-sidebar.css": "/seobox/sidebar/dist/css/seobox-sidebar.css",
-    "/seobox/settings/dist/js/seobox-settings.js": "/seobox/settings/dist/js/seobox-settings.js",
-    "/seobox/sidebar/dist/js/seobox-sidebar.js": "/seobox/sidebar/dist/js/seobox-sidebar.js"
+    "/silk/metabox/dist/js/silk-admin.js": "/silk/metabox/dist/js/silk-admin.js",
+    "/silk/metabox/dist/css/silk-admin.css": "/silk/metabox/dist/css/silk-admin.css",
+    "/silk/settings/dist/css/silk-settings.css": "/silk/settings/dist/css/silk-settings.css",
+    "/silk/sidebar/dist/css/silk-sidebar.css": "/silk/sidebar/dist/css/silk-sidebar.css",
+    "/silk/settings/dist/js/silk-settings.js": "/silk/settings/dist/js/silk-settings.js",
+    "/silk/sidebar/dist/js/silk-sidebar.js": "/silk/sidebar/dist/js/silk-sidebar.js"
 }

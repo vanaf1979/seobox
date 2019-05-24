@@ -9,7 +9,7 @@
  * @subpackage Silk/Metabox
  */
 
-namespace SeoBox\Metabox;
+namespace Silk\Metabox;
 
 
 use Silk\Includes\Plugin as Plugin;

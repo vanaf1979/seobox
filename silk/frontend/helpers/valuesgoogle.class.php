@@ -9,7 +9,7 @@
  * @subpackage SeoBox/Frontend
  */
 
-namespace Silk\Frontend;
+namespace Silk\Frontend\Helpers;
 
 
 class ValuesGoogle {
@@ -30,22 +30,6 @@ class ValuesGoogle {
 
 
     /**
-     * get_keywords_value.
-     *
-     * get keyword meta value.
-     *
-     * @since 1.0.0
-     * @access public
-     * @return void
-     */
-    public function get_keywords_value() {
-
-        return 'Keywords value placeholder';
-
-    }
-
-
-    /**
      * get_description_value.
      *
      * get description meta value.
@@ -56,7 +40,7 @@ class ValuesGoogle {
      */
     public function get_description_value() {
 
-        return 'Description value placeholder';
+        return trim( get_post_meta( $this->post_id , 'silk_g_description' , true ) );
 
     }
 
@@ -72,7 +56,7 @@ class ValuesGoogle {
      */
     public function get_robots_value() {
 
-        return 'Robots value placeholder';
+        return trim( get_post_meta( $this->post_id , 'silk_g_index_follow' , true ) );
 
     }
 
@@ -88,7 +72,7 @@ class ValuesGoogle {
      */
     public function get_conanical_value() {
 
-        return 'Conanical value placeholder';
+        return trim( get_post_meta( $this->post_id , 'silk_g_canonical' , true ) );
 
     }
 

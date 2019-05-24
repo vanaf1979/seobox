@@ -29,10 +29,10 @@ class Uninstaller extends Plugin {
      */
     public static function uninstall() {
         
-        $this->remove_metas();
-        $this->remove_settings();
-        $this->remove_version_from_database();
-        $this->register_uninstall();
+        self::remove_metas();
+        self::remove_settings();
+        self::remove_version_from_database();
+        self::register_uninstall();
 
     }
 

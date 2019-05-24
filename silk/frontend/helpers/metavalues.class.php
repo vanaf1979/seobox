@@ -9,7 +9,7 @@
  * @subpackage Silk/Includes
  */
 
-namespace Silk\Frontend;
+namespace Silk\Frontend\Helpers;
 
 
 class MetaValues {

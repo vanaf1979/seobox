@@ -125,7 +125,7 @@ class Silk extends Plugin {
 
             $this->loader->add_action( 'admin_menu', $settings, 'register_settings_page' );
             $this->loader->add_action( 'admin_init', $settings, 'register_settings' );
-            $this->loader->add_filter( 'plugin_action_links_seobox/silk.php' , $settings, 'silk_settings_links', $priority = 10 );
+            $this->loader->add_filter( 'plugin_action_links_silk/silk.php' , $settings, 'silk_settings_links', $priority = 10 );
             $this->loader->add_filter( 'plugin_row_meta', $settings, 'change_plugin_meta', 10, 2 );
 
         }
@@ -152,8 +152,9 @@ class Silk extends Plugin {
             $this->loader->add_action( 'wp_enqueue_scripts', $frontend, 'enqueue_scripts' );
 
             $this->loader->add_action( 'after_setup_theme' , $frontend , 'add_theme_support');
-            $this->loader->add_action( 'pre_get_document_title' , $frontend , 'add_silk_title_to_head', 15 );
+            $this->loader->add_action( 'pre_get_document_title' , $frontend , 'add_silk_title_to_head', 999 );
             $this->loader->add_action( 'wp_head' , $frontend , 'add_silk_tags_to_head' , 1 , 1 );
+            $this->loader->add_action( 'wp_head' , $frontend , 'write_jsonld_to_head' , 1 , 1 );
 
         }
 

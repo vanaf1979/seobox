@@ -9,7 +9,7 @@
  * @subpackage Silk/Frontend
  */
 
-namespace Silk\Frontend;
+namespace Silk\Frontend\Helpers;
 
 
 class Titlevalue {
@@ -47,7 +47,7 @@ class Titlevalue {
         if( get_option('_g_browser_title_active') == 'yes' ) {
 
             // get the title addition type.
-            $addition_type = get_option('_g_browser_title_addition');
+            $addition_type = get_option('g_browser_title_addition');
 
             if( $addition_type == 'none' ) {
 
@@ -59,23 +59,23 @@ class Titlevalue {
 
             } else if( $addition_type == 'custom' ) {
 
-                $addition = trim( esc_attr( get_option('_g_browser_title_custom_addition') ) );
+                $addition = trim( esc_attr( get_option('g_browser_title_custom_addition') ) );
 
             }
 
 
             // Get addition position.
-            $adition_position = get_option('_g_browser_title_addition_position');
+            $adition_position = get_option('g_browser_title_addition_position');
 
 
             // Determine the title value.
-            if ( trim( get_post_meta( $this->post_id , '_silk_g_browser_title' , true ) ) > '' ) {
+            if ( trim( get_post_meta( $this->post_id , 'silk_g_browser_title' , true ) ) > '' ) {
 
-                $title_text = trim( get_post_meta( $this->post_id , '_silk_g_browser_title' , true ) );
+                $title_text = trim( get_post_meta( $this->post_id , 'silk_g_browser_title' , true ) );
 
-            } else if ( trim( esc_attr( get_option('_g_browser_title_default') ) ) ) {
+            } else if ( trim( esc_attr( get_option('g_browser_title_default') ) ) ) {
 
-                $title_text = trim( esc_attr( get_option('_g_browser_title_default') ) );
+                $title_text = trim( esc_attr( get_option('g_browser_title_default') ) );
             }
 
 

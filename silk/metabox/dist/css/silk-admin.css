@@ -1,9 +1,9 @@
 @import url(https://use.fontawesome.com/releases/v5.7.1/css/all.css);@charset "UTF-8";
-.seobox-metabox {
+.silk-metabox {
   margin: 0px 0px 20px 0px;
 }
 
-.seobox-metabox .seobox-admin-tabs {
+.silk-metabox .silk-admin-tabs {
   display: inline-block;
   width: 100%;
   height: 36px;
@@ -13,7 +13,7 @@
   border-bottom: solid 1px #dedede;
 }
 
-.seobox-metabox .seobox-admin-tabs li {
+.silk-metabox .silk-admin-tabs li {
   display: inline-block;
   height: 26px;
   padding: 7px 20px 0px 20px;
@@ -24,7 +24,7 @@
   cursor: pointer;
 }
 
-.seobox-metabox .seobox-admin-tabs li.active {
+.silk-metabox .silk-admin-tabs li.active {
   height: 27px;
   padding: 8px 20px 0px 20px;
   background: #ffffff;
@@ -32,19 +32,19 @@
   border-bottom: none;
 }
 
-.seobox-metabox .seobox-admin-tabs li span {
+.silk-metabox .silk-admin-tabs li span {
   color: #0073aa;
 }
 
-.seobox-metabox .seobox-admin-tabs li a {
+.silk-metabox .silk-admin-tabs li a {
   pointer-events: none;
 }
 
-.seobox-metabox .sb-admin-tabs-container .tab {
+.silk-metabox .sb-admin-tabs-container .tab {
   display: none;
 }
 
-.seobox-metabox .sb-admin-tabs-container .tab.active {
+.silk-metabox .sb-admin-tabs-container .tab.active {
   display: block;
 }
 
@@ -402,7 +402,7 @@
   background: #f2f2f2;
 }
 
-.seobox-metabox .form-wrapper {
+.silk-metabox .form-wrapper {
   display: block;
   width: auto;
   clear: both;
@@ -411,52 +411,52 @@
   border-bottom: solid 1px #eeeeee;
 }
 
-.seobox-metabox .form-wrapper:after {
+.silk-metabox .form-wrapper:after {
   content: "";
   display: table;
   clear: both;
 }
 
-.seobox-metabox .tab .form-wrapper:last-child {
+.silk-metabox .tab .form-wrapper:last-child {
   border-bottom: none;
   padding: 0px 0px 0px 0px;
 }
 
-.seobox-metabox .form-wrapper ::-webkit-input-placeholder {
+.silk-metabox .form-wrapper ::-webkit-input-placeholder {
   color: inherit;
   opacity: 0.5;
 }
 
-.seobox-metabox .form-wrapper :-moz-placeholder {
+.silk-metabox .form-wrapper :-moz-placeholder {
   color: inherit;
   opacity: 0.5;
 }
 
-.seobox-metabox .form-wrapper ::-moz-placeholder {
+.silk-metabox .form-wrapper ::-moz-placeholder {
   color: inherit;
   opacity: 0.5;
 }
 
-.seobox-metabox .form-wrapper :-ms-input-placeholder {
+.silk-metabox .form-wrapper :-ms-input-placeholder {
   color: inherit;
   opacity: 0.5;
 }
 
-.seobox-metabox .form-wrapper ::-ms-input-placeholder {
+.silk-metabox .form-wrapper ::-ms-input-placeholder {
   color: inherit;
   opacity: 0.5;
 }
 
-.seobox-metabox .form-wrapper ::-moz-focus-inner {
+.silk-metabox .form-wrapper ::-moz-focus-inner {
   border: 0;
 }
 
-.seobox-metabox .form-wrapper :disabled {
+.silk-metabox .form-wrapper :disabled {
   background: #ffffff;
   opacity: 0.5;
 }
 
-.seobox-metabox .form-wrapper label {
+.silk-metabox .form-wrapper label {
   font-size: 13px;
   font-weight: normal;
   display: inline-block;
@@ -467,20 +467,20 @@
   padding: 0px 0px 5px 0px;
 }
 
-.seobox-metabox .form-wrapper label.main {
+.silk-metabox .form-wrapper label.main {
   font-size: 14px;
   font-weight: bold;
 }
 
-.seobox-metabox .form-wrapper label:after {
+.silk-metabox .form-wrapper label:after {
   content: "";
 }
 
-.seobox-metabox .form-wrapper label.main:after {
+.silk-metabox .form-wrapper label.main:after {
   content: ":";
 }
 
-.seobox-metabox .form-wrapper input {
+.silk-metabox .form-wrapper input {
   display: inline-block;
   background: none;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.07);
@@ -489,17 +489,17 @@
   resize: none;
 }
 
-.seobox-metabox .form-wrapper input[type=email],
-.seobox-metabox .form-wrapper input[type=url],
-.seobox-metabox .form-wrapper input[type=time],
-.seobox-metabox .form-wrapper input[type=date],
-.seobox-metabox .form-wrapper input[type=datetime],
-.seobox-metabox .form-wrapper input[type=number],
-.seobox-metabox .form-wrapper input[type=month],
-.seobox-metabox .form-wrapper input[type=search],
-.seobox-metabox .form-wrapper input[type=tel],
-.seobox-metabox .form-wrapper input[type=text],
-.seobox-metabox .form-wrapper input[type=password] {
+.silk-metabox .form-wrapper input[type=email],
+.silk-metabox .form-wrapper input[type=url],
+.silk-metabox .form-wrapper input[type=time],
+.silk-metabox .form-wrapper input[type=date],
+.silk-metabox .form-wrapper input[type=datetime],
+.silk-metabox .form-wrapper input[type=number],
+.silk-metabox .form-wrapper input[type=month],
+.silk-metabox .form-wrapper input[type=search],
+.silk-metabox .form-wrapper input[type=tel],
+.silk-metabox .form-wrapper input[type=text],
+.silk-metabox .form-wrapper input[type=password] {
   width: 100%;
   height: 32px;
   font-size: 14px;
@@ -509,7 +509,7 @@
   border-radius: 3px;
 }
 
-.seobox-metabox .form-wrapper textarea {
+.silk-metabox .form-wrapper textarea {
   width: 100%;
   height: 120px;
   padding: 3px 5px 5px 5px;
@@ -525,27 +525,27 @@
   border-radius: 3px;
 }
 
-.seobox-metabox .form-wrapper textarea:focus, .seobox-metabox .form-wrapper input:focus {
+.silk-metabox .form-wrapper textarea:focus, .silk-metabox .form-wrapper input:focus {
   border: 1px solid #5b9dd9;
 }
 
-.seobox-metabox .form-wrapper ul {
+.silk-metabox .form-wrapper ul {
   display: block;
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
   list-style: none;
 }
 
-.seobox-metabox .form-wrapper ul li {
+.silk-metabox .form-wrapper ul li {
   display: inline-block;
   margin: 0px 10px 0px 0px;
 }
 
-.seobox-metabox .form-wrapper ul li input {
+.silk-metabox .form-wrapper ul li input {
   margin: -1px 0px 0px 0px;
 }
 
-.seobox-metabox .form-wrapper select {
+.silk-metabox .form-wrapper select {
   display: block;
   width: 100%;
   height: 32px;
@@ -562,7 +562,7 @@
   background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 99% 50%;
 }
 
-.seobox-metabox .form-wrapper .image-upload-button {
+.silk-metabox .form-wrapper .image-upload-button {
   display: block;
   clear: both;
   margin: 10px 0px 0px 0px;

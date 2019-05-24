@@ -9,7 +9,7 @@
  * @subpackage Silk/Includes
  */
 
-namespace Silk\Frontend;
+namespace Silk\Frontend\Helpers;
 
 
 class Tagbuilder {
@@ -20,7 +20,7 @@ class Tagbuilder {
 
     public static function write_meta_tag( $name , $value ) {
 
-        $return = "<meta name=\"{$name}\" content=\"{$value}\" />";
+        $return = "\t<meta name=\"{$name}\" content=\"{$value}\" />";
 
         // Run registerd filters on the meta tag.
         $return = apply_filters( 'silk_make_meta_tag', $return , $metaarray['name'] , $metaarray['content'] );

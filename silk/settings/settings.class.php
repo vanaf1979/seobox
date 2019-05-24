@@ -277,7 +277,7 @@ class Settings extends Plugin {
      */
     public function settings_page_content( ) {
 
-        require_once( plugin_dir_path( dirname( __FILE__ ) ) . 'settings/partials/seobox-settings-display.php' );
+        require_once( plugin_dir_path( dirname( __FILE__ ) ) . 'settings/partials/silk-settings-display.php' );
     
     }
 
@@ -291,11 +291,11 @@ class Settings extends Plugin {
      * @access public
      * @return void
      */
-    public function seobox_settings_links( $links ) {
+    public function silk_settings_links( $links ) {
 
         $mylinks = array(
             '<a href="' . admin_url( 'options-general.php?page=' . $this->pluginname ) . '">Settings</a>',
-            '<a href="https://seobox.vanaf1979.nl" target="_blank">Website</a>',
+            '<a href="https://vanaf1979-1.gitbook.io/silk/" target="_blank">Documentation</a>',
         );
 
         return array_merge( $links, $mylinks );
@@ -314,7 +314,7 @@ class Settings extends Plugin {
      */
     public function change_plugin_meta( $plugin_meta , $plugin_file ) {
 
-        if ( strpos( $file, 'seobox.class.php' ) !== false ) {
+        if ( strpos( $plugin_file, 'silk.php' ) !== false ) {
 
             $plugin_meta[1] = str_replace( 'href="https://vanaf1979.nl"', 'href="https://vanaf1979.nl" target="_blank"' , $plugin_meta[1] );
             unset( $plugin_meta[2] );

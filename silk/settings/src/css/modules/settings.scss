@@ -16,15 +16,17 @@
     }
     .silk-settings-section label.title {
         margin: 0px 0px 0px 0px;
-        padding: 8px 0px 0px 0px;
-        font-weight: bold;
+        padding: 9px 0px 0px 0px;
+        font-weight: normal;
+        font-size: 14px;
     }
 
     .silk-settings-section h4 {
-        margin: 10px 0px 10px 0px;
+        margin: 10px 0px 20px 0px;
         padding: 0px 0px 0px 0px;
         font-size: 16px;
         color: #006799;
+        //color: rgba( 0 , 0 , 0 , 0.75 );
     }
     .silk-settings-section h4 a {
         text-decoration: none;
@@ -42,14 +44,15 @@
         }
 
     .silk-settings-section .form-wrapper {
-        margin: 0px 0px 0px 0px;
-        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 10px 0px !important;
+        padding: 0px 0px 10px 0px !important;
     }
         .silk-settings-section .form-wrapper label {
             margin: 0px 0px 0px 0px;
             padding: 4px 15px 0px 0px;
+            font-size: 14px;
         }
         .silk-settings-section .form-wrapper input[type="radio"] {
-            margin: 3px 0px 0px 0px;
+            margin: 5px 3px 0px 0px;
             padding: 4px 0px 0px 0px;
         }

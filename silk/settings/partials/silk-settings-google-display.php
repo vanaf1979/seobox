@@ -2,11 +2,11 @@
 
 <!-- / Section: Browser title \ -->
 
-<table width="100%" class="seobox-settings-section">
+<table width="100%" class="silk-settings-section">
     <thead>
         <tr>
             <td valign="top" width="170">
-                <h4><a class="fas fa-info-circle" href="" target="_blank"></a> <?php _e( 'Browser title', 'seobox' ); ?></h4>
+                <h4><?php _e( 'Browser title', 'seobox' ); ?></h4>
             </td>
             <td valign="top">
                 &nbsp;
@@ -136,11 +136,11 @@
 
 <!-- / Section: Keywords \ -->
 
-<table width="100%" class="seobox-settings-section">
+<table width="100%" class="silk-settings-section">
     <thead>
         <tr>
             <td valign="top" width="170">
-                <h4><a class="fas fa-info-circle" href="" target="_blank"></a> <?php _e( 'Keywords', 'seobox' ); ?></h4>
+                <h4><?php _e( 'Keywords', 'seobox' ); ?></h4>
             </td>
             <td valign="top">
                 &nbsp;
@@ -215,11 +215,11 @@
 
 <!-- / Section: Description \ -->
 
-<table width="100%" class="seobox-settings-section">
+<table width="100%" class="silk-settings-section">
     <thead>
         <tr>
             <td valign="top" width="170">
-                <h4><a class="fas fa-info-circle" href="" target="_blank"></a> <?php _e( 'Description', 'seobox' ); ?></h4>
+                <h4><?php _e( 'Description', 'seobox' ); ?></h4>
             </td>
             <td valign="top">
                 &nbsp;
@@ -316,11 +316,11 @@
 
 <!-- / Section: Robots \ -->
 
-<table width="100%" class="seobox-settings-section">
+<table width="100%" class="silk-settings-section">
     <thead>
         <tr>
             <td valign="top" width="170">
-                <h4><a class="fas fa-info-circle" href="" target="_blank"></a> <?php _e( 'Robots', 'seobox' ); ?></h4>
+                <h4><?php _e( 'Robots', 'seobox' ); ?></h4>
             </td>
             <td valign="top">
                 &nbsp;
@@ -379,11 +379,11 @@
 
 <!-- / Section: Cannonical \ -->
 
-<table width="100%" class="seobox-settings-section">
+<table width="100%" class="silk-settings-section">
     <thead>
         <tr>
             <td valign="top" width="170">
-                <h4><a class="fas fa-info-circle" href="" target="_blank"></a> <?php _e( 'Canonical link', 'seobox' ); ?></h4>
+                <h4><?php _e( 'Canonical link', 'seobox' ); ?></h4>
             </td>
             <td valign="top">
                 &nbsp;

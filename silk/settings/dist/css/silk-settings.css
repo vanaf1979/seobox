@@ -1,0 +1,343 @@
+@import url(https://use.fontawesome.com/releases/v5.7.1/css/all.css);.silk-settings {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  margin: 0px 30px 0px 0px;
+}
+
+.silk-settings .container {
+  padding: 20px 20px 20px 20px;
+  background: #ffffff;
+  border: solid 1px sil #efefefver;
+  border-radius: 10px;
+}
+
+.silk-settings .container.left {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+}
+
+.silk-settings .container.right {
+  width: 240px;
+  margin: 0px 0px 0px 20px;
+}
+
+.silk-settings .silk-settings-tabs {
+  display: inline-block;
+  width: 100%;
+  height: 36px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 5px;
+  list-style: none;
+  border-bottom: solid 1px #dedede;
+}
+
+.silk-settings .silk-settings-tabs li {
+  display: inline-block;
+  height: 26px;
+  padding: 7px 20px 0px 20px;
+  margin: 0px 1px 0px 0px;
+  background: #efefef;
+  border: solid 1px #cccccc;
+  border-radius: 2px;
+}
+
+.silk-settings .silk-settings-tabs li.active {
+  height: 27px;
+  padding: 8px 20px 0px 20px;
+  background: #ffffff;
+  border-top: solid 2px #0073aa;
+  border-bottom: none;
+}
+
+.silk-settings .silk-settings-tabs li span {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.silk-settings .silk-settings-tabs li a {
+  color: rgba(0, 0, 0, 0.75);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.silk-settings .sb-settings-tabs-container .tab {
+  display: none;
+  margin: 20px 0px 0px 0px;
+}
+
+.silk-settings .sb-settings-tabs-container .tab.active {
+  display: block;
+}
+
+.silk-settings .form-wrapper {
+  display: block;
+  width: auto;
+  clear: both;
+  margin: 20px 5px 5px 5px;
+  padding: 0px 0px 20px 0px;
+  border-bottom: solid 1px #eeeeee;
+}
+
+.silk-settings .form-wrapper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.silk-settings .tab .form-wrapper:last-child {
+  border-bottom: none;
+  padding: 0px 0px 0px 0px;
+}
+
+.silk-settings .form-wrapper ::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.5;
+}
+
+.silk-settings .form-wrapper :-moz-placeholder {
+  color: inherit;
+  opacity: 0.5;
+}
+
+.silk-settings .form-wrapper ::-moz-placeholder {
+  color: inherit;
+  opacity: 0.5;
+}
+
+.silk-settings .form-wrapper :-ms-input-placeholder {
+  color: inherit;
+  opacity: 0.5;
+}
+
+.silk-settings .form-wrapper ::-ms-input-placeholder {
+  color: inherit;
+  opacity: 0.5;
+}
+
+.silk-settings .form-wrapper ::-moz-focus-inner {
+  border: 0;
+}
+
+.silk-settings .form-wrapper :disabled {
+  background: #ffffff;
+  opacity: 0.5;
+}
+
+.silk-settings .form-wrapper label {
+  font-size: 13px;
+  font-weight: normal;
+  display: inline-block;
+  width: auto;
+  color: #444444;
+  line-height: 21px;
+  margin: 0px 0px 4px 0px;
+  padding: 0px 0px 5px 0px;
+}
+
+.silk-settings .form-wrapper label.main {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.silk-settings .form-wrapper label:after {
+  content: "";
+}
+
+.silk-settings .form-wrapper label.main:after {
+  content: ":";
+}
+
+.silk-settings .form-wrapper input {
+  display: inline-block;
+  background: none;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.07);
+  margin: 0px 0px 0px 0px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.silk-settings .form-wrapper input[type=email],
+.silk-settings .form-wrapper input[type=url],
+.silk-settings .form-wrapper input[type=time],
+.silk-settings .form-wrapper input[type=date],
+.silk-settings .form-wrapper input[type=datetime],
+.silk-settings .form-wrapper input[type=number],
+.silk-settings .form-wrapper input[type=month],
+.silk-settings .form-wrapper input[type=search],
+.silk-settings .form-wrapper input[type=tel],
+.silk-settings .form-wrapper input[type=text],
+.silk-settings .form-wrapper input[type=password] {
+  width: 100%;
+  height: 32px;
+  font-size: 14px;
+  color: #32373c;
+  padding: 1px 5px 2px 5px !important;
+  outline: none;
+  border-radius: 3px;
+}
+
+.silk-settings .form-wrapper textarea {
+  width: 100%;
+  height: 120px;
+  padding: 3px 5px 5px 5px;
+  font-size: 14px;
+  color: #32373c;
+  resize: none;
+  background: none;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.07);
+  padding: 3px 5px 3px 5px !important;
+  margin: 0px 0px 0px 0px;
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.silk-settings .form-wrapper textarea:focus, .silk-settings .form-wrapper input:focus {
+  border: 1px solid #5b9dd9;
+}
+
+.silk-settings .form-wrapper ul {
+  display: block;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  list-style: none;
+}
+
+.silk-settings .form-wrapper ul li {
+  display: inline-block;
+  margin: 0px 10px 0px 0px;
+}
+
+.silk-settings .form-wrapper ul li input {
+  margin: -1px 0px 0px 0px;
+}
+
+.silk-settings .form-wrapper select {
+  display: block;
+  width: 100%;
+  height: 32px;
+  padding: 0px 20px 0px 5px;
+  box-sizing: border-box;
+  outline: none;
+  color: #32373c;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.07);
+  background: #ffffff;
+  border-radius: 3px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 99% 50%;
+}
+
+.silk-settings .form-wrapper .image-upload-button {
+  display: block;
+  clear: both;
+  margin: 10px 0px 0px 0px;
+}
+
+.silk-settings-section {
+  margin: 0px 0px 10px 0px;
+  padding: 0px 0px 10px 0px;
+  border-bottom: solid 1px #eeeeee;
+}
+
+.silk-settings-section thead {
+  border-bottom: solid 1px #eeeeee;
+}
+
+.silk-settings-section .row {
+  height: 40px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.silk-settings-section label.title {
+  margin: 0px 0px 0px 0px;
+  padding: 9px 0px 0px 0px;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.silk-settings-section h4 {
+  margin: 10px 0px 20px 0px;
+  padding: 0px 0px 0px 0px;
+  font-size: 16px;
+  color: #006799;
+}
+
+.silk-settings-section h4 a {
+  text-decoration: none;
+  color: grey;
+}
+
+.silk-settings-section .form-wrapper.active {
+  margin: 16px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  text-align: left;
+}
+
+.silk-settings-section .form-wrapper.active input[type=checkbox] {
+  margin: 5px 5px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.silk-settings-section .form-wrapper {
+  margin: 0px 0px 10px 0px !important;
+  padding: 0px 0px 10px 0px !important;
+}
+
+.silk-settings-section .form-wrapper label {
+  margin: 0px 0px 0px 0px;
+  padding: 4px 15px 0px 0px;
+  font-size: 14px;
+}
+
+.silk-settings-section .form-wrapper input[type=radio] {
+  margin: 5px 3px 0px 0px;
+  padding: 4px 0px 0px 0px;
+}
+
+.silk-image-upload-container {
+  display: block;
+  width: 120px;
+  height: 120px;
+  border: solid 1px #eeeeee;
+  position: relative;
+}
+
+.silk-image-upload-container .silk-image-upload-src {
+  display: block;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.silk-image-upload-container .silk-image-upload-edit,
+.silk-image-upload-container .silk-image-upload-delete {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 34px;
+  top: 5px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+}
+
+.silk-image-upload-container .silk-image-upload-delete {
+  right: 5px;
+}
+
+.silk-image-upload-container .silk-image-upload-edit span,
+.silk-image-upload-container .silk-image-upload-delete span {
+  display: block;
+  margin: 6px 0px 0px 0px;
+  font-size: 12px;
+  font-weight: 600;
+}
