@@ -2,7 +2,7 @@ import React from 'react'
 
 const { __ } = wp.i18n;
 const { Fragment } = wp.element;
-const { TextControl, TextareaControl, RadioControl, Button, Popover, MenuGroup, MenuItem, Tooltip } = wp.components;
+const { TextControl, TextareaControl, RadioControl, Button, Popover, MenuGroup, MenuItem, Tooltip, TreeSelect } = wp.components;
 
 
 class ViewFacebook extends React.Component {
@@ -33,7 +33,7 @@ class ViewFacebook extends React.Component {
                     value="Canonical url"
                     onChange=""
                 />
-
+                
             </Fragment>
         )
 

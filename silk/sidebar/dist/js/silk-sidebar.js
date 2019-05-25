@@ -2824,7 +2824,11 @@ var _wp$data = wp.data,
     withDispatch = _wp$data.withDispatch,
     withSelect = _wp$data.withSelect;
 var Fragment = wp.element.Fragment;
-var TextControl = wp.components.TextControl;
+var _wp$components = wp.components,
+    TextControl = _wp$components.TextControl,
+    Popover = _wp$components.Popover,
+    MenuGroup = _wp$components.MenuGroup,
+    MenuItem = _wp$components.MenuItem;
 
 var ProtoTextfield =
 /*#__PURE__*/
@@ -2846,7 +2850,42 @@ function (_React$Component) {
   _createClass(ProtoTextfield, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextControl, {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        onClick: this.toggleVisible,
+        className: "chevron-bt"
+      }, this.isVisible && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Popover, {
+        position: "bottom left",
+        onClickOutside: this.toggleVisible
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuGroup, {
+        label: "Content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuItem, {
+        icon: "facebook-alt" // info="Copy value from Facebook title"
+        ,
+        isSelected: false,
+        onClick: function onClick() {
+          console.log('click');
+        }
+      }, "Copy Facebook title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuItem, {
+        icon: "twitter",
+        isSelected: false,
+        onClick: function onClick() {
+          console.log('click');
+        }
+      }, "Copy from Twitter"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuItem, {
+        icon: "networking",
+        isSelected: false,
+        onClick: function onClick() {
+          console.log('click');
+        }
+      }, "Copy from Schema")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuGroup, {
+        label: "Tools"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuItem, {
+        icon: "book",
+        isSelected: false,
+        onClick: function onClick() {
+          console.log('click');
+        }
+      }, "Field documentation")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextControl, {
         label: "Browser title",
         value: this.props.metaFieldValue,
         onChange: this.props.setMetaFieldValue
@@ -3242,6 +3281,7 @@ function (_React$Component) {
         icon: "",
         initialOpen: true
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PanelRow, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "components-button is-button is-default is-large",
         onClick: this.openModal
       }, "Edit meta values")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Panel, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PanelBody, {
         className: "facebook",
@@ -3255,7 +3295,7 @@ function (_React$Component) {
         initialOpen: false
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PanelRow, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Twitter")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Panel, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PanelBody, {
         className: "schema",
-        title: "Schema.org",
+        title: "Schema",
         icon: "",
         initialOpen: false
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PanelRow, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Schema.org"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_sbmodal_js__WEBPACK_IMPORTED_MODULE_1__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TabPanel, (_React$createElement = {
@@ -3417,7 +3457,8 @@ var _wp$components = wp.components,
     Popover = _wp$components.Popover,
     MenuGroup = _wp$components.MenuGroup,
     MenuItem = _wp$components.MenuItem,
-    Tooltip = _wp$components.Tooltip;
+    Tooltip = _wp$components.Tooltip,
+    TreeSelect = _wp$components.TreeSelect;
 
 var ViewFacebook =
 /*#__PURE__*/
@@ -3563,8 +3604,7 @@ var _wp$components = wp.components,
     Button = _wp$components.Button,
     Popover = _wp$components.Popover,
     MenuGroup = _wp$components.MenuGroup,
-    MenuItem = _wp$components.MenuItem,
-    Tooltip = _wp$components.Tooltip;
+    MenuItem = _wp$components.MenuItem;
 
 var ViewGoogle =
 /*#__PURE__*/
@@ -3606,22 +3646,20 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuGroup, {
         label: "Content"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuItem, {
-        icon: "facebook-alt",
-        info: "Copy value from Facebook title",
+        icon: "facebook-alt" // info="Copy value from Facebook title"
+        ,
         isSelected: false,
         onClick: function onClick() {
           console.log('click');
         }
       }, "Copy Facebook title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuItem, {
         icon: "twitter",
-        info: "Copy value from Twitter title",
         isSelected: false,
         onClick: function onClick() {
           console.log('click');
         }
       }, "Copy from Twitter"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuItem, {
         icon: "networking",
-        info: "Copy value from Schema title",
         isSelected: false,
         onClick: function onClick() {
           console.log('click');

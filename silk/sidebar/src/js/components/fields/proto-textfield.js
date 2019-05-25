@@ -4,7 +4,7 @@ const { __ } = wp.i18n;
 const { compose } = wp.compose;
 const { withDispatch, withSelect } = wp.data;
 const { Fragment } = wp.element;
-const { TextControl } = wp.components;
+const { TextControl, Popover, MenuGroup, MenuItem } = wp.components;
 
 
 class ProtoTextfield extends React.Component {
@@ -24,6 +24,49 @@ class ProtoTextfield extends React.Component {
 
         return (
             <div>
+
+                <a onClick={ this.toggleVisible } className="chevron-bt">
+                    { this.isVisible && (
+
+                        <Popover position="bottom left" onClickOutside={ this.toggleVisible }>
+                            
+                            <MenuGroup label="Content">
+                                <MenuItem
+                                    icon='facebook-alt'
+                                    // info="Copy value from Facebook title"
+                                    isSelected={ false }
+                                    onClick={ () => { console.log('click') } }
+                                >
+                                    Copy Facebook title
+                                </MenuItem>
+                                <MenuItem
+                                    icon='twitter'
+                                    isSelected={ false }
+                                    onClick={ () => { console.log('click') } }
+                                >
+                                    Copy from Twitter
+                                </MenuItem>
+                                <MenuItem
+                                    icon='networking'
+                                    isSelected={ false }
+                                    onClick={ () => { console.log('click') } }
+                                >
+                                    Copy from Schema
+                                </MenuItem>
+                            </MenuGroup>
+                            <MenuGroup label="Tools">
+                                <MenuItem
+                                    icon='book'
+                                    isSelected={ false }
+                                    onClick={ () => { console.log('click') } }
+                                >
+                                    Field documentation
+                                </MenuItem>
+                            </MenuGroup>
+
+                        </Popover>
+                    ) }
+                </a>
 
                 <TextControl
                     label="Browser title"

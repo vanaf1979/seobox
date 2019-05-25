@@ -63,7 +63,7 @@ class Sidebar extends React.Component {
 
                             <PanelRow>
 
-                                <button onClick={this.openModal}>Edit meta values</button>
+                                <button className="components-button is-button is-default is-large" onClick={this.openModal}>Edit meta values</button>
 
                             </PanelRow>
 
@@ -101,7 +101,7 @@ class Sidebar extends React.Component {
 
                     <Panel>
 
-                        <PanelBody className="schema" title="Schema.org" icon="" initialOpen={ false }>
+                        <PanelBody className="schema" title="Schema" icon="" initialOpen={ false }>
 
                             <PanelRow>
 

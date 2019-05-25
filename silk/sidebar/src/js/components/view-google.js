@@ -3,7 +3,7 @@ import ProtoTextfield from './fields/proto-textfield.js';
 
 const { __ } = wp.i18n;
 const { Fragment } = wp.element;
-const { TextControl, TextareaControl, RadioControl, Button, Popover, MenuGroup, MenuItem, Tooltip } = wp.components;
+const { TextControl, TextareaControl, RadioControl, Button, Popover, MenuGroup, MenuItem } = wp.components;
 
 
 class ViewGoogle extends React.Component {
@@ -43,7 +43,7 @@ class ViewGoogle extends React.Component {
                             <MenuGroup label="Content">
                                 <MenuItem
                                     icon='facebook-alt'
-                                    info="Copy value from Facebook title"
+                                    // info="Copy value from Facebook title"
                                     isSelected={ false }
                                     onClick={ () => { console.log('click') } }
                                 >
@@ -51,7 +51,6 @@ class ViewGoogle extends React.Component {
                                 </MenuItem>
                                 <MenuItem
                                     icon='twitter'
-                                    info="Copy value from Twitter title"
                                     isSelected={ false }
                                     onClick={ () => { console.log('click') } }
                                 >
@@ -59,7 +58,6 @@ class ViewGoogle extends React.Component {
                                 </MenuItem>
                                 <MenuItem
                                     icon='networking'
-                                    info="Copy value from Schema title"
                                     isSelected={ false }
                                     onClick={ () => { console.log('click') } }
                                 >
