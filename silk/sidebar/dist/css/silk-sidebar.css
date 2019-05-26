@@ -1,4 +1,23 @@
 @import url(https://use.fontawesome.com/releases/v5.7.1/css/all.css);@charset "UTF-8";
+.silk-svg-component {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+  fill: #323232;
+}
+
+.silk-svg-component g {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+}
+
+.silk-svg-component path {
+  fill: #323232;
+}
+
 .components-panel__body h2 button {
   font-size: 15px;
   color: #555555 !important;
@@ -90,6 +109,16 @@
   width: 100%;
   padding: 0px 16px 0px 16px;
   border-bottom: 1px solid #e2e4e7;
+}
+
+.silk-modal header .silk-svg-component {
+  display: inline-block;
+  margin: 12px 3px 0px 0px;
+  float: left;
+}
+
+.silk-modal header .silk-svg-component path {
+  fill: #0185ba;
 }
 
 .silk-modal header h4 {
@@ -258,4 +287,60 @@
 .components-textarea-control__input {
   margin: 0px 0px 0px 0px;
   color: rgba(0, 0, 0, 0.75) !important;
+}
+
+.silk-field {
+  display: block;
+}
+
+.silk-field .silk-field-controls {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  width: auto;
+  height: 20px;
+  float: right;
+}
+
+.silk-field .silk-field-controls .silk-field-control {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0px 0px 0px 5px;
+  padding: 0px 0px 0px 0px;
+  border: none;
+  background: #ffffff;
+}
+
+.silk-field .silk-field-controls .silk-counter {
+  width: 60px;
+  margin: 0px 0px 0px 0px !important;
+  padding: 3px 0px 0px 0px;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.silk-field .silk-menu-toggle {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  text-align: right;
+}
+
+.silk-field .silk-menu-toggle:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\F078";
+  display: block;
+  padding: 2px 0px 0px 0px;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.5);
 }

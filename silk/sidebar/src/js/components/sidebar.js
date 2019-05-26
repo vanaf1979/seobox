@@ -5,6 +5,8 @@ import ViewFacebook from './view-facebook.js'
 import ViewTwitter from './view-twitter.js'
 import ViewSchema from './view-schema.js'
 
+import icons from '../icons/icons.js'
+
 const { __ } = wp.i18n;
 const { Fragment } = wp.element;
 const { PluginSidebar, PluginSidebarMoreMenuItem } = wp.editPost;
@@ -49,13 +51,15 @@ class Sidebar extends React.Component {
         return (
             <Fragment>
 
-                <PluginSidebarMoreMenuItem target="silk-sidebar" icon="buddicons-replies">
+                <PluginSidebarMoreMenuItem target="silk-sidebar" icon={icons.butterfly}>
 
                     {__("Silk seo", "silk")}
 
                 </PluginSidebarMoreMenuItem>
 
                 <PluginSidebar name="silk-sidebar" title={__("Silk SEO", "silk")} >
+
+                    {/* <Butterfly/> */}
 
                     <Panel>
 

@@ -1,10 +1,13 @@
 import React from 'react'
 import Modal from 'react-modal';
 
+import icons from '../icons/icons.js'
+
 
 const { __ } = wp.i18n;
 const { compose } = wp.compose;
 const { withDispatch, withSelect } = wp.data;
+const { Icon } = wp.components;
 
 
 Modal.setAppElement('#editor');
@@ -61,7 +64,9 @@ class SbModal extends React.Component {
 
                 <header className="silk-modal-header">
 
-                    <h4>Silk</h4>
+                    <Icon className="icon" icon={icons.butterfly}/>
+
+                    <h4>Silk seo</h4>
 
                     <a onClick={this.closeModal} className="fas fa-times"></a>
 

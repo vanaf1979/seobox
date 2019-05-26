@@ -1,0 +1,55 @@
+
+
+.silk-field {
+    display: block;
+}
+    
+    // Field controls
+    .silk-field .silk-field-controls {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        height: 20px;
+        float: right;
+    }
+        .silk-field .silk-field-controls .silk-field-control {
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin: 0px 0px 0px 5px;
+            padding: 0px 0px 0px 0px;
+            border: none;
+            background: #ffffff;
+        }
+
+
+        // # Counter
+        .silk-field .silk-field-controls .silk-counter {
+            width: 60px;
+            margin: 0px 0px 0px 0px !important;
+            padding: 3px 0px 0px 0px;
+            font-size: 11px;
+            font-weight: bold;
+            text-align: right;
+            color: rgba( 0 , 0 , 0 , 0.5 );
+        }
+
+
+        // # Menu toggle.
+        .silk-field .silk-menu-toggle {
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+            text-align: right;
+        }
+            .silk-field .silk-menu-toggle:before {
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                content: "\f078";
+                display: block;
+                padding: 2px 0px 0px 0px;
+                text-align: right;
+                color: rgba( 0 , 0 , 0 , 0.5 );
+            }

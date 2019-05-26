@@ -1,5 +1,23 @@
 
 
+.silk-svg-component {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px;
+    fill: #323232;
+}
+    .silk-svg-component g {
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-size: 24px 24px;
+        
+    }
+    .silk-svg-component path {
+        fill: #323232;
+    }
+
 .components-panel__body h2 button {
     font-size: 15px;
     color: rgb(85, 85, 85) !important;

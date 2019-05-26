@@ -1,5 +1,6 @@
 import React from 'react'
 import ProtoTextfield from './fields/proto-textfield.js';
+import GBrowserTitle from './fields/GBrowserTitle.js';
 
 const { __ } = wp.i18n;
 const { Fragment } = wp.element;
@@ -33,52 +34,11 @@ class ViewGoogle extends React.Component {
         return (
             <Fragment>
 
-                <h3>Google inputs view</h3>
+                <h5>Google inputs view</h5>
 
-                <Button isDefault onClick={ this.toggleVisible } className="drop-bt">
-                    { this.isVisible && (
+                {/* <ProtoTextfield/> */}
 
-                        <Popover position="bottom left" onClickOutside={ this.toggleVisible }>
-                            
-                            <MenuGroup label="Content">
-                                <MenuItem
-                                    icon='facebook-alt'
-                                    // info="Copy value from Facebook title"
-                                    isSelected={ false }
-                                    onClick={ () => { console.log('click') } }
-                                >
-                                    Copy Facebook title
-                                </MenuItem>
-                                <MenuItem
-                                    icon='twitter'
-                                    isSelected={ false }
-                                    onClick={ () => { console.log('click') } }
-                                >
-                                    Copy from Twitter
-                                </MenuItem>
-                                <MenuItem
-                                    icon='networking'
-                                    isSelected={ false }
-                                    onClick={ () => { console.log('click') } }
-                                >
-                                    Copy from Schema
-                                </MenuItem>
-                            </MenuGroup>
-                            <MenuGroup label="Tools">
-                                <MenuItem
-                                    icon='book'
-                                    isSelected={ false }
-                                    onClick={ () => { console.log('click') } }
-                                >
-                                    Field documentation
-                                </MenuItem>
-                            </MenuGroup>
-
-                        </Popover>
-                    ) }
-                </Button>
-
-                <ProtoTextfield/>
+                <GBrowserTitle/>
                     
                 <TextareaControl
                     label="Description"

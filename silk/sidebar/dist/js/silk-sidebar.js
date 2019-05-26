@@ -2721,6 +2721,251 @@ module.exports = warning;
 
 /***/ }),
 
+/***/ "./silk/sidebar/src/js/components/fields/GBrowserTitle.js":
+/*!****************************************************************!*\
+  !*** ./silk/sidebar/src/js/components/fields/GBrowserTitle.js ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
+
+function _typeof(obj) {
+  if (typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol") {
+    _typeof = function _typeof(obj) {
+      return _typeof2(obj);
+    };
+  } else {
+    _typeof = function _typeof(obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
+    };
+  }
+
+  return _typeof(obj);
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (call && (_typeof(call) === "object" || typeof call === "function")) {
+    return call;
+  }
+
+  return _assertThisInitialized(self);
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
+}
+
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function");
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) _setPrototypeOf(subClass, superClass);
+}
+
+function _setPrototypeOf(o, p) {
+  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return _setPrototypeOf(o, p);
+}
+
+
+var __ = wp.i18n.__;
+var compose = wp.compose.compose;
+var _wp$data = wp.data,
+    withDispatch = _wp$data.withDispatch,
+    withSelect = _wp$data.withSelect;
+var Fragment = wp.element.Fragment;
+var _wp$components = wp.components,
+    TextControl = _wp$components.TextControl,
+    Button = _wp$components.Button,
+    Popover = _wp$components.Popover,
+    MenuGroup = _wp$components.MenuGroup,
+    MenuItem = _wp$components.MenuItem;
+
+var GBrowserTitle =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(GBrowserTitle, _React$Component);
+
+  function GBrowserTitle() {
+    var _this;
+
+    _classCallCheck(this, GBrowserTitle);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(GBrowserTitle).call(this));
+    _this.state = {
+      menuIsVisible: false
+    };
+    _this.copyFromFacebook - _this.copyFromFacebook.bind(_assertThisInitialized(_this));
+    _this.copyFromTwitter - _this.copyFromTwitter.bind(_assertThisInitialized(_this));
+    _this.copyFromSchema - _this.copyFromSchema.bind(_assertThisInitialized(_this));
+    _this.gotoDocs - _this.gotoDocs.bind(_assertThisInitialized(_this));
+    _this.toggleMenuVisible = _this.toggleMenuVisible.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(GBrowserTitle, [{
+    key: "popClick",
+    value: function popClick(e) {
+      e.preventDefault();
+    }
+  }, {
+    key: "copyFromFacebook",
+    value: function copyFromFacebook(e) {
+      console.log('Copy from Facebook title');
+    }
+  }, {
+    key: "copyFromTwitter",
+    value: function copyFromTwitter(e) {
+      console.log('Copy from Twitter title');
+    }
+  }, {
+    key: "copyFromSchema",
+    value: function copyFromSchema(e) {
+      console.log('Copy from Schema title');
+    }
+  }, {
+    key: "gotoDocs",
+    value: function gotoDocs(e) {
+      window.open('https://vanaf-1979.gitbook.io/silk/fields/google-meta-tags/browser-title', '_blank');
+    }
+  }, {
+    key: "toggleMenuVisible",
+    value: function toggleMenuVisible() {
+      var _this2 = this;
+
+      this.setState(function (state) {
+        return _this2.menuIsVisible = !_this2.menuIsVisible;
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this3 = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "silk-field silk-textfield silk-textfield-browser-title"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "silk-field-controls"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "silk-field-control silk-counter"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classNmme: "count"
+      }, "100"), " / ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classNmme: "max"
+      }, "150")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
+        onClick: this.toggleMenuVisible,
+        className: "silk-field-control silk-menu-toggle"
+      }, this.menuIsVisible && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Popover, {
+        position: "bottom left",
+        onClick: this.popClick(event),
+        onClickOutside: this.toggleMenuVisible
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuGroup, {
+        label: "Content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuItem, {
+        icon: "facebook-alt",
+        isSelected: false,
+        onClick: function onClick(event) {
+          _this3.copyFromFacebook(event);
+        }
+      }, "Copy from Facebook title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuItem, {
+        icon: "twitter",
+        isSelected: false,
+        onClick: function onClick(event) {
+          _this3.copyFromTwitter(event);
+        }
+      }, "Copy from Twitter title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuItem, {
+        icon: "networking",
+        isSelected: false,
+        onClick: function onClick(event) {
+          _this3.copyFromSchema(event);
+        }
+      }, "Copy from Schema title")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuGroup, {
+        label: "Tools"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuItem, {
+        icon: "book",
+        isSelected: false,
+        onClick: function onClick(event) {
+          _this3.gotoDocs(event);
+        }
+      }, "Field documentation"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextControl, {
+        label: "Browser title",
+        value: this.props.metaFieldValue,
+        onChange: this.props.setMetaFieldValue
+      }));
+    }
+  }]);
+
+  return GBrowserTitle;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (compose([withDispatch(function (dispatch, props) {
+  return {
+    setMetaFieldValue: function setMetaFieldValue(value) {
+      dispatch('core/editor').editPost({
+        meta: {
+          silk_g_browser_title: value
+        }
+      });
+    }
+  };
+}), withSelect(function (select, props) {
+  return {
+    metaFieldValue: select('core/editor').getEditedPostAttribute('meta')['silk_g_browser_title']
+  };
+})])(GBrowserTitle));
+
+/***/ }),
+
 /***/ "./silk/sidebar/src/js/components/fields/proto-textfield.js":
 /*!******************************************************************!*\
   !*** ./silk/sidebar/src/js/components/fields/proto-textfield.js ***!
@@ -2936,6 +3181,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-modal */ "./node_modules/react-modal/lib/index.js");
 /* harmony import */ var react_modal__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_modal__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _icons_icons_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../icons/icons.js */ "./silk/sidebar/src/js/icons/icons.js");
 function _typeof2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
 
 function _typeof(obj) {
@@ -3023,11 +3269,13 @@ function _setPrototypeOf(o, p) {
 
 
 
+
 var __ = wp.i18n.__;
 var compose = wp.compose.compose;
 var _wp$data = wp.data,
     withDispatch = _wp$data.withDispatch,
     withSelect = _wp$data.withSelect;
+var Icon = wp.components.Icon;
 react_modal__WEBPACK_IMPORTED_MODULE_1___default.a.setAppElement('#editor');
 
 var SbModal =
@@ -3073,7 +3321,10 @@ function (_React$Component) {
         overlayClassName: "silk-modal-overlay"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
         className: "silk-modal-header"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Silk"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Icon, {
+        className: "icon",
+        icon: _icons_icons_js__WEBPACK_IMPORTED_MODULE_2__["default"].butterfly
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Silk seo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         onClick: this.closeModal,
         className: "fas fa-times"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", null, this.props.children));
@@ -3113,6 +3364,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _view_facebook_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./view-facebook.js */ "./silk/sidebar/src/js/components/view-facebook.js");
 /* harmony import */ var _view_twitter_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./view-twitter.js */ "./silk/sidebar/src/js/components/view-twitter.js");
 /* harmony import */ var _view_schema_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./view-schema.js */ "./silk/sidebar/src/js/components/view-schema.js");
+/* harmony import */ var _icons_icons_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../icons/icons.js */ "./silk/sidebar/src/js/icons/icons.js");
 function _typeof2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
 
 function _typeof(obj) {
@@ -3219,6 +3471,7 @@ function _setPrototypeOf(o, p) {
 
 
 
+
 var __ = wp.i18n.__;
 var Fragment = wp.element.Fragment;
 var _wp$editPost = wp.editPost,
@@ -3271,7 +3524,7 @@ function (_React$Component) {
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PluginSidebarMoreMenuItem, {
         target: "silk-sidebar",
-        icon: "buddicons-replies"
+        icon: _icons_icons_js__WEBPACK_IMPORTED_MODULE_6__["default"].butterfly
       }, __("Silk seo", "silk")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PluginSidebar, {
         name: "silk-sidebar",
         title: __("Silk SEO", "silk")
@@ -3508,6 +3761,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _fields_proto_textfield_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./fields/proto-textfield.js */ "./silk/sidebar/src/js/components/fields/proto-textfield.js");
+/* harmony import */ var _fields_GBrowserTitle_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fields/GBrowserTitle.js */ "./silk/sidebar/src/js/components/fields/GBrowserTitle.js");
 function _typeof2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
 
 function _typeof(obj) {
@@ -3595,6 +3849,7 @@ function _setPrototypeOf(o, p) {
 
 
 
+
 var __ = wp.i18n.__;
 var Fragment = wp.element.Fragment;
 var _wp$components = wp.components,
@@ -3636,43 +3891,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Google inputs view"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
-        isDefault: true,
-        onClick: this.toggleVisible,
-        className: "drop-bt"
-      }, this.isVisible && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Popover, {
-        position: "bottom left",
-        onClickOutside: this.toggleVisible
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuGroup, {
-        label: "Content"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuItem, {
-        icon: "facebook-alt" // info="Copy value from Facebook title"
-        ,
-        isSelected: false,
-        onClick: function onClick() {
-          console.log('click');
-        }
-      }, "Copy Facebook title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuItem, {
-        icon: "twitter",
-        isSelected: false,
-        onClick: function onClick() {
-          console.log('click');
-        }
-      }, "Copy from Twitter"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuItem, {
-        icon: "networking",
-        isSelected: false,
-        onClick: function onClick() {
-          console.log('click');
-        }
-      }, "Copy from Schema")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuGroup, {
-        label: "Tools"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MenuItem, {
-        icon: "book",
-        isSelected: false,
-        onClick: function onClick() {
-          console.log('click');
-        }
-      }, "Field documentation")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fields_proto_textfield_js__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextareaControl, {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Google inputs view"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fields_GBrowserTitle_js__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextareaControl, {
         label: "Description",
         value: "Google description google description google description google description google description google description google description google description google description google description google description google description"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TextControl, {
@@ -3956,6 +4175,34 @@ function (_React$Component) {
 
 /***/ }),
 
+/***/ "./silk/sidebar/src/js/icons/icons.js":
+/*!********************************************!*\
+  !*** ./silk/sidebar/src/js/icons/icons.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var icons = {};
+icons.butterfly = React.createElement("svg", {
+  id: "svg",
+  className: "silk-svg-component",
+  xmlns: "http://www.w3.org/2000/svg",
+  width: "400",
+  height: "400",
+  viewBox: "0, 0, 400,400"
+}, React.createElement("g", {
+  id: "svgg"
+}, React.createElement("path", {
+  id: "path0",
+  d: "M54.496 51.198 C 41.565 55.351,36.494 75.133,37.779 116.406 C 39.949 186.058,77.968 219.875,159.514 224.684 L 168.637 225.223 169.043 222.572 C 169.266 221.115,169.640 217.168,169.876 213.802 C 170.502 204.851,172.457 192.218,174.733 182.422 C 175.831 177.695,176.907 172.868,177.123 171.695 C 178.157 166.087,149.067 118.317,130.609 95.313 C 104.854 63.216,73.556 45.076,54.496 51.198 M328.556 51.245 C 297.574 58.148,263.262 94.424,230.391 155.030 C 221.761 170.940,222.084 169.768,224.211 177.530 C 226.325 185.246,229.482 204.309,230.066 212.891 C 231.021 226.923,229.588 226.167,250.781 223.814 C 317.652 216.386,352.390 189.489,360.740 138.672 C 362.363 128.795,362.583 89.248,361.073 78.690 C 357.669 54.887,348.175 46.873,328.556 51.245 M157.467 76.758 C 156.778 79.026,155.469 85.147,155.469 86.100 C 155.469 86.668,157.917 88.273,160.910 89.668 C 181.139 99.092,199.075 146.103,191.392 169.557 C 178.659 208.424,178.618 260.436,191.286 305.078 C 195.373 319.482,199.556 332.812,199.988 332.813 C 200.586 332.813,208.155 307.734,210.865 296.776 C 221.347 254.393,220.594 204.413,208.955 169.996 C 205.440 159.599,206.905 144.523,213.347 124.800 C 220.031 104.338,233.892 87.599,244.226 87.508 C 245.689 87.495,242.784 76.233,241.241 75.936 C 237.619 75.238,225.287 82.558,219.319 88.947 C 212.166 96.605,203.784 112.243,201.146 122.852 C 200.852 124.033,200.337 125.000,200.000 125.000 C 199.663 125.000,199.148 124.033,198.854 122.852 C 195.825 110.669,186.162 93.793,177.950 86.346 C 170.799 79.861,158.301 74.011,157.467 76.758 M122.016 235.913 C 85.355 256.124,59.218 305.641,71.504 331.612 C 80.733 351.120,115.234 356.013,140.084 341.338 C 157.011 331.341,177.268 300.386,174.240 289.142 C 172.688 283.378,170.276 264.914,169.361 251.781 L 168.422 238.328 165.266 237.943 C 163.530 237.731,158.770 237.338,154.688 237.069 C 150.605 236.800,142.695 235.910,137.109 235.091 C 131.523 234.271,126.777 233.606,126.563 233.612 C 126.348 233.617,124.302 234.653,122.016 235.913 M264.844 234.796 C 261.621 235.350,254.238 236.207,248.438 236.701 C 242.637 237.196,236.470 237.764,234.733 237.964 L 231.576 238.328 230.621 252.172 C 229.712 265.340,227.381 283.024,225.743 289.174 C 222.750 300.413,243.026 331.362,259.916 341.338 C 284.778 356.020,319.262 351.130,328.496 331.612 C 340.765 305.676,314.595 256.096,277.984 235.913 C 273.390 233.380,273.191 233.363,264.844 234.796 ",
+  stroke: "none"
+})));
+/* harmony default export */ __webpack_exports__["default"] = (icons);
+
+/***/ }),
+
 /***/ "./silk/sidebar/src/js/silk-sidebar.js":
 /*!*********************************************!*\
   !*** ./silk/sidebar/src/js/silk-sidebar.js ***!
@@ -3970,13 +4217,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store_uistore_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_store_uistore_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _store_settingsstore_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store/settingsstore.js */ "./silk/sidebar/src/js/store/settingsstore.js");
 /* harmony import */ var _store_settingsstore_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_store_settingsstore_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _icons_icons_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./icons/icons.js */ "./silk/sidebar/src/js/icons/icons.js");
+
 
 
 
 var registerPlugin = wp.plugins.registerPlugin; // Gebruiken: https://github.com/reactjs/react-modal#demos
 
 registerPlugin("silk", {
-  icon: "buddicons-replies",
+  icon: _icons_icons_js__WEBPACK_IMPORTED_MODULE_3__["default"].butterfly,
   // The Plugin Dashicon
   render: _components_sidebar_js__WEBPACK_IMPORTED_MODULE_0__["default"]
 });

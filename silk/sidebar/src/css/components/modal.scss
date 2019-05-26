@@ -46,6 +46,15 @@
         padding: 0px 16px 0px 16px;
         border-bottom: 1px solid #e2e4e7;
     }
+        .silk-modal header .silk-svg-component {
+            display: inline-block;
+            margin: 12px 3px 0px 0px;
+            float: left;
+        }
+            .silk-modal header .silk-svg-component path {
+                fill: #0185ba;
+            }
+
         .silk-modal header h4 {
             display: inline-block;
             box-sizing: border-box;
